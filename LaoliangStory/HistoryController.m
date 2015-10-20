@@ -1,35 +1,22 @@
 //
-//  TSNavgationController.m
+//  HistoryController.m
 //  LaoliangStory
 //
-//  Created by tens on 15-10-19.
+//  Created by tens on 15-10-20.
 //  Copyright (c) 2015年 tens. All rights reserved.
 //
 
-#import "TSNavgationController.h"
+#import "HistoryController.h"
 
-@interface TSNavgationController ()
+@interface HistoryController ()
 
 @end
 
-@implementation TSNavgationController
+@implementation HistoryController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self setNavigationBar];
-
-    
-
-}
-
-
--(void)setNavigationBar
-{
-    self.navigationBar.tintColor = [UIColor redColor];
-    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg_topbar"] forBarMetrics:UIBarMetricsDefault];
-    // 设置字体的颜色和大小
-    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
