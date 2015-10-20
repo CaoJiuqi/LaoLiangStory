@@ -6,13 +6,15 @@
 //  Copyright (c) 2015年 tens. All rights reserved.
 //
 
-#import "HomeController.h"
+#import "HomeViewController.h"
 
-@interface HomeController ()
+#import "StorydetailViewController.h"
+
+@interface HomeViewController ()
 
 @end
 
-@implementation HomeController
+@implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +24,15 @@
     // 设置字体的颜色和大小
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
 }
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    StorydetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StorydetailViewController"];
+    [self.navigationController pushViewController:detail animated:YES];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

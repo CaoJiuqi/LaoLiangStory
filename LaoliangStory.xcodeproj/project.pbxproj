@@ -15,7 +15,10 @@
 		15829D191BD5E9FD0011EDA5 /* LaoliangStoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D181BD5E9FD0011EDA5 /* LaoliangStoryTests.m */; };
 		15829D341BD5EB210011EDA5 /* TSNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D331BD5EB210011EDA5 /* TSNavgationController.m */; };
 		15829D371BD5EB380011EDA5 /* TSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D361BD5EB380011EDA5 /* TSTabBarController.m */; };
-		15829D3A1BD5F1D10011EDA5 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D391BD5F1D10011EDA5 /* HomeController.m */; };
+		15829D3A1BD5F1D10011EDA5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D391BD5F1D10011EDA5 /* HomeViewController.m */; };
+		15EE94981BD5D2AE00FBE0FC /* StorydetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EE94971BD5D2AE00FBE0FC /* StorydetailViewController.m */; };
+		15EE949B1BD5D35700FBE0FC /* TStorydetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EE949A1BD5D35700FBE0FC /* TStorydetailCell.m */; };
+		15EE94A11BD6230000FBE0FC /* Storydetailmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EE94A01BD6230000FBE0FC /* Storydetailmodel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +47,14 @@
 		15829D331BD5EB210011EDA5 /* TSNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavgationController.m; sourceTree = "<group>"; };
 		15829D351BD5EB380011EDA5 /* TSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabBarController.h; sourceTree = "<group>"; };
 		15829D361BD5EB380011EDA5 /* TSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabBarController.m; sourceTree = "<group>"; };
-		15829D381BD5F1D10011EDA5 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
-		15829D391BD5F1D10011EDA5 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		15829D381BD5F1D10011EDA5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		15829D391BD5F1D10011EDA5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		15EE94961BD5D2AE00FBE0FC /* StorydetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorydetailViewController.h; sourceTree = "<group>"; };
+		15EE94971BD5D2AE00FBE0FC /* StorydetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorydetailViewController.m; sourceTree = "<group>"; };
+		15EE94991BD5D35700FBE0FC /* TStorydetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TStorydetailCell.h; sourceTree = SOURCE_ROOT; };
+		15EE949A1BD5D35700FBE0FC /* TStorydetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TStorydetailCell.m; sourceTree = SOURCE_ROOT; };
+		15EE949F1BD6230000FBE0FC /* Storydetailmodel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storydetailmodel.h; sourceTree = SOURCE_ROOT; };
+		15EE94A01BD6230000FBE0FC /* Storydetailmodel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Storydetailmodel.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +78,10 @@
 		15829CF01BD5E9FD0011EDA5 = {
 			isa = PBXGroup;
 			children = (
-				15829D221BD5EA740011EDA5 /* 历史记录 */,
-				15829D261BD5EA740011EDA5 /* 设置 */,
-				15829D2A1BD5EA740011EDA5 /* 首页 */,
-				15829D2E1BD5EA740011EDA5 /* 下载 */,
+				15829D2A1BD5EA740011EDA5 /* Home */,
+				15829D221BD5EA740011EDA5 /* History */,
+				15829D261BD5EA740011EDA5 /* Setting */,
+				15829D2E1BD5EA740011EDA5 /* Download */,
 				15829CFB1BD5E9FD0011EDA5 /* LaoliangStory */,
 				15829D151BD5E9FD0011EDA5 /* LaoliangStoryTests */,
 				15829CFA1BD5E9FD0011EDA5 /* Products */,
@@ -131,14 +140,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		15829D221BD5EA740011EDA5 /* 历史记录 */ = {
+		15829D221BD5EA740011EDA5 /* History */ = {
 			isa = PBXGroup;
 			children = (
 				15829D231BD5EA740011EDA5 /* Controller */,
 				15829D241BD5EA740011EDA5 /* medol */,
 				15829D251BD5EA740011EDA5 /* View */,
 			);
-			name = "历史记录";
+			name = History;
 			path = "LaoliangStory/历史记录";
 			sourceTree = "<group>";
 		};
@@ -163,14 +172,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		15829D261BD5EA740011EDA5 /* 设置 */ = {
+		15829D261BD5EA740011EDA5 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
 				15829D271BD5EA740011EDA5 /* Controller */,
 				15829D281BD5EA740011EDA5 /* medol */,
 				15829D291BD5EA740011EDA5 /* View */,
 			);
-			name = "设置";
+			name = Setting;
 			path = "LaoliangStory/设置";
 			sourceTree = "<group>";
 		};
@@ -195,22 +204,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		15829D2A1BD5EA740011EDA5 /* 首页 */ = {
+		15829D2A1BD5EA740011EDA5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				15829D2B1BD5EA740011EDA5 /* Controller */,
 				15829D2C1BD5EA740011EDA5 /* medol */,
 				15829D2D1BD5EA740011EDA5 /* View */,
 			);
-			name = "首页";
+			name = Home;
 			path = "LaoliangStory/首页";
 			sourceTree = "<group>";
 		};
 		15829D2B1BD5EA740011EDA5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				15829D381BD5F1D10011EDA5 /* HomeController.h */,
-				15829D391BD5F1D10011EDA5 /* HomeController.m */,
+				15829D381BD5F1D10011EDA5 /* HomeViewController.h */,
+				15829D391BD5F1D10011EDA5 /* HomeViewController.m */,
+				15EE94961BD5D2AE00FBE0FC /* StorydetailViewController.h */,
+				15EE94971BD5D2AE00FBE0FC /* StorydetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +229,8 @@
 		15829D2C1BD5EA740011EDA5 /* medol */ = {
 			isa = PBXGroup;
 			children = (
+				15EE949F1BD6230000FBE0FC /* Storydetailmodel.h */,
+				15EE94A01BD6230000FBE0FC /* Storydetailmodel.m */,
 			);
 			path = medol;
 			sourceTree = "<group>";
@@ -225,18 +238,20 @@
 		15829D2D1BD5EA740011EDA5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				15EE94991BD5D35700FBE0FC /* TStorydetailCell.h */,
+				15EE949A1BD5D35700FBE0FC /* TStorydetailCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		15829D2E1BD5EA740011EDA5 /* 下载 */ = {
+		15829D2E1BD5EA740011EDA5 /* Download */ = {
 			isa = PBXGroup;
 			children = (
 				15829D2F1BD5EA740011EDA5 /* Controller */,
 				15829D301BD5EA740011EDA5 /* medol */,
 				15829D311BD5EA740011EDA5 /* View */,
 			);
-			name = "下载";
+			name = Download;
 			path = "LaoliangStory/下载";
 			sourceTree = "<group>";
 		};
@@ -362,9 +377,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				15829D021BD5E9FD0011EDA5 /* AppDelegate.m in Sources */,
+				15EE94981BD5D2AE00FBE0FC /* StorydetailViewController.m in Sources */,
+				15EE94A11BD6230000FBE0FC /* Storydetailmodel.m in Sources */,
 				15829CFF1BD5E9FD0011EDA5 /* main.m in Sources */,
 				15829D371BD5EB380011EDA5 /* TSTabBarController.m in Sources */,
-				15829D3A1BD5F1D10011EDA5 /* HomeController.m in Sources */,
+				15829D3A1BD5F1D10011EDA5 /* HomeViewController.m in Sources */,
+				15EE949B1BD5D35700FBE0FC /* TStorydetailCell.m in Sources */,
 				15829D341BD5EB210011EDA5 /* TSNavgationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,6 +574,7 @@
 				15829D1E1BD5E9FD0011EDA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15829D1F1BD5E9FD0011EDA5 /* Build configuration list for PBXNativeTarget "LaoliangStoryTests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +583,7 @@
 				15829D211BD5E9FD0011EDA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
