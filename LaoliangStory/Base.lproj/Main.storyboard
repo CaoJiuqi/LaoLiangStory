@@ -17,8 +17,8 @@
                     <connections>
                         <segue destination="Ep1-Se-A3D" kind="relationship" relationship="viewControllers" id="mLi-1s-IZQ"/>
                         <segue destination="TOm-nM-Cb3" kind="relationship" relationship="viewControllers" id="9nT-Rw-MVv"/>
-                        <segue destination="3e4-rB-C0v" kind="relationship" relationship="viewControllers" id="n19-f5-zR8"/>
                         <segue destination="9em-Tl-JpL" kind="relationship" relationship="viewControllers" id="TK0-SN-k2Q"/>
+                        <segue destination="3e4-rB-C0v" kind="relationship" relationship="viewControllers" id="n19-f5-zR8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gz-cr-sba" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -61,14 +61,53 @@
             <point key="canvasLocation" x="-1438.5" y="991"/>
         </scene>
         <!--下载-->
+        <scene sceneID="29w-xF-Hb8">
+            <objects>
+                <viewController id="bk6-mF-hwV" customClass="TSLoadController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="id8-mo-wdS"/>
+                        <viewControllerLayoutGuide type="bottom" id="VqU-Ek-Rs8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sIi-6L-J64">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="下载" id="qeE-kH-7ET"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hg-Fa-oXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-805.5" y="991"/>
+        </scene>
+        <!--历史记录-->
+        <scene sceneID="nZm-5L-eUk">
+            <objects>
+                <viewController id="dBl-4k-dKc" customClass="HistoryController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ltb-pA-5UD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gr3-aS-rxJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Au8-A8-0WP">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="历史记录" id="dnz-v9-B7w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BnS-2Z-g5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174" y="991"/>
+        </scene>
+        <!--下载-->
         <scene sceneID="KVI-h8-w8x">
             <objects>
                 <navigationController id="TOm-nM-Cb3" customClass="TSNavgationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="下载" image="ic_download_n" selectedImage="ic_download_p" id="eTd-b6-j4N"/>
+                    <tabBarItem key="tabBarItem" title="下载" image="ic_download_n" id="eTd-b6-j4N"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nAb-Ye-8Gx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="bk6-mF-hwV" kind="relationship" relationship="rootViewController" id="QBv-lc-YSG"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bd-vd-p0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,11 +117,14 @@
         <scene sceneID="fYi-Pa-Slx">
             <objects>
                 <navigationController id="9em-Tl-JpL" customClass="TSNavgationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="历史记录" image="ic_history_n" selectedImage="ic_history_p" id="dwN-MX-7Uw"/>
+                    <tabBarItem key="tabBarItem" title="历史记录" image="ic_history_n" id="dwN-MX-7Uw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YUY-e3-ixY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="dBl-4k-dKc" kind="relationship" relationship="rootViewController" id="udz-jZ-aYu"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdo-Va-VLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,18 +139,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="i1K-pH-pCX" kind="relationship" relationship="rootViewController" id="RtX-RM-sbz"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6k-Gd-E5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="457.5" y="264"/>
         </scene>
+        <!--设置-->
+        <scene sceneID="Vij-Hg-Eah">
+            <objects>
+                <viewController id="i1K-pH-pCX" customClass="SettingController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="seM-eu-lEy"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZsZ-UZ-FS7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lLP-Q4-RE8">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="设置" id="w7W-dJ-pMa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9r-bG-DKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457.5" y="991"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg_topbar" width="5" height="5"/>
         <image name="ic_download_n" width="22" height="22"/>
-        <image name="ic_download_p" width="22" height="22"/>
         <image name="ic_history_n" width="22" height="22"/>
-        <image name="ic_history_p" width="22" height="22"/>
         <image name="ic_home_n" width="22" height="22"/>
         <image name="ic_setup_n" width="22" height="22"/>
     </resources>

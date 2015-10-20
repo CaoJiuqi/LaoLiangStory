@@ -1,26 +1,23 @@
 //
-//  HomeController.m
+//  SettingController.m
 //  LaoliangStory
 //
-//  Created by tens on 15-10-19.
+//  Created by tens on 15-10-20.
 //  Copyright (c) 2015年 tens. All rights reserved.
 //
 
-#import "HomeController.h"
+#import "SettingController.h"
 
-@interface HomeController ()
+@interface SettingController ()
 
 @end
 
-@implementation HomeController
+@implementation SettingController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-
-    
+    // Do any additional setup after loading the view.
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

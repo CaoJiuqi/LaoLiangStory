@@ -1,26 +1,23 @@
 //
-//  HomeController.m
+//  HistoryController.m
 //  LaoliangStory
 //
-//  Created by tens on 15-10-19.
+//  Created by tens on 15-10-20.
 //  Copyright (c) 2015年 tens. All rights reserved.
 //
 
-#import "HomeController.h"
+#import "HistoryController.h"
 
-@interface HomeController ()
+@interface HistoryController ()
 
 @end
 
-@implementation HomeController
+@implementation HistoryController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-
-    
+    // Do any additional setup after loading the view.
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

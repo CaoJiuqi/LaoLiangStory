@@ -16,6 +16,9 @@
 		15829D341BD5EB210011EDA5 /* TSNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D331BD5EB210011EDA5 /* TSNavgationController.m */; };
 		15829D371BD5EB380011EDA5 /* TSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D361BD5EB380011EDA5 /* TSTabBarController.m */; };
 		15829D3A1BD5F1D10011EDA5 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D391BD5F1D10011EDA5 /* HomeController.m */; };
+		15829D3D1BD6A2920011EDA5 /* TSLoadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D3C1BD6A2920011EDA5 /* TSLoadController.m */; };
+		15829D401BD6A2C60011EDA5 /* HistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D3F1BD6A2C60011EDA5 /* HistoryController.m */; };
+		15829D431BD6A2DE0011EDA5 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D421BD6A2DE0011EDA5 /* SettingController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,12 @@
 		15829D361BD5EB380011EDA5 /* TSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabBarController.m; sourceTree = "<group>"; };
 		15829D381BD5F1D10011EDA5 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
 		15829D391BD5F1D10011EDA5 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		15829D3B1BD6A2920011EDA5 /* TSLoadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLoadController.h; sourceTree = "<group>"; };
+		15829D3C1BD6A2920011EDA5 /* TSLoadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLoadController.m; sourceTree = "<group>"; };
+		15829D3E1BD6A2C60011EDA5 /* HistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryController.h; path = ../../HistoryController.h; sourceTree = "<group>"; };
+		15829D3F1BD6A2C60011EDA5 /* HistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryController.m; path = ../../HistoryController.m; sourceTree = "<group>"; };
+		15829D411BD6A2DE0011EDA5 /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
+		15829D421BD6A2DE0011EDA5 /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +78,10 @@
 		15829CF01BD5E9FD0011EDA5 = {
 			isa = PBXGroup;
 			children = (
-				15829D221BD5EA740011EDA5 /* 历史记录 */,
-				15829D261BD5EA740011EDA5 /* 设置 */,
 				15829D2A1BD5EA740011EDA5 /* 首页 */,
 				15829D2E1BD5EA740011EDA5 /* 下载 */,
+				15829D221BD5EA740011EDA5 /* 历史记录 */,
+				15829D261BD5EA740011EDA5 /* 设置 */,
 				15829CFB1BD5E9FD0011EDA5 /* LaoliangStory */,
 				15829D151BD5E9FD0011EDA5 /* LaoliangStoryTests */,
 				15829CFA1BD5E9FD0011EDA5 /* Products */,
@@ -145,6 +154,8 @@
 		15829D231BD5EA740011EDA5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				15829D3E1BD6A2C60011EDA5 /* HistoryController.h */,
+				15829D3F1BD6A2C60011EDA5 /* HistoryController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,6 +188,8 @@
 		15829D271BD5EA740011EDA5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				15829D411BD6A2DE0011EDA5 /* SettingController.h */,
+				15829D421BD6A2DE0011EDA5 /* SettingController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +256,8 @@
 		15829D2F1BD5EA740011EDA5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				15829D3B1BD6A2920011EDA5 /* TSLoadController.h */,
+				15829D3C1BD6A2920011EDA5 /* TSLoadController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -361,7 +376,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15829D431BD6A2DE0011EDA5 /* SettingController.m in Sources */,
+				15829D3D1BD6A2920011EDA5 /* TSLoadController.m in Sources */,
 				15829D021BD5E9FD0011EDA5 /* AppDelegate.m in Sources */,
+				15829D401BD6A2C60011EDA5 /* HistoryController.m in Sources */,
 				15829CFF1BD5E9FD0011EDA5 /* main.m in Sources */,
 				15829D371BD5EB380011EDA5 /* TSTabBarController.m in Sources */,
 				15829D3A1BD5F1D10011EDA5 /* HomeController.m in Sources */,
