@@ -17,10 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [self setNavigationBar];
 
     
 
+}
+
+
+-(void)setNavigationBar
+{
+    self.navigationBar.tintColor = [UIColor redColor];
+    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg_topbar"] forBarMetrics:UIBarMetricsDefault];
+    // 设置字体的颜色和大小
+    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
 }
 
 - (void)didReceiveMemoryWarning {

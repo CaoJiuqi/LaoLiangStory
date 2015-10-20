@@ -7,35 +7,68 @@
 //
 
 #import "HomeController.h"
+#import "ItemView.h"
 
-@interface HomeController ()
+#define imageWedth  (TSWedth - 50)/2
+#define imageHeight imageWedth + 50
 
+@interface HomeController ()<UIScrollViewDelegate>
+
+{
+    ItemView *view;
+
+}
+
+
+@property (weak, nonatomic) IBOutlet UIView *backgroundView;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
+@property (strong,nonatomic)NSMutableArray  *bgviewArray;
 @end
 
 @implementation HomeController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setScrollView];
+    [self addItemViewToScrollView];
 
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg_topbar"] forBarMetrics:UIBarMetricsDefault];
-    // 设置字体的颜色和大小
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(void)setScrollView
+{
+    int height = self.view.bounds.size.height +imageHeight -20  ;
+    self.myScrollView.contentSize = CGSizeMake(TSWedth ,  height);
+    self.myScrollView.delegate = self;
 }
 
-/*
-#pragma mark - Navigation
+-(void)addItemViewToScrollView
+{
+    for (int i = 0; i < 7; i ++) {
+        
+        view = [[[NSBundle mainBundle]loadNibNamed:@"ItemView" owner:self options:nil]lastObject];
+        view.tag = i;
+        view.userInteractionEnabled = YES;
+        CGFloat viewX = 0;
+        CGFloat viewY = 10+ (i/2)* (imageHeight);
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+        if (i % 2 == 0) {
+            viewX = 0 ;
+        }else
+        {
+            viewX = imageWedth + 15 ;
+        }
+        view.frame = CGRectMake(15 + viewX,viewY , imageWedth, imageHeight);
+        [self.myScrollView addSubview:view];
+    }
 }
-*/
+
+
+
+
+
+
+
 
 @end

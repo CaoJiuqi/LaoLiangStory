@@ -1,25 +1,22 @@
 //
-//  TSTabBarController.m
+//  HistoryController.m
 //  LaoliangStory
 //
-//  Created by tens on 15-10-19.
+//  Created by tens on 15-10-20.
 //  Copyright (c) 2015年 tens. All rights reserved.
 //
 
-#import "TSTabBarController.h"
-#import "TSNavgationController.h"
+#import "HistoryController.h"
 
-@interface TSTabBarController ()
+@interface HistoryController ()
 
 @end
 
-@implementation TSTabBarController
+@implementation HistoryController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.tabBar.tintColor = [UIColor colorWithRed:47/255.0 green:173/255.0 blue:159/255.0 alpha:1];
-
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
