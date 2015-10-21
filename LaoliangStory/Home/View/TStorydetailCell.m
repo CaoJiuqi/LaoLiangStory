@@ -7,8 +7,17 @@
 //
 
 #import "TStorydetailCell.h"
+#import "UIImageView+WebCache.h"
+
 
 @interface TStorydetailCell ()
+
+@property (weak, nonatomic) IBOutlet UIView *headview;
+@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *anthorImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLable;
+@property (weak, nonatomic) IBOutlet UITextView *introduceLable;
+
 
 
 @property (weak, nonatomic) IBOutlet UILabel *storyname;
@@ -34,7 +43,19 @@
     self.downbutton.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.downbutton.layer.borderWidth = 0.8;
 
+    self.storyname.text = @"明天";
 }
+
+-(void)setMedol:(ItemMedol *)medol
+{
+    _medol = medol;
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:_medol.largerImageUrl]];
+    NSLog(@"--->%@",_medol.title);
+    
+    self.titleLable.text = _medol.title;
+}
+
+
 
 - (IBAction)playbutton:(UIButton *)sender {
 }

@@ -9,11 +9,12 @@
 #import "StorydetailViewController.h"
 #import "TStorydetailCell.h"
 
+
 @interface StorydetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *storydetailtableview;
 
-@property (weak, nonatomic) IBOutlet UIView *headview;
+
 
 @property(strong,nonatomic)NSMutableArray *storydetailArray;
 
@@ -38,12 +39,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-  self.title = @"老梁故事汇";
+    self.title = @"老梁故事汇";
 
 
 }
 
 
+
+#pragma mark-- <UITableViewDataSource,UITableViewDelegate>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     
@@ -57,7 +60,7 @@
         return 1;
     }
     
-    return 10;
+    return 3;
     
 }
 
@@ -65,12 +68,30 @@
 {
     static NSString *ptah = @"StorydetailCell";
     
-    TStorydetailCell *cell = [tableView dequeueReusableCellWithIdentifier:ptah forIndexPath:indexPath];
+    TStorydetailCell *cell = nil;
+    if(indexPath.row == 0 && indexPath.section == 0)
+    {
+        //  StorydetailHeaderCell
+       cell = [tableView dequeueReusableCellWithIdentifier:@"StorydetailHeaderCell" forIndexPath:indexPath];
+        cell.medol = _medol;
+        return cell;
+    }
     
     
-    
+    cell = [tableView dequeueReusableCellWithIdentifier:ptah forIndexPath:indexPath];
     return cell;
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section == 0 && indexPath.row == 0)
+    {
+        return 265;
+    
+    }
+    return 120;
+        
 }
 
 

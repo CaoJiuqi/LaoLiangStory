@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ItemMedol.h"
 
 @interface TStorydetailCell : UITableViewCell
+
+@property (nonatomic,strong)ItemMedol * medol;
+
+
 
 @end

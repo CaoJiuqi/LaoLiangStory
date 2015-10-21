@@ -16,7 +16,7 @@
 #define imageHeight (imageWidth + 30)
 
 
-@interface HomeViewController ()
+@interface HomeViewController () <OnclickItemViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
 
 
@@ -63,8 +63,10 @@
             itemViewX = 30 +imageWidth ;
         }
         itemView.frame = CGRectMake(itemViewX, itemViewY, imageWidth, imageHeight);
-        
+
         itemView.medol = self.infoArrays[i];
+        itemView.markTag = i;
+        itemView.delegate = self;
     }
 }
 
@@ -82,6 +84,14 @@
 }
 
 
+-(void)OnClickViewkwithItem:(int)markTag
+{
+    StorydetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StorydetailViewController"];
+
+    detail.medol = self.infoArrays[markTag];
+    [self.navigationController pushViewController:detail animated:YES];
+
+}
 
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 //{

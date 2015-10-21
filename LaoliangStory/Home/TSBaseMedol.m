@@ -20,6 +20,7 @@
             [self setValuesForKeysWithDictionary:dic];
         }
     }
+
     return self;
 }
 

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ItemMedol.h"
 
 @interface StorydetailViewController : UIViewController
+
+@property (nonatomic,strong)ItemMedol * medol;
 
 @end

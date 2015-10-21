@@ -10,6 +10,7 @@
 #import "ItemMedol.h"
 #import "UIImageView+WebCache.h"
 
+
 @interface ItemView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLable;
@@ -39,7 +40,18 @@
     
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
 
+
+    NSLog(@"点击了marktag :%d ",self.markTag);
+   
+    if ([self.delegate respondsToSelector:@selector(OnClickViewkwithItem:)]) {
+
+        [self.delegate OnClickViewkwithItem:self.markTag];
+    }
+    
+}
 
 
 @end
