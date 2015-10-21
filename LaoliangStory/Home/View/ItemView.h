@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class ItemMedol;
 
 @interface ItemView : UIView
+
+@property (nonatomic,strong)ItemMedol *medol;
 
 @end

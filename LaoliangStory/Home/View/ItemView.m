@@ -7,6 +7,8 @@
 //
 
 #import "ItemView.h"
+#import "ItemMedol.h"
+#import "UIImageView+WebCache.h"
 
 @interface ItemView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -25,6 +27,19 @@
 
 
 }
+
+-(void)setMedol:(ItemMedol *)medol
+{
+
+    _medol = medol;
+    
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:_medol.largerImageUrl]];
+    self.titleLable.text = _medol.title;
+    
+    
+}
+
+
 
 
 @end
