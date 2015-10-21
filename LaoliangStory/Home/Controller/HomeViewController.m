@@ -7,10 +7,14 @@
 //
 
 #import "HomeViewController.h"
-
 #import "StorydetailViewController.h"
 
+#define imageWidth [TSWedth - 50]/2
+#define imageHeight [imageWidth + 30]
+
+
 @interface HomeViewController ()
+@property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
 
 @end
 
@@ -24,30 +28,39 @@
     // 设置字体的颜色和大小
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
     
+   // [self setScrollView];
+   // [self addViewToScrollView];
+    
+    
+
 }
 
+#pragma mark-- 设置ScrollView
+-(void)setScrollView{
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+    self.myScrollView.contentSize = CGSizeMake(TSWedth, TSHeight * 2);
+}
+
+-(void)addViewToScrollView
 {
-    StorydetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StorydetailViewController"];
-    [self.navigationController pushViewController:detail animated:YES];
+
+    for (int i = 0; i < 7 ; i++) {
+        
+    }
     
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    StorydetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StorydetailViewController"];
+//    [self.navigationController pushViewController:detail animated:YES];
+//    
+//}
+
+
+
 
 @end

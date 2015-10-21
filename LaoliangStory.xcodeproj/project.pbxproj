@@ -15,11 +15,15 @@
 		15829D191BD5E9FD0011EDA5 /* LaoliangStoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D181BD5E9FD0011EDA5 /* LaoliangStoryTests.m */; };
 		15829D341BD5EB210011EDA5 /* TSNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D331BD5EB210011EDA5 /* TSNavgationController.m */; };
 		15829D371BD5EB380011EDA5 /* TSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D361BD5EB380011EDA5 /* TSTabBarController.m */; };
-		15829D3A1BD5F1D10011EDA5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D391BD5F1D10011EDA5 /* HomeViewController.m */; };
 		15DE33541BD7F4F40092A29C /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15DE33531BD7F4F40092A29C /* data.plist */; };
-		15EE94981BD5D2AE00FBE0FC /* StorydetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EE94971BD5D2AE00FBE0FC /* StorydetailViewController.m */; };
-		15EE949B1BD5D35700FBE0FC /* TStorydetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EE949A1BD5D35700FBE0FC /* TStorydetailCell.m */; };
-		15EE94A11BD6230000FBE0FC /* Storydetailmodel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EE94A01BD6230000FBE0FC /* Storydetailmodel.m */; };
+		15DE336F1BD7FE550092A29C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE335E1BD7FE540092A29C /* HomeViewController.m */; };
+		15DE33701BD7FE550092A29C /* StorydetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE33601BD7FE540092A29C /* StorydetailViewController.m */; };
+		15DE33801BD7FFCE0092A29C /* ItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE337C1BD7FFCE0092A29C /* ItemView.m */; };
+		15DE33811BD7FFCE0092A29C /* ItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DE337D1BD7FFCE0092A29C /* ItemView.xib */; };
+		15DE33821BD7FFCE0092A29C /* TStorydetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE337F1BD7FFCE0092A29C /* TStorydetailCell.m */; };
+		15DE33891BD800BD0092A29C /* HistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE33861BD800BD0092A29C /* HistoryController.m */; };
+		15DE33901BD800C70092A29C /* TSLoadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE338D1BD800C70092A29C /* TSLoadController.m */; };
+		15DE33971BD800D70092A29C /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE33941BD800D70092A29C /* SettingController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,16 +52,23 @@
 		15829D331BD5EB210011EDA5 /* TSNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavgationController.m; sourceTree = "<group>"; };
 		15829D351BD5EB380011EDA5 /* TSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabBarController.h; sourceTree = "<group>"; };
 		15829D361BD5EB380011EDA5 /* TSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabBarController.m; sourceTree = "<group>"; };
-		15829D381BD5F1D10011EDA5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		15829D391BD5F1D10011EDA5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		15DE33531BD7F4F40092A29C /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		15DE33551BD7F7D90092A29C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
-		15EE94961BD5D2AE00FBE0FC /* StorydetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorydetailViewController.h; sourceTree = "<group>"; };
-		15EE94971BD5D2AE00FBE0FC /* StorydetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorydetailViewController.m; sourceTree = "<group>"; };
-		15EE94991BD5D35700FBE0FC /* TStorydetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TStorydetailCell.h; sourceTree = SOURCE_ROOT; };
-		15EE949A1BD5D35700FBE0FC /* TStorydetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TStorydetailCell.m; sourceTree = SOURCE_ROOT; };
-		15EE949F1BD6230000FBE0FC /* Storydetailmodel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storydetailmodel.h; sourceTree = SOURCE_ROOT; };
-		15EE94A01BD6230000FBE0FC /* Storydetailmodel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Storydetailmodel.m; sourceTree = SOURCE_ROOT; };
+		15DE335D1BD7FE540092A29C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		15DE335E1BD7FE540092A29C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		15DE335F1BD7FE540092A29C /* StorydetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorydetailViewController.h; sourceTree = "<group>"; };
+		15DE33601BD7FE540092A29C /* StorydetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorydetailViewController.m; sourceTree = "<group>"; };
+		15DE337B1BD7FFCE0092A29C /* ItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemView.h; sourceTree = "<group>"; };
+		15DE337C1BD7FFCE0092A29C /* ItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemView.m; sourceTree = "<group>"; };
+		15DE337D1BD7FFCE0092A29C /* ItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemView.xib; sourceTree = "<group>"; };
+		15DE337E1BD7FFCE0092A29C /* TStorydetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TStorydetailCell.h; sourceTree = "<group>"; };
+		15DE337F1BD7FFCE0092A29C /* TStorydetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TStorydetailCell.m; sourceTree = "<group>"; };
+		15DE33851BD800BD0092A29C /* HistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryController.h; sourceTree = "<group>"; };
+		15DE33861BD800BD0092A29C /* HistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryController.m; sourceTree = "<group>"; };
+		15DE338C1BD800C70092A29C /* TSLoadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLoadController.h; sourceTree = "<group>"; };
+		15DE338D1BD800C70092A29C /* TSLoadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLoadController.m; sourceTree = "<group>"; };
+		15DE33931BD800D70092A29C /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
+		15DE33941BD800D70092A29C /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +92,10 @@
 		15829CF01BD5E9FD0011EDA5 = {
 			isa = PBXGroup;
 			children = (
-				15829D2A1BD5EA740011EDA5 /* Home */,
-				15829D221BD5EA740011EDA5 /* History */,
-				15829D261BD5EA740011EDA5 /* Setting */,
-				15829D2E1BD5EA740011EDA5 /* Download */,
+				15DE33911BD800D70092A29C /* Setting */,
+				15DE338A1BD800C70092A29C /* Download */,
+				15DE33831BD800BD0092A29C /* History */,
+				15DE335B1BD7FE540092A29C /* Home */,
 				15829CFB1BD5E9FD0011EDA5 /* LaoliangStory */,
 				15829D151BD5E9FD0011EDA5 /* LaoliangStoryTests */,
 				15829CFA1BD5E9FD0011EDA5 /* Products */,
@@ -145,136 +156,143 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		15829D221BD5EA740011EDA5 /* History */ = {
+		15DE335B1BD7FE540092A29C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				15829D231BD5EA740011EDA5 /* Controller */,
-				15829D241BD5EA740011EDA5 /* medol */,
-				15829D251BD5EA740011EDA5 /* View */,
-			);
-			name = History;
-			path = "LaoliangStory/历史记录";
-			sourceTree = "<group>";
-		};
-		15829D231BD5EA740011EDA5 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		15829D241BD5EA740011EDA5 /* medol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = medol;
-			sourceTree = "<group>";
-		};
-		15829D251BD5EA740011EDA5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		15829D261BD5EA740011EDA5 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-				15829D271BD5EA740011EDA5 /* Controller */,
-				15829D281BD5EA740011EDA5 /* medol */,
-				15829D291BD5EA740011EDA5 /* View */,
-			);
-			name = Setting;
-			path = "LaoliangStory/设置";
-			sourceTree = "<group>";
-		};
-		15829D271BD5EA740011EDA5 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		15829D281BD5EA740011EDA5 /* medol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = medol;
-			sourceTree = "<group>";
-		};
-		15829D291BD5EA740011EDA5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		15829D2A1BD5EA740011EDA5 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				15829D2B1BD5EA740011EDA5 /* Controller */,
-				15829D2C1BD5EA740011EDA5 /* medol */,
-				15829D2D1BD5EA740011EDA5 /* View */,
+				15DE335C1BD7FE540092A29C /* Controller */,
+				15DE33791BD7FF0B0092A29C /* medol */,
+				15DE337A1BD7FFCE0092A29C /* View */,
 			);
 			name = Home;
-			path = "LaoliangStory/首页";
+			path = LaoliangStory/Home;
 			sourceTree = "<group>";
 		};
-		15829D2B1BD5EA740011EDA5 /* Controller */ = {
+		15DE335C1BD7FE540092A29C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				15829D381BD5F1D10011EDA5 /* HomeViewController.h */,
-				15829D391BD5F1D10011EDA5 /* HomeViewController.m */,
-				15EE94961BD5D2AE00FBE0FC /* StorydetailViewController.h */,
-				15EE94971BD5D2AE00FBE0FC /* StorydetailViewController.m */,
+				15DE335D1BD7FE540092A29C /* HomeViewController.h */,
+				15DE335E1BD7FE540092A29C /* HomeViewController.m */,
+				15DE335F1BD7FE540092A29C /* StorydetailViewController.h */,
+				15DE33601BD7FE540092A29C /* StorydetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		15829D2C1BD5EA740011EDA5 /* medol */ = {
+		15DE33791BD7FF0B0092A29C /* medol */ = {
 			isa = PBXGroup;
 			children = (
-				15EE949F1BD6230000FBE0FC /* Storydetailmodel.h */,
-				15EE94A01BD6230000FBE0FC /* Storydetailmodel.m */,
 			);
 			path = medol;
 			sourceTree = "<group>";
 		};
-		15829D2D1BD5EA740011EDA5 /* View */ = {
+		15DE337A1BD7FFCE0092A29C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				15EE94991BD5D35700FBE0FC /* TStorydetailCell.h */,
-				15EE949A1BD5D35700FBE0FC /* TStorydetailCell.m */,
+				15DE337B1BD7FFCE0092A29C /* ItemView.h */,
+				15DE337C1BD7FFCE0092A29C /* ItemView.m */,
+				15DE337D1BD7FFCE0092A29C /* ItemView.xib */,
+				15DE337E1BD7FFCE0092A29C /* TStorydetailCell.h */,
+				15DE337F1BD7FFCE0092A29C /* TStorydetailCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		15829D2E1BD5EA740011EDA5 /* Download */ = {
+		15DE33831BD800BD0092A29C /* History */ = {
 			isa = PBXGroup;
 			children = (
-				15829D2F1BD5EA740011EDA5 /* Controller */,
-				15829D301BD5EA740011EDA5 /* medol */,
-				15829D311BD5EA740011EDA5 /* View */,
+				15DE33841BD800BD0092A29C /* Controller */,
+				15DE33871BD800BD0092A29C /* medol */,
+				15DE33881BD800BD0092A29C /* View */,
 			);
-			name = Download;
-			path = "LaoliangStory/下载";
+			name = History;
+			path = LaoliangStory/History;
 			sourceTree = "<group>";
 		};
-		15829D2F1BD5EA740011EDA5 /* Controller */ = {
+		15DE33841BD800BD0092A29C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				15DE33851BD800BD0092A29C /* HistoryController.h */,
+				15DE33861BD800BD0092A29C /* HistoryController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		15829D301BD5EA740011EDA5 /* medol */ = {
+		15DE33871BD800BD0092A29C /* medol */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = medol;
 			sourceTree = "<group>";
 		};
-		15829D311BD5EA740011EDA5 /* View */ = {
+		15DE33881BD800BD0092A29C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15DE338A1BD800C70092A29C /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				15DE338B1BD800C70092A29C /* Controller */,
+				15DE338E1BD800C70092A29C /* medol */,
+				15DE338F1BD800C70092A29C /* View */,
+			);
+			name = Download;
+			path = LaoliangStory/Download;
+			sourceTree = "<group>";
+		};
+		15DE338B1BD800C70092A29C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				15DE338C1BD800C70092A29C /* TSLoadController.h */,
+				15DE338D1BD800C70092A29C /* TSLoadController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15DE338E1BD800C70092A29C /* medol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = medol;
+			sourceTree = "<group>";
+		};
+		15DE338F1BD800C70092A29C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		15DE33911BD800D70092A29C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				15DE33921BD800D70092A29C /* Controller */,
+				15DE33951BD800D70092A29C /* medol */,
+				15DE33961BD800D70092A29C /* View */,
+			);
+			name = Setting;
+			path = LaoliangStory/Setting;
+			sourceTree = "<group>";
+		};
+		15DE33921BD800D70092A29C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				15DE33931BD800D70092A29C /* SettingController.h */,
+				15DE33941BD800D70092A29C /* SettingController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		15DE33951BD800D70092A29C /* medol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = medol;
+			sourceTree = "<group>";
+		};
+		15DE33961BD800D70092A29C /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -363,6 +381,7 @@
 			files = (
 				15829D081BD5E9FD0011EDA5 /* Main.storyboard in Resources */,
 				15829D0D1BD5E9FD0011EDA5 /* LaunchScreen.xib in Resources */,
+				15DE33811BD7FFCE0092A29C /* ItemView.xib in Resources */,
 				15DE33541BD7F4F40092A29C /* data.plist in Resources */,
 				15829D0A1BD5E9FD0011EDA5 /* Images.xcassets in Resources */,
 			);
@@ -383,12 +402,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				15829D021BD5E9FD0011EDA5 /* AppDelegate.m in Sources */,
-				15EE94981BD5D2AE00FBE0FC /* StorydetailViewController.m in Sources */,
-				15EE94A11BD6230000FBE0FC /* Storydetailmodel.m in Sources */,
+				15DE33801BD7FFCE0092A29C /* ItemView.m in Sources */,
+				15DE33971BD800D70092A29C /* SettingController.m in Sources */,
+				15DE33891BD800BD0092A29C /* HistoryController.m in Sources */,
+				15DE336F1BD7FE550092A29C /* HomeViewController.m in Sources */,
 				15829CFF1BD5E9FD0011EDA5 /* main.m in Sources */,
 				15829D371BD5EB380011EDA5 /* TSTabBarController.m in Sources */,
-				15829D3A1BD5F1D10011EDA5 /* HomeViewController.m in Sources */,
-				15EE949B1BD5D35700FBE0FC /* TStorydetailCell.m in Sources */,
+				15DE33901BD800C70092A29C /* TSLoadController.m in Sources */,
+				15DE33821BD7FFCE0092A29C /* TStorydetailCell.m in Sources */,
+				15DE33701BD7FE550092A29C /* StorydetailViewController.m in Sources */,
 				15829D341BD5EB210011EDA5 /* TSNavgationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
