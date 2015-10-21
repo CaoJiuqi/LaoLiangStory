@@ -19,6 +19,8 @@
 		15829D3D1BD6A2920011EDA5 /* TSLoadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D3C1BD6A2920011EDA5 /* TSLoadController.m */; };
 		15829D401BD6A2C60011EDA5 /* HistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D3F1BD6A2C60011EDA5 /* HistoryController.m */; };
 		15829D431BD6A2DE0011EDA5 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D421BD6A2DE0011EDA5 /* SettingController.m */; };
+		15829D571BD6F51B0011EDA5 /* ItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D561BD6F51B0011EDA5 /* ItemView.m */; };
+		15829D591BD6F5410011EDA5 /* ItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15829D581BD6F5410011EDA5 /* ItemView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		15829D3F1BD6A2C60011EDA5 /* HistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryController.m; path = ../../HistoryController.m; sourceTree = "<group>"; };
 		15829D411BD6A2DE0011EDA5 /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
 		15829D421BD6A2DE0011EDA5 /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingController.m; sourceTree = "<group>"; };
+		15829D511BD6B6100011EDA5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		15829D551BD6F51B0011EDA5 /* ItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemView.h; sourceTree = "<group>"; };
+		15829D561BD6F51B0011EDA5 /* ItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemView.m; sourceTree = "<group>"; };
+		15829D581BD6F5410011EDA5 /* ItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 				15829D331BD5EB210011EDA5 /* TSNavgationController.m */,
 				15829D061BD5E9FD0011EDA5 /* Main.storyboard */,
 				15829D091BD5E9FD0011EDA5 /* Images.xcassets */,
+				15829D511BD6B6100011EDA5 /* PrefixHeader.pch */,
 				15829D0B1BD5E9FD0011EDA5 /* LaunchScreen.xib */,
 				15829CFC1BD5E9FD0011EDA5 /* Supporting Files */,
 			);
@@ -238,6 +245,9 @@
 		15829D2D1BD5EA740011EDA5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				15829D551BD6F51B0011EDA5 /* ItemView.h */,
+				15829D561BD6F51B0011EDA5 /* ItemView.m */,
+				15829D581BD6F5410011EDA5 /* ItemView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +369,7 @@
 				15829D081BD5E9FD0011EDA5 /* Main.storyboard in Resources */,
 				15829D0D1BD5E9FD0011EDA5 /* LaunchScreen.xib in Resources */,
 				15829D0A1BD5E9FD0011EDA5 /* Images.xcassets in Resources */,
+				15829D591BD6F5410011EDA5 /* ItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +393,7 @@
 				15829D401BD6A2C60011EDA5 /* HistoryController.m in Sources */,
 				15829CFF1BD5E9FD0011EDA5 /* main.m in Sources */,
 				15829D371BD5EB380011EDA5 /* TSTabBarController.m in Sources */,
+				15829D571BD6F51B0011EDA5 /* ItemView.m in Sources */,
 				15829D3A1BD5F1D10011EDA5 /* HomeController.m in Sources */,
 				15829D341BD5EB210011EDA5 /* TSNavgationController.m in Sources */,
 			);
@@ -447,7 +459,10 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -488,6 +503,9 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -505,6 +523,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LaoliangStory/PrefixHeader.pch;
 				INFOPLIST_FILE = LaoliangStory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,6 +535,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = LaoliangStory/PrefixHeader.pch;
 				INFOPLIST_FILE = LaoliangStory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
