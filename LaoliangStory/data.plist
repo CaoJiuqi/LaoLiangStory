@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>largerImageUrl</key>
+		<string>http://183.136.166.248/cdn.lizhi.fm/radio_cover/2014/04/18/10964871124928898_640x640.jpg</string>
+		<key>title</key>
+		<string>老梁故事汇</string>
+	</dict>
+	<dict>
+		<key>largerImageUrl</key>
+		<string>http://118.123.99.42/cdn.lizhi.fm/radio_cover/2013/10/12/6596588463244164_640x640.jpg</string>
+		<key>title</key>
+		<string>哓哓故事汇</string>
+	</dict>
+	<dict>
+		<key>largerImageUrl</key>
+		<string>http://118.116.6.247/cdn.lizhi.fm/radio_cover/2014/03/20/10295631478098436_640x640.jpg</string>
+		<key>title</key>
+		<string>天天故事会</string>
+	</dict>
+	<dict>
+		<key>largerImageUrl</key>
+		<string>http://118.116.6.247/cdn.lizhi.fm/radio_cover/2013/12/20/8198423364801282_640x640.jpg</string>
+		<key>title</key>
+		<string>小葱故事会</string>
+	</dict>
+	<dict>
+		<key>largerImageUrl</key>
+		<string>http://183.136.166.248/cdn.lizhi.fm/radio_cover/2014/06/25/12530320127113476_640x640.jpg
+http://183.136.166.248/cdn.lizhi.fm/radio_cover/2014/06/25/12530320127113476_640x640.jpg
+http://183.136.166.248/cdn.lizhi.fm/radio_cover/2014/06/25/12530320127113476_640x640.jpg</string>
+		<key>title</key>
+		<string>楚楚故事会</string>
+	</dict>
+	<dict>
+		<key>largerImageUrl</key>
+		<string>http://183.136.166.248/cdn.lizhi.fm/radio_cover/2014/05/08/11432378041774084_640x640.jpg</string>
+		<key>title</key>
+		<string>夏日清晨故事会</string>
+	</dict>
+	<dict>
+		<key>largerImageUrl</key>
+		<string>http://118.116.6.247/cdn.lizhi.fm/radio_cover/2014/05/22/11744435930890628_640x640.jpg</string>
+		<key>title</key>
+		<string>空中古城故事会</string>
+	</dict>
+</array>
+</plist>
