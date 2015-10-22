@@ -14,9 +14,7 @@
 
 #define  TSHeight [UIScreen mainScreen].bounds.size.height;
 #define  TSWidth  [UIScreen mainScreen].bounds.size.width;
-#define  DefaultImageUrl  @"http://118.123.114.174/cdn.lizhi.fm/user/2014/05/08/11430195990757506_320x320.jpg";
+
 
 
 #endif
-
-

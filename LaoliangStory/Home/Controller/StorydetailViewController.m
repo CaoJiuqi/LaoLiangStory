@@ -87,9 +87,7 @@
         
         NSString *str = [[NSString alloc]initWithUTF8String:selectResult[1]];
         
-        NSLog(@"---->%@",str);
-        
-//        NSMutableDictionary *dictionary = [[NSMutableDictionary alloc]initWithContentsOfFile:str];
+
         
 //        for (int i=0; i<row; i++) {
 //            for (int j=0; j<column; j++) {
