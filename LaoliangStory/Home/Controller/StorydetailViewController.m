@@ -47,7 +47,7 @@
     [super viewDidLoad];
 
     self.title = @"老梁故事汇";
-    [self loadMP3Data];
+//    [self loadMP3Data];
 
 }
 
