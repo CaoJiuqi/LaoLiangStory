@@ -33,7 +33,6 @@
 {
 
     _medol = medol;
-    
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:_medol.largerImageUrl]];
     self.titleLable.text = _medol.title;
     
@@ -42,9 +41,6 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-
-
-    NSLog(@"点击了marktag :%d ",self.markTag);
    
     if ([self.delegate respondsToSelector:@selector(OnClickViewkwithItem:)]) {
 

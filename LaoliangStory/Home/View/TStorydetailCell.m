@@ -10,9 +10,9 @@
 #import "UIImageView+WebCache.h"
 
 
+
 @interface TStorydetailCell ()
 
-@property (weak, nonatomic) IBOutlet UIView *headview;
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *anthorImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLable;
@@ -43,14 +43,24 @@
     self.downbutton.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.downbutton.layer.borderWidth = 0.8;
 
-    self.storyname.text = @"明天";
 }
 
 -(void)setMedol:(ItemMedol *)medol
 {
     _medol = medol;
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:_medol.largerImageUrl]];
-    NSLog(@"--->%@",_medol.title);
+    
+
+    if(_medol.anuthorImageUrl == nil)
+    {
+     [self.anthorImageView sd_setImageWithURL:[NSURL URLWithString:@"http://183.136.166.248/cdn.lizhi.fm//user//avatar_132_640x640.jpg"]];
+        
+    }else
+    {
+        [self.anthorImageView sd_setImageWithURL:[NSURL URLWithString:_medol.anuthorImageUrl]];
+    }
+        
+   
     
     self.titleLable.text = _medol.title;
 }

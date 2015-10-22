@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1547C7841BD85B5400CB6A32 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1547C7831BD85B5400CB6A32 /* libsqlite3.dylib */; };
+		1547C78B1BD8866000CB6A32 /* ItemMedol .m in Sources */ = {isa = PBXBuildFile; fileRef = 1547C7891BD8866000CB6A32 /* ItemMedol .m */; };
 		15829CFF1BD5E9FD0011EDA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829CFE1BD5E9FD0011EDA5 /* main.m */; };
 		15829D021BD5E9FD0011EDA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D011BD5E9FD0011EDA5 /* AppDelegate.m */; };
 		15829D081BD5E9FD0011EDA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15829D061BD5E9FD0011EDA5 /* Main.storyboard */; };
@@ -25,7 +27,6 @@
 		15DE33901BD800C70092A29C /* TSLoadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE338D1BD800C70092A29C /* TSLoadController.m */; };
 		15DE33971BD800D70092A29C /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE33941BD800D70092A29C /* SettingController.m */; };
 		15DE339D1BD80E1F0092A29C /* TSBaseMedol.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE339C1BD80E1F0092A29C /* TSBaseMedol.m */; };
-		15DE33A01BD80E380092A29C /* ItemMedol.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE339F1BD80E380092A29C /* ItemMedol.m */; };
 		15DE33C31BD811700092A29C /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE33A31BD811700092A29C /* MKAnnotationView+WebCache.m */; };
 		15DE33C41BD811700092A29C /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE33A51BD811700092A29C /* NSData+ImageContentType.m */; };
 		15DE33C51BD811700092A29C /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE33A71BD811700092A29C /* SDImageCache.m */; };
@@ -55,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1547C7831BD85B5400CB6A32 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		1547C7891BD8866000CB6A32 /* ItemMedol .m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ItemMedol .m"; sourceTree = "<group>"; };
+		1547C78A1BD8866000CB6A32 /* ItemMedol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemMedol.h; sourceTree = "<group>"; };
 		15829CF91BD5E9FD0011EDA5 /* LaoliangStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaoliangStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15829CFD1BD5E9FD0011EDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15829CFE1BD5E9FD0011EDA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,8 +93,6 @@
 		15DE33941BD800D70092A29C /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingController.m; sourceTree = "<group>"; };
 		15DE339B1BD80E1F0092A29C /* TSBaseMedol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBaseMedol.h; sourceTree = "<group>"; };
 		15DE339C1BD80E1F0092A29C /* TSBaseMedol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBaseMedol.m; sourceTree = "<group>"; };
-		15DE339E1BD80E380092A29C /* ItemMedol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemMedol.h; path = ../../../../../Documents/ItemMedol.h; sourceTree = "<group>"; };
-		15DE339F1BD80E380092A29C /* ItemMedol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemMedol.m; path = ../../../../../Documents/ItemMedol.m; sourceTree = "<group>"; };
 		15DE33A21BD811700092A29C /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		15DE33A31BD811700092A29C /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		15DE33A41BD811700092A29C /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1547C7841BD85B5400CB6A32 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,11 +147,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1547C7821BD81C3B00CB6A32 /* medol */ = {
+		1547C7851BD8850100CB6A32 /* medol */ = {
 			isa = PBXGroup;
 			children = (
-				15DE339E1BD80E380092A29C /* ItemMedol.h */,
-				15DE339F1BD80E380092A29C /* ItemMedol.m */,
+				1547C78A1BD8866000CB6A32 /* ItemMedol.h */,
+				1547C7891BD8866000CB6A32 /* ItemMedol .m */,
 			);
 			path = medol;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 		15829CF01BD5E9FD0011EDA5 = {
 			isa = PBXGroup;
 			children = (
+				1547C7831BD85B5400CB6A32 /* libsqlite3.dylib */,
 				15DE33A11BD811700092A29C /* SDWebImage */,
 				15DE33911BD800D70092A29C /* Setting */,
 				15DE338A1BD800C70092A29C /* Download */,
@@ -224,7 +228,7 @@
 		15DE335B1BD7FE540092A29C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1547C7821BD81C3B00CB6A32 /* medol */,
+				1547C7851BD8850100CB6A32 /* medol */,
 				15DE339B1BD80E1F0092A29C /* TSBaseMedol.h */,
 				15DE339C1BD80E1F0092A29C /* TSBaseMedol.m */,
 				15DE335C1BD7FE540092A29C /* Controller */,
@@ -522,8 +526,8 @@
 				15DE33D11BD811700092A29C /* UIImageView+WebCache.m in Sources */,
 				15DE33D01BD811700092A29C /* UIImageView+HighlightedWebCache.m in Sources */,
 				15DE33C31BD811700092A29C /* MKAnnotationView+WebCache.m in Sources */,
+				1547C78B1BD8866000CB6A32 /* ItemMedol .m in Sources */,
 				15DE33CD1BD811700092A29C /* UIImage+GIF.m in Sources */,
-				15DE33A01BD80E380092A29C /* ItemMedol.m in Sources */,
 				15DE33CB1BD811700092A29C /* SDWebImagePrefetcher.m in Sources */,
 				15DE33CC1BD811700092A29C /* UIButton+WebCache.m in Sources */,
 				15DE33CE1BD811700092A29C /* UIImage+MultiFormat.m in Sources */,
