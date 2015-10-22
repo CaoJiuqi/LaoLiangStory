@@ -85,7 +85,7 @@
         NSLog(@"查找成功");
 //        int index = column;
         
-        NSString *str = [[NSString alloc]initWithUTF8String:selectResult[1]];
+//        NSString *str = [[NSString alloc]initWithUTF8String:selectResult[1]];
         
 
         
