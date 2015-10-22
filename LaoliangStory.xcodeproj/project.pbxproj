@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152EF09D1BD953CA009AADC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 152EF09B1BD953CA009AADC7 /* Main.storyboard */; };
+		152EF0A61BD97CF7009AADC7 /* GroupMedol.m in Sources */ = {isa = PBXBuildFile; fileRef = 152EF0A51BD97CF7009AADC7 /* GroupMedol.m */; };
+		152EF0A91BD99D1A009AADC7 /* LoadSqlistData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152EF0A81BD99D1A009AADC7 /* LoadSqlistData.m */; };
 		154556131BD877D200144AC9 /* TSplayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 154556111BD877D200144AC9 /* TSplayerView.m */; };
 		154556141BD877D200144AC9 /* TSplayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154556121BD877D200144AC9 /* TSplayerView.xib */; };
 		154556171BD877FE00144AC9 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 154556161BD877FE00144AC9 /* PlayerViewController.m */; };
@@ -14,7 +17,6 @@
 		1547C78B1BD8866000CB6A32 /* ItemMedol .m in Sources */ = {isa = PBXBuildFile; fileRef = 1547C7891BD8866000CB6A32 /* ItemMedol .m */; };
 		15829CFF1BD5E9FD0011EDA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829CFE1BD5E9FD0011EDA5 /* main.m */; };
 		15829D021BD5E9FD0011EDA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D011BD5E9FD0011EDA5 /* AppDelegate.m */; };
-		15829D081BD5E9FD0011EDA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15829D061BD5E9FD0011EDA5 /* Main.storyboard */; };
 		15829D0A1BD5E9FD0011EDA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15829D091BD5E9FD0011EDA5 /* Images.xcassets */; };
 		15829D0D1BD5E9FD0011EDA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15829D0B1BD5E9FD0011EDA5 /* LaunchScreen.xib */; };
 		15829D191BD5E9FD0011EDA5 /* LaoliangStoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D181BD5E9FD0011EDA5 /* LaoliangStoryTests.m */; };
@@ -59,6 +61,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		152EF09C1BD953CA009AADC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		152EF0A41BD97CF7009AADC7 /* GroupMedol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupMedol.h; sourceTree = "<group>"; };
+		152EF0A51BD97CF7009AADC7 /* GroupMedol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupMedol.m; sourceTree = "<group>"; };
+		152EF0A71BD99D1A009AADC7 /* LoadSqlistData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadSqlistData.h; sourceTree = "<group>"; };
+		152EF0A81BD99D1A009AADC7 /* LoadSqlistData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadSqlistData.m; sourceTree = "<group>"; };
 		154556101BD877D200144AC9 /* TSplayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSplayerView.h; sourceTree = "<group>"; };
 		154556111BD877D200144AC9 /* TSplayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSplayerView.m; sourceTree = "<group>"; };
 		154556121BD877D200144AC9 /* TSplayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSplayerView.xib; sourceTree = "<group>"; };
@@ -72,7 +79,6 @@
 		15829CFE1BD5E9FD0011EDA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		15829D001BD5E9FD0011EDA5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15829D011BD5E9FD0011EDA5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		15829D071BD5E9FD0011EDA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15829D091BD5E9FD0011EDA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		15829D0C1BD5E9FD0011EDA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		15829D121BD5E9FD0011EDA5 /* LaoliangStoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaoliangStoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +166,10 @@
 			children = (
 				1547C78A1BD8866000CB6A32 /* ItemMedol.h */,
 				1547C7891BD8866000CB6A32 /* ItemMedol .m */,
+				152EF0A41BD97CF7009AADC7 /* GroupMedol.h */,
+				152EF0A51BD97CF7009AADC7 /* GroupMedol.m */,
+				152EF0A71BD99D1A009AADC7 /* LoadSqlistData.h */,
+				152EF0A81BD99D1A009AADC7 /* LoadSqlistData.m */,
 			);
 			path = medol;
 			sourceTree = "<group>";
@@ -198,8 +208,8 @@
 				15829D321BD5EB210011EDA5 /* TSNavgationController.h */,
 				15829D331BD5EB210011EDA5 /* TSNavgationController.m */,
 				15DE33551BD7F7D90092A29C /* PrefixHeader.pch */,
-				15829D061BD5E9FD0011EDA5 /* Main.storyboard */,
 				15829D091BD5E9FD0011EDA5 /* Images.xcassets */,
+				152EF09B1BD953CA009AADC7 /* Main.storyboard */,
 				15829D0B1BD5E9FD0011EDA5 /* LaunchScreen.xib */,
 				15829CFC1BD5E9FD0011EDA5 /* Supporting Files */,
 			);
@@ -236,10 +246,10 @@
 		15DE335B1BD7FE540092A29C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				15DE335C1BD7FE540092A29C /* Controller */,
 				1547C7851BD8850100CB6A32 /* medol */,
 				15DE339B1BD80E1F0092A29C /* TSBaseMedol.h */,
 				15DE339C1BD80E1F0092A29C /* TSBaseMedol.m */,
-				15DE335C1BD7FE540092A29C /* Controller */,
 				15DE337A1BD7FFCE0092A29C /* View */,
 			);
 			name = Home;
@@ -496,10 +506,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15829D081BD5E9FD0011EDA5 /* Main.storyboard in Resources */,
 				15829D0D1BD5E9FD0011EDA5 /* LaunchScreen.xib in Resources */,
 				154556141BD877D200144AC9 /* TSplayerView.xib in Resources */,
 				15DE33811BD7FFCE0092A29C /* ItemView.xib in Resources */,
+				152EF09D1BD953CA009AADC7 /* Main.storyboard in Resources */,
 				15DE33541BD7F4F40092A29C /* data.plist in Resources */,
 				15829D0A1BD5E9FD0011EDA5 /* Images.xcassets in Resources */,
 			);
@@ -524,6 +534,7 @@
 				15DE33801BD7FFCE0092A29C /* ItemView.m in Sources */,
 				15DE33971BD800D70092A29C /* SettingController.m in Sources */,
 				15DE339D1BD80E1F0092A29C /* TSBaseMedol.m in Sources */,
+				152EF0A61BD97CF7009AADC7 /* GroupMedol.m in Sources */,
 				15DE33891BD800BD0092A29C /* HistoryController.m in Sources */,
 				15DE336F1BD7FE550092A29C /* HomeViewController.m in Sources */,
 				15DE33C91BD811700092A29C /* SDWebImageDownloaderOperation.m in Sources */,
@@ -548,6 +559,7 @@
 				15DE33CC1BD811700092A29C /* UIButton+WebCache.m in Sources */,
 				15DE33CE1BD811700092A29C /* UIImage+MultiFormat.m in Sources */,
 				15DE33C71BD811700092A29C /* SDWebImageDecoder.m in Sources */,
+				152EF0A91BD99D1A009AADC7 /* LoadSqlistData.m in Sources */,
 				15DE33D21BD811700092A29C /* UIView+WebCacheOperation.m in Sources */,
 				15829D341BD5EB210011EDA5 /* TSNavgationController.m in Sources */,
 			);
@@ -572,10 +584,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		15829D061BD5E9FD0011EDA5 /* Main.storyboard */ = {
+		152EF09B1BD953CA009AADC7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				15829D071BD5E9FD0011EDA5 /* Base */,
+				152EF09C1BD953CA009AADC7 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

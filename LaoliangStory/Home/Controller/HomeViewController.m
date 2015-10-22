@@ -12,6 +12,7 @@
 #import "ItemMedol.h"
 
 
+
 #define imageWidth  (TSWedth - 50)/2
 #define imageHeight (imageWidth + 30)
 
@@ -28,11 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg_topbar"] forBarMetrics:UIBarMetricsDefault];
-    // 设置字体的颜色和大小
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
     
     [self loadData];
     

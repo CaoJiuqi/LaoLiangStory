@@ -8,22 +8,19 @@
 
 #import "StorydetailViewController.h"
 #import "TStorydetailCell.h"
+#import "GroupMedol.h"
+#import "LoadSqlistData.h"
 #import <sqlite3.h>
 
 #define kDataBaseName @"LizhiFM.sqlite"
 
 @interface StorydetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-{
-    sqlite3 *_dataBase;
-
-}
-
 @property (weak, nonatomic) IBOutlet UITableView *storydetailtableview;
 
-
-
 @property(strong,nonatomic)NSMutableArray *storydetailArray;
+
+@property (strong,nonatomic)NSMutableArray *groupMedols;
 
 
 @end
@@ -40,6 +37,13 @@
     return _storydetailArray;
 }
 
+-(NSMutableArray *)groupMedols
+{
+    if (_groupMedols == nil) {
+        _groupMedols = [[NSMutableArray alloc]init];
+    }
+    return _groupMedols;
+}
 
 
 
@@ -47,59 +51,15 @@
     [super viewDidLoad];
 
     self.title = @"老梁故事汇";
-    [self loadMP3Data];
+    [self loadData];
 
 }
-
-
--(void)loadMP3Data
+-(void)loadData
 {
-    // 数据库路径
-    NSArray *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    
-    NSString *dataBasePath = [[documentsDirectory firstObject] stringByAppendingPathComponent:kDataBaseName];
-    
-    NSLog(@"path == %@", dataBasePath);
-    
-    // 1、打开数据库
-    int createResout = sqlite3_open([dataBasePath UTF8String], &_dataBase);
-    if (createResout != SQLITE_OK) {
-        NSLog(@"创建数据库失败");
-        return;
-    }
-    else {
-        NSLog(@"创建数据库成功");
-    }
-    
-    NSString *selectSQL = @"SELECT track FROM programs";
-    char **selectResult = nil;
-    int row,column;
-    char *error = nil;
-    int selectState = sqlite3_get_table(_dataBase, [selectSQL UTF8String],&selectResult, &row, &column, &error);
-    
-    if (selectState != SQLITE_OK) {
-        NSLog(@"查找失败");
-        return;
-    }
-    else {
-        NSLog(@"查找成功");
-//        int index = column;
-        
-        NSString *str = [[NSString alloc]initWithUTF8String:selectResult[1]];
-        
-
-        
-//        for (int i=0; i<row; i++) {
-//            for (int j=0; j<column; j++) {
-//                
-//                NSLog(@"--->%s  ======>%s", selectResult[j], selectResult[index++]);
-//
-//            }
-//        }
-    }
-
-    
-    
+    sqlite3 *mysqlite = [LoadSqlistData openSqlite3dataBase:kDataBaseName];
+ 
+     NSString *selectSQL = @"SELECT * FROM groups";
+    self.groupMedols = [LoadSqlistData loadMP3GroupData:selectSQL withDataBase:mysqlite];
 }
 
 
@@ -146,6 +106,8 @@
     return 120;
         
 }
+
+
 
 
 
