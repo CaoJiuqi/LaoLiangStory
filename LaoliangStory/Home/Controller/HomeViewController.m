@@ -10,6 +10,7 @@
 #import "StorydetailViewController.h"
 #import "ItemView.h"
 #import "ItemMedol.h"
+#import "PlayerViewController.h"
 
 
 
@@ -91,9 +92,13 @@
 
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 //{
-//    StorydetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StorydetailViewController"];
-//    [self.navigationController pushViewController:detail animated:YES];
+////    StorydetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StorydetailViewController"];
+////    [self.navigationController pushViewController:detail animated:YES];
 //    
+//    PlayerViewController *playerVC = [[PlayerViewController alloc]init];
+//    playerVC.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+//    [self presentViewController:playerVC animated:YES completion:nil];
+//
 //}
 
 -(NSMutableArray *)infoArrays

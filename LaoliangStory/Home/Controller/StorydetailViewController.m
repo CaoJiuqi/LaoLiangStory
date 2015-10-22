@@ -60,6 +60,9 @@
  
      NSString *selectSQL = @"SELECT * FROM groups";
     self.groupMedols = [LoadSqlistData loadMP3GroupData:selectSQL withDataBase:mysqlite];
+    
+    
+    
 }
 
 
