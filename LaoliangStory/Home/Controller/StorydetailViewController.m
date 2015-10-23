@@ -39,7 +39,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"老梁故事汇";
+    self.title = _medol.title;
 
 }
 
@@ -56,7 +56,8 @@
     if (section == 0) {
         return 1;
     }
-    return 3;
+    
+    return [self.programsMedolArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -74,6 +75,8 @@
     
     
     cell = [tableView dequeueReusableCellWithIdentifier:ptah forIndexPath:indexPath];
+    cell.programsMedol = self.programsMedolArray[indexPath.row];
+    
     return cell;
     
 }
@@ -99,15 +102,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

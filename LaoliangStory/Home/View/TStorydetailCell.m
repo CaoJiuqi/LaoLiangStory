@@ -65,6 +65,16 @@
     self.titleLable.text = _medol.title;
 }
 
+-(void)setProgramsMedol:(ProgramsMedol *)programsMedol
+{
+    _programsMedol = programsMedol;
+    self.storyname.text = _programsMedol.name;
+    self.hitslabel.text = [NSString stringWithFormat:@"下载量%@",_programsMedol.downloadCount];
+    self.timelabel.text = [NSString stringWithFormat:@"创建时间%@",_programsMedol.createTime];
+    self.timelengthlabel.text = [NSString stringWithFormat:@"播放时长%@",_programsMedol.duration];
+
+}
+
 
 
 - (IBAction)playbutton:(UIButton *)sender {

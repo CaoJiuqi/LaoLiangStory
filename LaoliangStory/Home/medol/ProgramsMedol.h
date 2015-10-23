@@ -12,6 +12,8 @@
 
 /*0、节目的ID*/
 @property (nonatomic,copy)NSString *programId;
+/*1、节目的ID*/
+@property (nonatomic,copy)NSString *radioId;
 /*2、节目名称*/
 @property (nonatomic,copy)NSString *name;
 /*3、节目的时间*/

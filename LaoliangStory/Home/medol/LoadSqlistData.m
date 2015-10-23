@@ -62,18 +62,18 @@
                 NSString *str = [[NSString alloc]initWithUTF8String:selectResult[index ++]];
                 int temp = index;
                 switch (temp % column) {
-                    case 0:{
+                    case 1:{
                         groupMedol = [[GroupMedol alloc]init];
                         groupMedol.groupId = str;
                     }
                         break;
-                    case 1:
+                    case 2:
                         groupMedol.title = str;
                         break;
-                    case 2:
+                    case 3:
                         groupMedol.timestamp = [NSNumber numberWithInteger:[str integerValue]];
                         break;
-                    case 3:
+                    case 0:
                         groupMedol.type =  [NSNumber numberWithInteger:[str integerValue]];
                         break;
                 }
@@ -119,6 +119,9 @@
                         programMedol = [[ProgramsMedol alloc]init];
                         programMedol.programId = str;
                     }
+                        break;
+                    case 2:
+                        programMedol.radioId = str;
                         break;
                     case 3:
                         programMedol.name = str;

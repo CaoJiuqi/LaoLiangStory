@@ -14,6 +14,7 @@
 #import "LoadSqlistData.h"
 #import <sqlite3.h>
 #import "GroupMedol.h"
+#import "ProgramsMedol.h"
 
 
 
@@ -98,11 +99,6 @@
     self.groupMedols = [LoadSqlistData loadMP3GroupData:selectSQL1 withDataBase:mysqlite];
     NSString *selectSQL2 = @"SELECT * FROM programs";
     self.programsMedols = [LoadSqlistData loadMP3ProgramsData:selectSQL2 withDataBase:mysqlite];
-    
-//    NSLog(@"groupMedols-->%@",self.groupMedols);
-//    NSLog(@"programsMedols-->%@",self.programsMedols);
-
-    
 }
 
 
@@ -111,20 +107,41 @@
     StorydetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StorydetailViewController"];
 
     detail.medol = self.infoArrays[markTag];
+    NSLog(@"-->%@",detail.medol.title);
+    
+    NSMutableArray *programsItemArray = [[NSMutableArray alloc]init];
+    
+    for (GroupMedol *groupMedol in self.groupMedols) {
+    
+        if ( ![groupMedol.title isEqualToString:detail.medol.title] ) {
+            NSLog(@"title 不相同");
+        }else
+        {
+            NSLog(@"title 相同");
+            
+            detail.groupId = groupMedol.groupId;
+            
+            for ( ProgramsMedol *programMedol in self.programsMedols) {
+                if ([programMedol.radioId isEqualToString:groupMedol.groupId]) {
+                    [programsItemArray addObject:programMedol];
+                }
+            }
+
+            detail.programsMedolArray = programsItemArray;
+
+            break ;
+
+        }
+        
+        
+    }
+    
+    
     [self.navigationController pushViewController:detail animated:YES];
 
 }
 
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-////    StorydetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StorydetailViewController"];
-////    [self.navigationController pushViewController:detail animated:YES];
-//    
-//    PlayerViewController *playerVC = [[PlayerViewController alloc]init];
-//    playerVC.modalTransitionStyle = UIModalTransitionStylePartialCurl;
-//    [self presentViewController:playerVC animated:YES completion:nil];
-//
-//}
+
 
 -(NSMutableArray *)infoArrays
 {

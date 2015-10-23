@@ -12,5 +12,8 @@
 @interface StorydetailViewController : UIViewController
 
 @property (nonatomic,strong)ItemMedol * medol;
+@property (nonatomic,strong)NSString * groupId;
+@property (nonatomic,strong)NSArray *programsMedolArray;
+
 
 @end
