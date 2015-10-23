@@ -10,11 +10,17 @@
 #import "ItemMedol.h"
 #import "ProgramsMedol.h"
 
+@protocol PlayerAudioDelgate <NSObject>
+
+-(void)onClickToPlayer:(NSString *)audioUrl;
+
+@end
 
 @interface TStorydetailCell : UITableViewCell
 
 @property (nonatomic,strong)ItemMedol * medol;
 @property (nonatomic,strong)ProgramsMedol *programsMedol;
+@property (nonatomic,strong)id <PlayerAudioDelgate> delgate;
 
 
 @end
