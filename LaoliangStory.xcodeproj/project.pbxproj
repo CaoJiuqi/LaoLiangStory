@@ -666,7 +666,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				155C948E1BD9CC890067B0F5 /* 浮夸.mp3 in Resources */,
 				155C948B1BD9CC890067B0F5 /* Shake It Off.mp3 in Resources */,
 				155C948A1BD9CC890067B0F5 /* Property List.plist in Resources */,
@@ -674,8 +673,6 @@
 				155C94CA1BD9CCCD0067B0F5 /* volleft@2x.png in Resources */,
 				155C948C1BD9CC890067B0F5 /* Skipalong.mp3 in Resources */,
 				155C94BE1BD9CCCD0067B0F5 /* play1@2x.png in Resources */,
-=======
->>>>>>> ac1e03c131456b7ea698a29e28a1aba96019c1de
 				15829D0D1BD5E9FD0011EDA5 /* LaunchScreen.xib in Resources */,
 				155C94BC1BD9CCCD0067B0F5 /* mo.png in Resources */,
 				155C94BD1BD9CCCD0067B0F5 /* pause@2x.png in Resources */,
@@ -687,12 +684,9 @@
 				155C94BB1BD9CCCD0067B0F5 /* liked@2x.png in Resources */,
 				154556141BD877D200144AC9 /* TSplayerView.xib in Resources */,
 				15DE33811BD7FFCE0092A29C /* ItemView.xib in Resources */,
-<<<<<<< HEAD
 				155C94C71BD9CCCD0067B0F5 /* shunxv1@2x.png in Resources */,
 				155C94C31BD9CCCD0067B0F5 /* rightslider@2x.png in Resources */,
-=======
 				152EF09D1BD953CA009AADC7 /* Main.storyboard in Resources */,
->>>>>>> ac1e03c131456b7ea698a29e28a1aba96019c1de
 				15DE33541BD7F4F40092A29C /* data.plist in Resources */,
 				155C94BF1BD9CCCD0067B0F5 /* play2@2x.png in Resources */,
 				155C94B51BD9CCCD0067B0F5 /* Default@3x.png in Resources */,
