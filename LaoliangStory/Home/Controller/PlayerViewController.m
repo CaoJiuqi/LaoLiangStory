@@ -8,28 +8,50 @@
 
 #import "PlayerViewController.h"
 #import "TSplayerView.h"
-
 @interface PlayerViewController ()
-{
-    TSplayerView *playerview ;
-}
 
 @end
 
-@implementation PlayerViewController
+
+@implementation PlayerViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
+}
 
-}
-- (void)awakeFromNib
+- (instancetype)init
 {
-    playerview = [[[NSBundle mainBundle]loadNibNamed:@"TSPlayerView" owner:self options:nil]lastObject];
-    [self.view addSubview:playerview];
-    
-    
+    self = [super init];
+    if (self) {
+ 
+        
+        TSplayerView *playerview= [[[NSBundle mainBundle] loadNibNamed:@"TSplayerView" owner:self options:nil]lastObject];
+            playerview.frame = CGRectMake(0, 0, TSWedth, TSHeight);
+
+      [self.view addSubview:playerview];
+        
+    }
+    return self;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
