@@ -107,7 +107,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Iqf-Fp-RbO">
-                                <rect key="frame" x="10" y="10" width="300" height="558"/>
+                                <rect key="frame" x="10" y="10" width="300" height="607"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StorydetailHeaderCell" rowHeight="276" id="gl0-Tw-Pmd" customClass="TStorydetailCell">
@@ -329,7 +329,7 @@
                             <constraint firstItem="Iqf-Fp-RbO" firstAttribute="leading" secondItem="UIx-2Y-Ucv" secondAttribute="leading" constant="10" id="VKQ-Nc-ila"/>
                             <constraint firstItem="Iqf-Fp-RbO" firstAttribute="top" secondItem="UIx-2Y-Ucv" secondAttribute="top" constant="10" id="YRN-en-J73"/>
                             <constraint firstAttribute="trailing" secondItem="Iqf-Fp-RbO" secondAttribute="trailing" constant="10" id="bcd-Gg-raT"/>
-                            <constraint firstItem="mVo-bQ-sD6" firstAttribute="top" secondItem="Iqf-Fp-RbO" secondAttribute="bottom" id="yMC-sM-oc1"/>
+                            <constraint firstItem="mVo-bQ-sD6" firstAttribute="top" secondItem="Iqf-Fp-RbO" secondAttribute="bottom" constant="-49" id="yMC-sM-oc1"/>
                         </constraints>
                     </view>
                     <connections>

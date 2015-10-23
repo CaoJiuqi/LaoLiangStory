@@ -11,10 +11,16 @@
 #import "ItemView.h"
 #import "ItemMedol.h"
 #import "PlayerViewController.h"
+#import "LoadSqlistData.h"
+#import <sqlite3.h>
+#import "GroupMedol.h"
+#import "ProgramsMedol.h"
+
 
 
 #define imageWidth  (TSWedth - 50)/2
 #define imageHeight (imageWidth + 30)
+#define kDataBaseName @"LizhiFM.sqlite"
 
 
 @interface HomeViewController () <OnclickItemViewDelegate>
@@ -24,17 +30,19 @@
 
 @property (nonatomic,strong)NSMutableArray *infoArrays;
 
+@property (strong,nonatomic)NSMutableArray *groupMedols;
+
+@property (strong,nonatomic)NSMutableArray *programsMedols;
+
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg_topbar"] forBarMetrics:UIBarMetricsDefault];
-    // 设置字体的颜色和大小
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
+    
+    [self loadMP3SqliteData];
+    
     
     [self loadData];
     
@@ -47,7 +55,6 @@
 
 #pragma mark-- 设置ScrollView
 -(void)setScrollView{
-
     self.myScrollView.contentSize = CGSizeMake(TSWedth, (imageHeight + 10) * 4);
 }
 
@@ -85,26 +92,57 @@
 
 }
 
+-(void)loadMP3SqliteData
+{
+    sqlite3 *mysqlite = [LoadSqlistData openSqlite3dataBase:kDataBaseName];
+    
+    NSString *selectSQL1 = @"SELECT * FROM groups";
+    self.groupMedols = [LoadSqlistData loadMP3GroupData:selectSQL1 withDataBase:mysqlite];
+    NSString *selectSQL2 = @"SELECT * FROM programs";
+    self.programsMedols = [LoadSqlistData loadMP3ProgramsData:selectSQL2 withDataBase:mysqlite];
+}
+
 
 -(void)OnClickViewkwithItem:(int)markTag
 {
     StorydetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StorydetailViewController"];
 
     detail.medol = self.infoArrays[markTag];
+    NSLog(@"-->%@",detail.medol.title);
+    
+    NSMutableArray *programsItemArray = [[NSMutableArray alloc]init];
+    
+    for (GroupMedol *groupMedol in self.groupMedols) {
+    
+        if ( ![groupMedol.title isEqualToString:detail.medol.title] ) {
+            NSLog(@"title 不相同");
+        }else
+        {
+            NSLog(@"title 相同");
+            
+            detail.groupId = groupMedol.groupId;
+            
+            for ( ProgramsMedol *programMedol in self.programsMedols) {
+                if ([programMedol.radioId isEqualToString:groupMedol.groupId]) {
+                    [programsItemArray addObject:programMedol];
+                }
+            }
+
+            detail.programsMedolArray = programsItemArray;
+
+            break ;
+
+        }
+        
+        
+    }
+    
+    
     [self.navigationController pushViewController:detail animated:YES];
 
 }
 
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-////    StorydetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StorydetailViewController"];
-////    [self.navigationController pushViewController:detail animated:YES];
-//    
-//    PlayerViewController *playerVC = [[PlayerViewController alloc]init];
-//    playerVC.modalTransitionStyle = UIModalTransitionStylePartialCurl;
-//    [self presentViewController:playerVC animated:YES completion:nil];
-//
-//}
+
 
 
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
@@ -129,5 +167,19 @@
     return _infoArrays;
 }
 
+-(NSMutableArray *)groupMedols
+{
+    if (_groupMedols == nil) {
+        _groupMedols = [[NSMutableArray alloc]init];
+    }
+    return _groupMedols;
+}
 
+-(NSMutableArray *)programsMedols
+{
+    if (_programsMedols == nil) {
+        _programsMedols = [[NSMutableArray alloc]init];
+    }
+    return _programsMedols;
+}
 @end

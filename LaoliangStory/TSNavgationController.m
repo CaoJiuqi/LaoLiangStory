@@ -19,14 +19,12 @@
     
     [self setNavigationBar];
 
-    
-
 }
 
 
 -(void)setNavigationBar
 {
-    self.navigationBar.tintColor = [UIColor redColor];
+    self.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"bg_topbar"] forBarMetrics:UIBarMetricsDefault];
     // 设置字体的颜色和大小
     [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
@@ -36,6 +34,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation
