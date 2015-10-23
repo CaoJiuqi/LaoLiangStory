@@ -11,11 +11,15 @@
 #import "ItemView.h"
 #import "ItemMedol.h"
 #import "PlayerViewController.h"
+#import "LoadSqlistData.h"
+#import <sqlite3.h>
+#import "GroupMedol.h"
 
 
 
 #define imageWidth  (TSWedth - 50)/2
 #define imageHeight (imageWidth + 30)
+#define kDataBaseName @"LizhiFM.sqlite"
 
 
 @interface HomeViewController () <OnclickItemViewDelegate>
@@ -24,12 +28,19 @@
 
 @property (nonatomic,strong)NSMutableArray *infoArrays;
 
+@property (strong,nonatomic)NSMutableArray *groupMedols;
+
+@property (strong,nonatomic)NSMutableArray *programsMedols;
+
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self loadMP3SqliteData];
+    
     
     [self loadData];
     
@@ -42,7 +53,6 @@
 
 #pragma mark-- 设置ScrollView
 -(void)setScrollView{
-
     self.myScrollView.contentSize = CGSizeMake(TSWedth, (imageHeight + 10) * 4);
 }
 
@@ -80,6 +90,21 @@
 
 }
 
+-(void)loadMP3SqliteData
+{
+    sqlite3 *mysqlite = [LoadSqlistData openSqlite3dataBase:kDataBaseName];
+    
+    NSString *selectSQL1 = @"SELECT * FROM groups";
+    self.groupMedols = [LoadSqlistData loadMP3GroupData:selectSQL1 withDataBase:mysqlite];
+    NSString *selectSQL2 = @"SELECT * FROM programs";
+    self.programsMedols = [LoadSqlistData loadMP3ProgramsData:selectSQL2 withDataBase:mysqlite];
+    
+//    NSLog(@"groupMedols-->%@",self.groupMedols);
+//    NSLog(@"programsMedols-->%@",self.programsMedols);
+
+    
+}
+
 
 -(void)OnClickViewkwithItem:(int)markTag
 {
@@ -109,5 +134,19 @@
     return _infoArrays;
 }
 
+-(NSMutableArray *)groupMedols
+{
+    if (_groupMedols == nil) {
+        _groupMedols = [[NSMutableArray alloc]init];
+    }
+    return _groupMedols;
+}
 
+-(NSMutableArray *)programsMedols
+{
+    if (_programsMedols == nil) {
+        _programsMedols = [[NSMutableArray alloc]init];
+    }
+    return _programsMedols;
+}
 @end

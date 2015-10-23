@@ -8,11 +8,8 @@
 
 #import "StorydetailViewController.h"
 #import "TStorydetailCell.h"
-#import "GroupMedol.h"
-#import "LoadSqlistData.h"
-#import <sqlite3.h>
 
-#define kDataBaseName @"LizhiFM.sqlite"
+
 
 @interface StorydetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -20,7 +17,7 @@
 
 @property(strong,nonatomic)NSMutableArray *storydetailArray;
 
-@property (strong,nonatomic)NSMutableArray *groupMedols;
+
 
 
 @end
@@ -37,33 +34,15 @@
     return _storydetailArray;
 }
 
--(NSMutableArray *)groupMedols
-{
-    if (_groupMedols == nil) {
-        _groupMedols = [[NSMutableArray alloc]init];
-    }
-    return _groupMedols;
-}
-
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     self.title = @"老梁故事汇";
-    [self loadData];
 
 }
--(void)loadData
-{
-    sqlite3 *mysqlite = [LoadSqlistData openSqlite3dataBase:kDataBaseName];
- 
-     NSString *selectSQL = @"SELECT * FROM groups";
-    self.groupMedols = [LoadSqlistData loadMP3GroupData:selectSQL withDataBase:mysqlite];
-    
-    
-    
-}
+
 
 
 #pragma mark-- <UITableViewDataSource,UITableViewDelegate>

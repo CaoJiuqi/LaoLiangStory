@@ -10,10 +10,11 @@
 		152EF09D1BD953CA009AADC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 152EF09B1BD953CA009AADC7 /* Main.storyboard */; };
 		152EF0A61BD97CF7009AADC7 /* GroupMedol.m in Sources */ = {isa = PBXBuildFile; fileRef = 152EF0A51BD97CF7009AADC7 /* GroupMedol.m */; };
 		152EF0A91BD99D1A009AADC7 /* LoadSqlistData.m in Sources */ = {isa = PBXBuildFile; fileRef = 152EF0A81BD99D1A009AADC7 /* LoadSqlistData.m */; };
+		152EF0AC1BD9AAE5009AADC7 /* ProgramsMedol.m in Sources */ = {isa = PBXBuildFile; fileRef = 152EF0AB1BD9AAE5009AADC7 /* ProgramsMedol.m */; };
+		152EF0AD1BD9B4C2009AADC7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1547C7831BD85B5400CB6A32 /* libsqlite3.dylib */; };
 		154556131BD877D200144AC9 /* TSplayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 154556111BD877D200144AC9 /* TSplayerView.m */; };
 		154556141BD877D200144AC9 /* TSplayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154556121BD877D200144AC9 /* TSplayerView.xib */; };
 		154556171BD877FE00144AC9 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 154556161BD877FE00144AC9 /* PlayerViewController.m */; };
-		1547C7841BD85B5400CB6A32 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1547C7831BD85B5400CB6A32 /* libsqlite3.dylib */; };
 		1547C78B1BD8866000CB6A32 /* ItemMedol .m in Sources */ = {isa = PBXBuildFile; fileRef = 1547C7891BD8866000CB6A32 /* ItemMedol .m */; };
 		155C94441BD8AAB20067B0F5 /* SettingTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155C94431BD8AAB20067B0F5 /* SettingTableController.m */; };
 		155C94691BD8C41C0067B0F5 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 155C94491BD8C41C0067B0F5 /* MKAnnotationView+WebCache.m */; };
@@ -67,6 +68,8 @@
 		152EF0A51BD97CF7009AADC7 /* GroupMedol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupMedol.m; sourceTree = "<group>"; };
 		152EF0A71BD99D1A009AADC7 /* LoadSqlistData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadSqlistData.h; sourceTree = "<group>"; };
 		152EF0A81BD99D1A009AADC7 /* LoadSqlistData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadSqlistData.m; sourceTree = "<group>"; };
+		152EF0AA1BD9AAE5009AADC7 /* ProgramsMedol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramsMedol.h; sourceTree = "<group>"; };
+		152EF0AB1BD9AAE5009AADC7 /* ProgramsMedol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramsMedol.m; sourceTree = "<group>"; };
 		154556101BD877D200144AC9 /* TSplayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSplayerView.h; sourceTree = "<group>"; };
 		154556111BD877D200144AC9 /* TSplayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSplayerView.m; sourceTree = "<group>"; };
 		154556121BD877D200144AC9 /* TSplayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSplayerView.xib; sourceTree = "<group>"; };
@@ -150,7 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1547C7841BD85B5400CB6A32 /* libsqlite3.dylib in Frameworks */,
+				152EF0AD1BD9B4C2009AADC7 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +174,8 @@
 				1547C7891BD8866000CB6A32 /* ItemMedol .m */,
 				152EF0A41BD97CF7009AADC7 /* GroupMedol.h */,
 				152EF0A51BD97CF7009AADC7 /* GroupMedol.m */,
+				152EF0AA1BD9AAE5009AADC7 /* ProgramsMedol.h */,
+				152EF0AB1BD9AAE5009AADC7 /* ProgramsMedol.m */,
 				152EF0A71BD99D1A009AADC7 /* LoadSqlistData.h */,
 				152EF0A81BD99D1A009AADC7 /* LoadSqlistData.m */,
 			);
@@ -578,16 +583,11 @@
 				155C94761BD8C41C0067B0F5 /* UIImageView+HighlightedWebCache.m in Sources */,
 				155C94721BD8C41C0067B0F5 /* UIButton+WebCache.m in Sources */,
 				15DE33821BD7FFCE0092A29C /* TStorydetailCell.m in Sources */,
+				152EF0AC1BD9AAE5009AADC7 /* ProgramsMedol.m in Sources */,
 				15DE33701BD7FE550092A29C /* StorydetailViewController.m in Sources */,
 				154556171BD877FE00144AC9 /* PlayerViewController.m in Sources */,
 				1547C78B1BD8866000CB6A32 /* ItemMedol .m in Sources */,
-				15DE33CD1BD811700092A29C /* UIImage+GIF.m in Sources */,
-				15DE33CB1BD811700092A29C /* SDWebImagePrefetcher.m in Sources */,
-				15DE33CC1BD811700092A29C /* UIButton+WebCache.m in Sources */,
-				15DE33CE1BD811700092A29C /* UIImage+MultiFormat.m in Sources */,
-				15DE33C71BD811700092A29C /* SDWebImageDecoder.m in Sources */,
 				152EF0A91BD99D1A009AADC7 /* LoadSqlistData.m in Sources */,
-				15DE33D21BD811700092A29C /* UIView+WebCacheOperation.m in Sources */,
 				15829D341BD5EB210011EDA5 /* TSNavgationController.m in Sources */,
 				155C946E1BD8C41C0067B0F5 /* SDWebImageDownloader.m in Sources */,
 				155C94441BD8AAB20067B0F5 /* SettingTableController.m in Sources */,
