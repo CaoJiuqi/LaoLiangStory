@@ -24,6 +24,7 @@
 
 
 @interface HomeViewController () <OnclickItemViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
 
 
@@ -140,6 +141,21 @@
     [self.navigationController pushViewController:detail animated:YES];
 
 }
+
+
+
+
+- (IBAction)pushplayerbuttonaction:(UIButton *)sender {
+    
+    
+         PlayerViewController *playerVC = [[PlayerViewController alloc]init];
+        playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:playerVC animated:YES completion:nil];
+    
+    
+    
+}
+
 
 
 

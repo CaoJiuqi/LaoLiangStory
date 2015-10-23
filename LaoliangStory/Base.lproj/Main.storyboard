@@ -71,7 +71,20 @@
                             <constraint firstItem="2aN-UV-qwc" firstAttribute="leading" secondItem="kjD-qY-wiO" secondAttribute="leading" id="Wiy-pX-MQk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="首页" id="PH9-jr-cIf"/>
+                    <navigationItem key="navigationItem" title="首页" id="PH9-jr-cIf">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Reh-nL-7DR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Iv0-kf-jMJ">
+                                <rect key="frame" x="264" y="2" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="topbar_musicplayer_4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushplayerbuttonaction:" destination="Y7Q-jw-Qe7" eventType="touchUpInside" id="Nz8-wO-mHo"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="myScrollView" destination="2aN-UV-qwc" id="9fg-Op-gpU"/>
@@ -506,6 +519,7 @@
         <image name="ic_home_n" width="22" height="22"/>
         <image name="ic_lizhifm_p" width="32" height="32"/>
         <image name="ic_setup_n" width="22" height="22"/>
+        <image name="topbar_musicplayer_4" width="27" height="27"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
