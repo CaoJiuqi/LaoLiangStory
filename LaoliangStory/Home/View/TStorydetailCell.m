@@ -78,6 +78,29 @@
 
 
 - (IBAction)playbutton:(UIButton *)sender {
+    
+    switch (sender.tag) {
+        case 0:
+        {
+            if ([self.delgate respondsToSelector:@selector(onClickToPlayer:)]) {
+                [self.delgate onClickToPlayer:self.programsMedol.mp3Url];
+            }
+        }
+            break;
+        case 1:
+        {
+            
+            
+        }   break;
+        case 2:
+        {
+        }
+            break;
+        
+    }
+
+    
+    
 }
 
 
