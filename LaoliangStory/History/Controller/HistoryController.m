@@ -9,7 +9,7 @@
 #import "HistoryController.h"
 #import "PlayerViewController.h"
 
-@interface HistoryController ()
+@interface HistoryController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -20,12 +20,13 @@
     // Do any additional setup after loading the view.
 }
 
-
+//编辑按钮
 - (IBAction)editbuttonaction:(UIButton *)sender {
+    
 }
 
 
-
+//跳转播放页面按钮
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
     
     
@@ -33,6 +34,25 @@
     playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:playerVC animated:YES completion:nil];
 }
+
+
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"historycell" forIndexPath:indexPath];
+    [tableView setTableFooterView:[[UIView alloc]initWithFrame:CGRectZero ]];
+
+    return cell;
+}
+
+
+
 
 
 

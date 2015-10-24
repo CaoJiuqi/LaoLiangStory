@@ -9,7 +9,7 @@
 #import "TSLoadController.h"
 #import "PlayerViewController.h"
 
-@interface TSLoadController ()
+@interface TSLoadController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -30,6 +30,24 @@
 }
 
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"downloadcell" forIndexPath:indexPath];
+    [tableView setTableFooterView:[[UIView alloc]initWithFrame:CGRectZero ]];
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return 90;
+}
 
 
 

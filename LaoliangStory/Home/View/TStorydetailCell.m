@@ -135,13 +135,17 @@
             break;
         
     }
-
-    
     
 }
 
+- (IBAction)forwardbuttonaction:(UIButton *)sender {
+}
 
 
+- (IBAction)downloadbuttonaction:(UIButton *)sender {
+    
+    
+}
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
