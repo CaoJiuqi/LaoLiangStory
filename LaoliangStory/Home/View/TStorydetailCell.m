@@ -82,8 +82,8 @@
     switch (sender.tag) {
         case 0:
         {
-            if ([self.delgate respondsToSelector:@selector(onClickToPlayer:)]) {
-                [self.delgate onClickToPlayer:self.programsMedol.mp3Url];
+            if ([self.delgate respondsToSelector:@selector(onClickToPlayer:withTag:withButton:)]) {
+                [self.delgate onClickToPlayer:self.programsMedol.mp3Url withTag:self.tag withButton:sender];
             }
         }
             break;

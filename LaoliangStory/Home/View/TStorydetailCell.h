@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "ItemMedol.h"
 #import "ProgramsMedol.h"
+#import "TSplayerView.h"
 
 @protocol PlayerAudioDelgate <NSObject>
 
--(void)onClickToPlayer:(NSString *)audioUrl;
+-(void)onClickToPlayer:(NSString *)audioUrl withTag:(long)tag withButton:(UIButton *)button;
 
 @end
 
@@ -20,7 +21,9 @@
 
 @property (nonatomic,strong)ItemMedol * medol;
 @property (nonatomic,strong)ProgramsMedol *programsMedol;
+@property (nonatomic,strong)TSplayerView *player;
 @property (nonatomic,strong)id <PlayerAudioDelgate> delgate;
+@property (nonatomic,assign)long celltag;
 
 
 @end
