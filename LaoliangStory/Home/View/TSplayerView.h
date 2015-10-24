@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PlayerDelagte <NSObject>
+
+-(void)onClickToReturn;
+
+
+@end
+
+
 @interface TSplayerView : UIView
+
+@property (nonatomic,strong) id <PlayerDelagte> delagte;
 
 @end

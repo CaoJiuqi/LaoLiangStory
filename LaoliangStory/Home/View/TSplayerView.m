@@ -22,7 +22,7 @@
 
 }
 
-@property (weak, nonatomic) IBOutlet UIButton *returnbutton;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *sortnamelabel;
 
@@ -36,14 +36,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *endtimelabel;
 
-@property (weak, nonatomic) IBOutlet UIButton *playbutton;
-
-@property (weak, nonatomic) IBOutlet UIButton *lastbutton;
-
-@property (weak, nonatomic) IBOutlet UIButton *nextbutton;
-
-@property (weak, nonatomic) IBOutlet UIButton *retreatbutton;
-@property (weak, nonatomic) IBOutlet UIButton *speedbutton;
 
 @property (weak, nonatomic) IBOutlet UIView *bottomview;
 
@@ -64,11 +56,6 @@
     [_slider addTarget:self action:@selector(sliderAction) forControlEvents:UIControlEventValueChanged];
     
     
-    [_playbutton addTarget:self action:@selector(playaudioaction) forControlEvents:UIControlEventTouchUpInside];
-    
-    [_lastbutton addTarget:self action:@selector(lastaudioplayaction) forControlEvents:UIControlEventTouchUpInside];
-    
-    [_nextbutton addTarget:self action:@selector(nextaudioplayaction) forControlEvents:UIControlEventTouchUpInside];
 }
 
 
@@ -117,6 +104,8 @@
 
 
 
+
+
 #pragma mark -播放前设置
 - (void)prepareToPlayMusic
 {
@@ -158,10 +147,11 @@
 #pragma mark - <AVAudioPlayerDelegate> 音乐播放完后调用的协议方法
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
-    [self.nextbutton sendActionsForControlEvents:UIControlEventTouchUpInside];
+//    [self.nextbutton sendActionsForControlEvents:UIControlEventTouchUpInside];
 }
 
 
+/*
 - (void)playaudioaction
 {
     self.playbutton.selected =!self.playbutton.selected;
@@ -209,7 +199,7 @@
     self.playbutton.selected = NO;
     [self.playbutton sendActionsForControlEvents:UIControlEventTouchUpInside];
 }
-
+*/
 
 
 
@@ -220,9 +210,22 @@
     
 }
 
+#pragma mark--Action
 
-- (IBAction)returnbuttonaction:(UIButton *)sender {
-    
+- (IBAction)ButtonActopn:(UIButton *)sender
+{
+    switch (sender.tag) {
+        case 0 :
+        {
+            if ([self.delagte respondsToSelector:@selector(onClickToReturn)]) {
+                [self.delagte onClickToReturn];
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
     
     
     
