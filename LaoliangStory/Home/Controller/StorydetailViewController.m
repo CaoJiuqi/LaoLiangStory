@@ -20,7 +20,6 @@
 
 @property(strong,nonatomic)NSMutableArray *storydetailArray;
 
-@property (nonatomic,copy)NSString *playerUrl;
 
 
 
@@ -47,18 +46,7 @@
 
 }
 
--(void)createMPMoviePlayerCol:(NSString *)url
-{
-    self.streamplayer = nil;
-    if( self.streamplayer == nil)
-    {
-        self.streamplayer = [[MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:url]];
-        [self.streamplayer.view setFrame: self.view.bounds];
-        self.streamplayer.controlStyle = MPMovieControlStyleFullscreen;
-    
-    }
-  
-}
+
 
 
 
@@ -67,25 +55,10 @@
 {
     button.selected = !button.selected;
     
-    if (![self.playerUrl isEqualToString:audioUrl]) {
-        [self createMPMoviePlayerCol:audioUrl];
-    }
-    if (button.selected) {
-        [self.streamplayer play];
-    }else
-    {
-        [self.streamplayer pause];
-    }
-    
-    self.playerUrl = audioUrl;
-
     PlayerViewController *playerVC = [[PlayerViewController alloc]init];
-    playerVC.block = ^(MPMoviePlayerController *player){
-        self.streamplayer = player;
-        
-    };
+//    playerVC.isPlaying = button.selected;
+    playerVC.mp3Url = audioUrl;
     playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-//    [self presentViewController:playerVC animated:YES completion:nil];
     
 
 
