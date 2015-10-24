@@ -54,6 +54,38 @@
 
 
 
+
+
+//
+//- (AVAudioPlayer *)audioPlayer
+//{
+//    if (_audioPlayer == nil) {
+//        
+//        NSString *musicPath = [[NSBundle mainBundle] pathForResource:_audioInfo[@"name"] ofType:@"mp3"];
+//        
+//        NSURL *musicURL = [NSURL fileURLWithPath:musicPath];
+//        
+//        NSError *error;
+//        
+//        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicURL error:&error];
+//        
+//        _audioPlayer.delegate = self;
+//        
+//        // 准备播放
+//        [_audioPlayer prepareToPlay];
+//    }
+//    
+//    return _audioPlayer;
+//    
+//}
+
+
+
+
+
+
+
+
 #pragma mark -播放前设置
 - (void)prepareToPlayMusic
 {

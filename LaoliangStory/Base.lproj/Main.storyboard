@@ -73,10 +73,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="PH9-jr-cIf">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Reh-nL-7DR">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Iv0-kf-jMJ">
-                                <rect key="frame" x="264" y="2" width="40" height="40"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Iv0-kf-jMJ" userLabel="player">
+                                <rect key="frame" x="274" y="6" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="topbar_musicplayer_1">
+                                <state key="normal" image="topbar_musicplayer_1" backgroundImage="btn_playing_n">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -107,9 +107,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Nbl-4P-A22">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.87322624360000001" green="0.87322624360000001" blue="0.87322624360000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="9qg-4Z-QLY">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="downloadcell" rowHeight="80" id="9qg-4Z-QLY">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9qg-4Z-QLY" id="Wi7-9Y-d29">
@@ -140,7 +140,7 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI2-nJ-ZBz">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XI2-nJ-ZBz">
                                                             <rect key="frame" x="169" y="36" width="35" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="73w-bX-mdK"/>
@@ -151,7 +151,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.96434550382653061" green="0.96434550382653061" blue="0.96434550382653061" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="9de-Oq-bdJ" firstAttribute="top" secondItem="dIP-Jo-ud7" secondAttribute="bottom" id="8f8-Ez-vcZ"/>
                                                         <constraint firstItem="dIP-Jo-ud7" firstAttribute="leading" secondItem="CCD-aD-iME" secondAttribute="trailing" constant="10" id="A7l-Hr-JQO"/>
@@ -175,6 +175,10 @@
                                         <color key="backgroundColor" red="0.87322624362244894" green="0.87322624362244894" blue="0.87322624362244894" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rhv-TO-ktY" id="5Lr-7c-X8C"/>
+                                    <outlet property="delegate" destination="rhv-TO-ktY" id="UFV-kG-dTV"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -188,9 +192,9 @@
                     <navigationItem key="navigationItem" title="下载记录" id="WEp-UZ-EyF">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="hmF-rI-D4K">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FHC-JC-bV3" userLabel="player">
-                                <rect key="frame" x="264" y="7" width="40" height="30"/>
+                                <rect key="frame" x="273" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="topbar_musicplayer_4">
+                                <state key="normal" image="topbar_musicplayer_4" backgroundImage="btn_playing_n">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -370,6 +374,7 @@
                                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
                                                             <connections>
+                                                                <action selector="forwardbuttonaction:" destination="mk9-Ex-8El" eventType="touchUpInside" id="JKd-P7-7jE"/>
                                                                 <action selector="playbutton:" destination="mk9-Ex-8El" eventType="touchUpInside" id="WKQ-Iw-PXL"/>
                                                             </connections>
                                                         </button>
@@ -382,6 +387,7 @@
                                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
                                                             <connections>
+                                                                <action selector="downloadbuttonaction:" destination="mk9-Ex-8El" eventType="touchUpInside" id="ia2-Qd-w6G"/>
                                                                 <action selector="playbutton:" destination="mk9-Ex-8El" eventType="touchUpInside" id="IjC-bj-Eiv"/>
                                                             </connections>
                                                         </button>
@@ -446,9 +452,9 @@
                     <navigationItem key="navigationItem" id="Ufq-dr-hnO">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="FHH-V9-DSJ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="j1c-ea-oVp" userLabel="player">
-                                <rect key="frame" x="264" y="7" width="40" height="30"/>
+                                <rect key="frame" x="273" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="topbar_musicplayer_1">
+                                <state key="normal" image="topbar_musicplayer_1" backgroundImage="btn_playing_n">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -528,7 +534,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="VHi-Nb-UoV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.87322624360000001" green="0.87322624360000001" blue="0.87322624360000001" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="功能" id="2wc-BA-1tL" userLabel="功能" colorLabel="IBBuiltInLabel-Gray">
                                 <cells>
@@ -567,7 +573,7 @@
                                                 <constraint firstItem="j0d-mE-J7w" firstAttribute="top" secondItem="87H-w4-vjE" secondAttribute="top" constant="10" id="xyu-7j-cRj"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.97146045918367352" green="0.97146045918367352" blue="0.97146045918367352" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="xAo-0w-dLo">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -599,7 +605,7 @@
                                                 <constraint firstItem="M0k-uA-eQ4" firstAttribute="leading" secondItem="3da-37-bMd" secondAttribute="leading" constant="20" id="hav-Uq-hhu"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.96482382015306123" green="0.96482382015306123" blue="0.96482382015306123" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -626,7 +632,7 @@
                                                 <constraint firstItem="eQ6-r0-hJC" firstAttribute="leading" secondItem="48h-IE-hVD" secondAttribute="leading" constant="20" id="YEb-wS-yyu"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.97397161989795922" green="0.97397161989795922" blue="0.97397161989795922" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -639,9 +645,9 @@
                     <navigationItem key="navigationItem" title="设置" id="dr8-oD-1Or">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="YGN-mu-f0m">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="W41-KB-fBm" userLabel="player">
-                                <rect key="frame" x="264" y="7" width="40" height="30"/>
+                                <rect key="frame" x="273" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="topbar_musicplayer_4">
+                                <state key="normal" image="topbar_musicplayer_4" backgroundImage="btn_playing_n">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -669,9 +675,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tgp-Is-j5J">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.87322624360000001" green="0.87322624360000001" blue="0.87322624360000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="klb-z9-j8C">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historycell" rowHeight="80" id="klb-z9-j8C">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="klb-z9-j8C" id="5dE-Bh-hml">
@@ -702,7 +708,7 @@
                                                             <color key="textColor" red="0.77413504464285721" green="0.77413504464285721" blue="0.77413504464285721" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leT-CG-zp1">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leT-CG-zp1">
                                                             <rect key="frame" x="164" y="38" width="45" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="C8e-V3-0zg"/>
@@ -713,7 +719,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.96101721938775508" green="0.96101721938775508" blue="0.96101721938775508" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="leT-CG-zp1" firstAttribute="centerY" secondItem="Y42-Vz-bej" secondAttribute="centerY" id="5sU-It-oHL"/>
                                                         <constraint firstItem="leT-CG-zp1" firstAttribute="leading" secondItem="Y42-Vz-bej" secondAttribute="trailing" constant="10" id="Cfg-hB-0iL"/>
@@ -737,6 +743,9 @@
                                         <color key="backgroundColor" red="0.87322624360000001" green="0.87322624360000001" blue="0.87322624360000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wCG-uG-Ydw" id="T2h-9J-JIx"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -764,9 +773,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="ShE-7y-zjo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="whb-hn-wR7" userLabel="player">
-                                <rect key="frame" x="264" y="7" width="40" height="30"/>
+                                <rect key="frame" x="273" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="topbar_musicplayer_4">
+                                <state key="normal" image="topbar_musicplayer_4" backgroundImage="btn_playing_n">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -786,6 +795,7 @@
         <image name="btn_pause_n" width="22" height="22"/>
         <image name="btn_pause_p" width="22" height="22"/>
         <image name="btn_play_p" width="22" height="22"/>
+        <image name="btn_playing_n" width="27" height="27"/>
         <image name="btn_share_n" width="16" height="16"/>
         <image name="ic_download_n" width="22" height="22"/>
         <image name="ic_history_n" width="22" height="22"/>
