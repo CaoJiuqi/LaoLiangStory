@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import "ProgramsMedol.h"
 
-@interface PlayerViewController : UIViewController
+
+@interface PlayerViewController : UIViewController 
+
+@property (nonatomic,strong)AVAudioPlayer *audioPlayer;
+@property (nonatomic,copy)NSString *mp3Url;
+@property (nonatomic,strong)ProgramsMedol *medol;
+
 
 @end

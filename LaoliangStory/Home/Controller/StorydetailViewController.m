@@ -8,15 +8,20 @@
 
 #import "StorydetailViewController.h"
 #import "TStorydetailCell.h"
+#import <AVFoundation/AVFoundation.h>
+#import "PlayerViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 
 
-@interface StorydetailViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface StorydetailViewController ()<UITableViewDataSource,UITableViewDelegate,PlayerAudioDelgate>
 
 @property (weak, nonatomic) IBOutlet UITableView *storydetailtableview;
 
 @property(strong,nonatomic)NSMutableArray *storydetailArray;
 
+@property (nonatomic,strong)MPMoviePlayerController *streamplayer;
+@property (nonatomic,copy)NSString *playerUrl;
 
 
 
@@ -41,7 +46,50 @@
 
     self.title = _medol.title;
 
+        
+
+
 }
+
+-(void)createMPMoviePlayerCol:(NSString *)url
+{
+    self.streamplayer = nil;
+    if( self.streamplayer == nil)
+    {
+        self.streamplayer = [[MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:url]];
+        [self.streamplayer.view setFrame: self.view.bounds];
+        self.streamplayer.controlStyle = MPMovieControlStyleFullscreen;
+    
+    }
+
+}
+
+
+
+#pragma mark--<PlayerAudioDelgate>
+-(void)onClickToPlayer:(NSString *)audioUrl withTag:(long)tag withButton:(UIButton *)button
+{
+    button.selected = !button.selected;
+    
+    if (![self.playerUrl isEqualToString:audioUrl]) {
+        [self createMPMoviePlayerCol:audioUrl];
+    }
+    if (button.selected) {
+        [self.streamplayer play];
+    }else
+    {
+        [self.streamplayer pause];
+    }
+    
+    self.playerUrl = audioUrl;
+    
+    
+
+    
+
+}
+
+
 
 
 
@@ -76,7 +124,8 @@
     
     cell = [tableView dequeueReusableCellWithIdentifier:ptah forIndexPath:indexPath];
     cell.programsMedol = self.programsMedolArray[indexPath.row];
-    
+    cell.celltag = indexPath.row;
+    cell.delgate = self;
     return cell;
     
 }

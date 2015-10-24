@@ -54,6 +54,7 @@
 
 @implementation TSplayerView
 
+
 - (void)drawRect:(CGRect)rect {
     
 //    [_slider setMinimumTrackImage:[UIImage imageNamed:@"volleft"] forState:UIControlStateNormal];
