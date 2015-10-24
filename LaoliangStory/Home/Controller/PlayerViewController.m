@@ -15,11 +15,7 @@
 
 @implementation PlayerViewController 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
 
-    
-}
 
 - (instancetype)init
 {
@@ -36,21 +32,72 @@
     return self;
 }
 
+-(void)createPlayerWith:(NSString *)url
+{
+    self.player = [[MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:url]];
+    [self.player.view setFrame: self.view.bounds];
+    self.player.controlStyle = MPMovieControlStyleFullscreen;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+   
+    if (self.block == nil) {
+//        self.player = /
+        self.block(self.player);
+
+    }
+    
+}
+
 
 
 #pragma mark--<PlayerAudioDelgate>
--(void)onClickToPlayer:(NSString *)audioUrl
+-(void)OnClickToPlayer:(NSString *)audioUrl
 {
     NSLog(@"点击了播放按钮:url :%@",audioUrl);
 
 }
 
 #pragma mark--<PlayerDelagte>
--(void)onClickToReturn
+-(void)OnClickToReturn
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(void)OnClickPlayerButton:(UIButton *)playButton
+{
+    playButton.selected =!playButton.selected;
+    if (playButton.selected) {
+        
+//        [self.audioPlayer play];
+        
+//        _timer.fireDate = [NSDate distantPast];
+    }else{
+        
+//        [self.audioPlayer pause];
+        
+//        _timer.fireDate = [NSDate distantFuture];
+    }
+
+
+}
+-(void)OnClickLastButton
+{
+
+}
+-(void)OnClickNextButton
+{
+
+}
+-(void)OnClickBackTimeButton
+{
+
+}
+-(void)OnClickForwardTimeButton
+{
+
+}
 
 
 - (void)didReceiveMemoryWarning {

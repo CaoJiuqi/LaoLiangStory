@@ -51,7 +51,6 @@
     }
     else {
         // row 表示 返回的是有几条数据， column 表示数据的有多少列
-        NSLog(@"查找成功");
         int index = column;
         NSMutableArray *groupMedols = [[NSMutableArray alloc]init];
         for (int i=0; i<row; i++) {
@@ -104,7 +103,6 @@
     }
     else {
         // row 表示 返回的是有几条数据， column 表示数据的有多少列
-        NSLog(@"查找成功");
         int index = column;
         NSMutableArray *programsMedols = [[NSMutableArray alloc]init];
         for (int i=0; i<row; i++) {

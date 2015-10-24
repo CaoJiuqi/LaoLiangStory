@@ -20,7 +20,6 @@
 
 @property(strong,nonatomic)NSMutableArray *storydetailArray;
 
-@property (nonatomic,strong)MPMoviePlayerController *streamplayer;
 @property (nonatomic,copy)NSString *playerUrl;
 
 
@@ -43,11 +42,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.title = _medol.title;
-
-        
-
 
 }
 
@@ -61,7 +57,7 @@
         self.streamplayer.controlStyle = MPMovieControlStyleFullscreen;
     
     }
-
+  
 }
 
 
@@ -82,10 +78,16 @@
     }
     
     self.playerUrl = audioUrl;
-    
+
+    PlayerViewController *playerVC = [[PlayerViewController alloc]init];
+    playerVC.block = ^(MPMoviePlayerController *player){
+        self.streamplayer = player;
+        
+    };
+    playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+//    [self presentViewController:playerVC animated:YES completion:nil];
     
 
-    
 
 }
 

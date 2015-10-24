@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "ItemMedol.h"
+#import <MediaPlayer/MediaPlayer.h>
+
+
 
 @interface StorydetailViewController : UIViewController
 
 @property (nonatomic,strong)ItemMedol * medol;
 @property (nonatomic,strong)NSString * groupId;
 @property (nonatomic,strong)NSArray *programsMedolArray;
+@property (nonatomic,strong)MPMoviePlayerController *streamplayer;
 
 
 @end
