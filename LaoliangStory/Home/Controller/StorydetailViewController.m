@@ -14,9 +14,17 @@
 
 
 
+
+
 @interface StorydetailViewController ()<UITableViewDataSource,UITableViewDelegate,PlayerAudioDelgate>
+{
+    NSTimer* timer;
+}
+
 
 @property (weak, nonatomic) IBOutlet UITableView *storydetailtableview;
+
+@property (weak, nonatomic) IBOutlet UIButton *playerbutton;
 
 @property(strong,nonatomic)NSMutableArray *storydetailArray;
 
@@ -43,9 +51,21 @@
     [super viewDidLoad];
     
     self.title = _medol.title;
+   
 
 }
-
+//播放按钮动画
+- (void)timerdataaction
+{
+    NSArray *values = @[@"topbar_musicplayer_1",
+                        @"topbar_musicplayer_2",
+                        @"topbar_musicplayer_3",
+                        @"topbar_musicplayer_4",
+                        @"topbar_musicplayer_5"];
+    NSString *str = values[arc4random()%5];
+    [self.playerbutton setImage:[UIImage imageNamed:str] forState:UIControlStateNormal];
+    
+}
 
 
 
@@ -60,11 +80,11 @@
     playerVC.mp3Url = audioUrl;
     playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerdataaction) userInfo:nil repeats:YES];
+    
 
 
 }
-
-
 
 
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
@@ -76,7 +96,6 @@
     
     
 }
-
 
 
 

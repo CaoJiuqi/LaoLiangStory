@@ -52,7 +52,6 @@
                 </label>
                 <slider opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="5.5" translatesAutoresizingMaskIntoConstraints="NO" id="jyo-NA-O2J">
                     <rect key="frame" x="58" y="320" width="204" height="31"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -85,7 +84,7 @@
                     <state key="normal" image="btn_play_pause_n">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <state key="selected" backgroundImage="btn_play_play_n"/>
+                    <state key="selected" image="btn_play_play_n"/>
                     <connections>
                         <action selector="ButtonActopn:" destination="17B-EV-oTs" eventType="touchUpInside" id="1fv-k0-fLV"/>
                     </connections>

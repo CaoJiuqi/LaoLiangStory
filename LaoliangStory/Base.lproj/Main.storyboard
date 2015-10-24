@@ -365,7 +365,7 @@
                                                             <color key="textColor" red="0.67794667119999996" green="0.67794667119999996" blue="0.67794667119999996" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbc-b1-jkn" userLabel="forward">
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbc-b1-jkn" userLabel="forward">
                                                             <rect key="frame" x="-1" y="124" width="151" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="sb0-yK-bu4"/>
@@ -378,7 +378,7 @@
                                                                 <action selector="playbutton:" destination="mk9-Ex-8El" eventType="touchUpInside" id="WKQ-Iw-PXL"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXF-yh-Za0" userLabel="down">
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXF-yh-Za0" userLabel="down">
                                                             <rect key="frame" x="150" y="124" width="151" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="cZo-P7-wXW"/>
@@ -465,6 +465,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="playerbutton" destination="j1c-ea-oVp" id="OmP-ec-R1B"/>
                         <outlet property="storydetailtableview" destination="Iqf-Fp-RbO" id="SpF-uz-cTA"/>
                     </connections>
                 </viewController>
@@ -780,6 +781,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="playerbutton" destination="whb-hn-wR7" id="5zy-Ae-ifN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8o-LX-LSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
