@@ -8,7 +8,7 @@
 
 #import "PlayerViewController.h"
 #import "TSplayerView.h"
-@interface PlayerViewController ()
+@interface PlayerViewController () <PlayerDelagte>
 
 @end
 
@@ -29,7 +29,7 @@
         
         TSplayerView *playerview= [[[NSBundle mainBundle] loadNibNamed:@"TSplayerView" owner:self options:nil]lastObject];
             playerview.frame = CGRectMake(0, 0, TSWedth, TSHeight);
-
+        playerview.delagte = self;
       [self.view addSubview:playerview];
         
     }
@@ -45,35 +45,13 @@
 
 }
 
-/*
-#pragma mark - 创建音乐播放器
-- (AVAudioPlayer *)audioPlayer
+#pragma mark--<PlayerDelagte>
+-(void)onClickToReturn
 {
-    if (_audioPlayer == nil) {
-        
-        // 1、获取音乐的路径
-        NSString *musicPath = [[NSBundle mainBundle] pathForResource:_musicInfo[@"name"] ofType:@"mp3"];
-        
-        // 2、将路径转为URL
-        NSURL *musicURL = [NSURL fileURLWithPath:musicPath];
-        
-        // 3、创建播放器并且将URL交给播放器
-        NSError *error;
-        
-        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicURL error:&error];
-        
-        
-        // 设置audioPlayer的代理对象
-//        _audioPlayer.delegate = self;
-        
-        // 准备播放
-        [_audioPlayer prepareToPlay];
-    }
-    
-    return _audioPlayer;
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+<<<<<<< HEAD
 #pragma mark - 播放前的设置
 - (void)prepareToPlayMusic
 {
@@ -111,6 +89,8 @@
 
 
 
+=======
+>>>>>>> e73a22410af40a66d58d14d3036ad1061040cc7e
 
 
 - (void)didReceiveMemoryWarning {
@@ -118,14 +98,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

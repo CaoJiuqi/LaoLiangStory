@@ -21,7 +21,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="returnbuttonaction:" destination="17B-EV-oTs" eventType="touchUpInside" id="DRg-wT-Jjk"/>
+                        <action selector="ButtonActopn:" destination="17B-EV-oTs" eventType="touchUpInside" id="Koc-RX-oHY"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老梁故事汇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCf-Df-ehD">
@@ -77,7 +77,7 @@
                     <color key="textColor" red="0.61850286989795911" green="0.47086198396293594" blue="0.36540422800528599" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdo-I6-6c2" userLabel="playButton">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdo-I6-6c2" userLabel="playButton">
                     <rect key="frame" x="130" y="380" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="i1P-op-8Sb"/>
@@ -86,8 +86,11 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="selected" backgroundImage="btn_play_play_n"/>
+                    <connections>
+                        <action selector="ButtonActopn:" destination="17B-EV-oTs" eventType="touchUpInside" id="1fv-k0-fLV"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8n4-fP-11f" userLabel="lastButton">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8n4-fP-11f" userLabel="lastButton">
                     <rect key="frame" x="70" y="400" width="50" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="1ll-qG-vED"/>
@@ -97,8 +100,11 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="selected" image="btn_play_return_x"/>
+                    <connections>
+                        <action selector="ButtonActopn:" destination="17B-EV-oTs" eventType="touchUpInside" id="Gm7-YQ-iYM"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dW4-IA-S6y" userLabel="nextButton">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dW4-IA-S6y" userLabel="nextButton">
                     <rect key="frame" x="200" y="400" width="50" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="W9y-jB-b4g"/>
@@ -108,8 +114,11 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="selected" image="btn_play_next_n"/>
+                    <connections>
+                        <action selector="ButtonActopn:" destination="17B-EV-oTs" eventType="touchUpInside" id="9YB-Gy-2bb"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3j-al-EvM" userLabel="retreatButton">
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3j-al-EvM" userLabel="retreatButton">
                     <rect key="frame" x="35" y="400" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="Gac-tr-uzH"/>
@@ -118,8 +127,11 @@
                     <state key="normal" image="btn_play_retreat_n">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="ButtonActopn:" destination="17B-EV-oTs" eventType="touchUpInside" id="3Yv-hG-F6f"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDz-QQ-XiV" userLabel="speedButton">
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDz-QQ-XiV" userLabel="speedButton">
                     <rect key="frame" x="260" y="400" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="2XO-4J-pPC"/>
@@ -128,6 +140,9 @@
                     <state key="normal" image="btn_play_retreat_n">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="ButtonActopn:" destination="17B-EV-oTs" eventType="touchUpInside" id="ert-es-SYZ"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfE-zA-D75" userLabel="bottomView">
                     <rect key="frame" x="0.0" y="528" width="320" height="40"/>
@@ -208,15 +223,9 @@
                 <outlet property="audionamelabel" destination="Qh4-7X-GrM" id="5Hz-KO-xdo"/>
                 <outlet property="bottomview" destination="FfE-zA-D75" id="EsH-H1-sLn"/>
                 <outlet property="endtimelabel" destination="Z6K-Kq-HfA" id="vm1-5c-QYq"/>
-                <outlet property="lastbutton" destination="8n4-fP-11f" id="ClC-1T-6zE"/>
-                <outlet property="nextbutton" destination="dW4-IA-S6y" id="Y8O-vy-HKi"/>
-                <outlet property="playbutton" destination="pdo-I6-6c2" id="f2U-fD-2p7"/>
-                <outlet property="retreatbutton" destination="H3j-al-EvM" id="d7Q-nZ-eFT"/>
-                <outlet property="returnbutton" destination="Whl-ku-QSD" id="2nb-P8-JHn"/>
                 <outlet property="slider" destination="jyo-NA-O2J" id="Xdi-yu-BQ7"/>
                 <outlet property="sortimageview" destination="0cD-OU-Nwi" id="mco-8u-PjZ"/>
                 <outlet property="sortnamelabel" destination="vCf-Df-ehD" id="MrI-Cv-4yF"/>
-                <outlet property="speedbutton" destination="EDz-QQ-XiV" id="7qE-Yt-I1G"/>
                 <outlet property="starttimelabel" destination="3Rs-H4-XY3" id="2vb-KP-qoK"/>
             </connections>
         </view>
