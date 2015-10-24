@@ -94,6 +94,21 @@
 
 
 
+- (IBAction)pushplayerbuttonaction:(UIButton *)sender {
+    
+    
+    PlayerViewController *playerVC = [[PlayerViewController alloc]init];
+    playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:playerVC animated:YES completion:nil];
+    
+    
+}
+
+
+
+
+
+
 
 #pragma mark-- <UITableViewDataSource,UITableViewDelegate>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

@@ -8,6 +8,7 @@
 
 #import "SettingTableController.h"
 #import "MBProgressHUD.h"
+#import "PlayerViewController.h"
 
 
 
@@ -88,6 +89,18 @@
     
     [HUD hide:YES afterDelay:1];
 }
+
+
+- (IBAction)pushplayerbuttonaction:(UIButton *)sender {
+    
+    PlayerViewController *playerVC = [[PlayerViewController alloc]init];
+    playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:playerVC animated:YES completion:nil];
+}
+
+
+
+
 
 
 

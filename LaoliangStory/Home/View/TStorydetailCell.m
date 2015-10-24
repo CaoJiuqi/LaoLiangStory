@@ -101,7 +101,7 @@
     
     NSTimeInterval time = [str doubleValue]+2800;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
-    NSLog(@"date:%@",[date description]);
+//    NSLog(@"date:%@",[date description]);
 
     NSDateFormatter *formater = [[NSDateFormatter alloc] init];
     [formater setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
