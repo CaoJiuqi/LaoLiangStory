@@ -470,7 +470,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fdb-TD-eBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="-768" y="1850"/>
+=======
             <point key="canvasLocation" x="-768" y="1592"/>
+>>>>>>> 89ea95c12488cbb8a86fbaa65841e20e961793a7
         </scene>
         <!--下载-->
         <scene sceneID="KVI-h8-w8x">

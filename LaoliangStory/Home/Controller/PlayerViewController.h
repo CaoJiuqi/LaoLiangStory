@@ -7,15 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
 #import "ProgramsMedol.h"
+#import <MediaPlayer/MediaPlayer.h>
+
+typedef void(^PlayerBlock)(MPMoviePlayerController *);
 
 
 @interface PlayerViewController : UIViewController 
 
-@property (nonatomic,strong)AVAudioPlayer *audioPlayer;
+@property (nonatomic,strong)MPMoviePlayerController *player;
 @property (nonatomic,copy)NSString *mp3Url;
 @property (nonatomic,strong)ProgramsMedol *medol;
+
+@property (copy, nonatomic) PlayerBlock block;
 
 
 @end

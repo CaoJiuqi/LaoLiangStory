@@ -115,10 +115,10 @@
     for (GroupMedol *groupMedol in self.groupMedols) {
     
         if ( ![groupMedol.title isEqualToString:detail.medol.title] ) {
-            NSLog(@"title 不相同");
+//            NSLog(@"title 不相同");
         }else
         {
-            NSLog(@"title 相同");
+//            NSLog(@"title 相同");
             
             detail.groupId = groupMedol.groupId;
             

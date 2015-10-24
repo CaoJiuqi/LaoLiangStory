@@ -14,16 +14,11 @@
 
 @interface TSplayerView ()
 {
-    
         NSMutableArray *_audioArray; // 所有音乐数据
         NSDictionary *_audioInfo;    // 每首歌的数据
         NSTimer *_timer;
        int _audioIndex;
-
 }
-
-
-
 @property (weak, nonatomic) IBOutlet UILabel *sortnamelabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *sortimageview;
@@ -35,7 +30,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *starttimelabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *endtimelabel;
-
 
 @property (weak, nonatomic) IBOutlet UIView *bottomview;
 
@@ -59,21 +53,7 @@
 }
 
 
-- (void)loadMusicData
-{
-    // 1、获取plist文件所在的文件路径
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MusicInfo" ofType:@"plist"];
-    
-    // 2、读取plist文件的数据，保存为对应的数据类型
-    _audioArray = [[NSMutableArray alloc] initWithContentsOfFile:filePath];
-    
-    _audioInfo = _audioArray[0];
-    
-    [self prepareToPlayMusic];
-    
-    
-    NSLog(@"%@",_audioInfo);
-}
+
 
 
 //
@@ -133,7 +113,6 @@
 {
     int m = duration / 60;
     int s = (int)duration % 60;
-    
     return [NSString stringWithFormat:@"%02d:%02d",m,s];
 }
 
@@ -215,16 +194,50 @@
 - (IBAction)ButtonActopn:(UIButton *)sender
 {
     switch (sender.tag) {
-        case 0 :
+        case ReturnButton :
         {
-            if ([self.delagte respondsToSelector:@selector(onClickToReturn)]) {
-                [self.delagte onClickToReturn];
+            if ([self.delagte respondsToSelector:@selector(OnClickToReturn)]) {
+                [self.delagte OnClickToReturn];
+            }
+        }
+            break;
+        case PlayerButton:
+        {
+            if ([self.delagte respondsToSelector:@selector(OnClickPlayerButton:)]) {
+                [self.delagte OnClickPlayerButton:sender];
+            }
+        }
+            break;
+        case LastButton:
+        {
+            if ([self.delagte respondsToSelector:@selector(OnClickLastButton)]) {
+                [self.delagte OnClickLastButton];
+            }
+        }
+            break;
+        case NextButton:
+        {
+            if ([self.delagte respondsToSelector:@selector(OnClickNextButton)]) {
+                [self.delagte OnClickNextButton];
+            }
+        }
+            break;
+        case BackTimeButton:
+        {
+            if ([self.delagte respondsToSelector:@selector(OnClickBackTimeButton)]) {
+                [self.delagte OnClickBackTimeButton];
+            }
+        }
+            break;
+        case ForwardTimeButton:
+        {
+            if ([self.delagte respondsToSelector:@selector(OnClickForwardTimeButton)]) {
+                [self.delagte OnClickForwardTimeButton];
             }
         }
             break;
             
-        default:
-            break;
+        
     }
     
     
