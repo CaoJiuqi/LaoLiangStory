@@ -7,6 +7,7 @@
 //
 
 #import "TSLoadController.h"
+#import "PlayerViewController.h"
 
 @interface TSLoadController ()
 
@@ -18,6 +19,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+
+- (IBAction)pushplayerbuttonaction:(UIButton *)sender {
+    
+    PlayerViewController *playerVC = [[PlayerViewController alloc]init];
+    playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:playerVC animated:YES completion:nil];
+    
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

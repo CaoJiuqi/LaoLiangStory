@@ -51,46 +51,12 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-<<<<<<< HEAD
-#pragma mark - 播放前的设置
-- (void)prepareToPlayMusic
-{
-    self.audioPlayer = nil;
-    
-    // 每一首音乐都要新建一个播放器
-    [self audioPlayer];
-    
-    // 设置slider最大值
-    self.musicSlider.maximumValue = self.audioPlayer.duration;
-    self.musicSlider.value = 0;
-    
-    // 将音乐的总秒数格式化显示
-    self.endTimeLabel.text = [self fomatTimeToString:self.audioPlayer.duration];
-    self.startTimeLabel.text = @"00:00";
-    self.musicNameLabel.text = _musicInfo[@"name"];
-    self.musicImageView.image = [UIImage imageNamed:_musicInfo[@"imageName"]];
-    self.singerNameLabel.text = _musicInfo[@"actor"];
-    
-    [_timer invalidate];
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(changSliderValue) userInfo:nil repeats:YES];
-    
-}
-*/
 
 
 
 
 
 
-
-
-
-
-
-
-
-=======
->>>>>>> e73a22410af40a66d58d14d3036ad1061040cc7e
 
 
 - (void)didReceiveMemoryWarning {

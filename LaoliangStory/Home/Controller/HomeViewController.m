@@ -138,7 +138,7 @@
     }
     
     
-    [self.navigationController pushViewController:detail animated:YES];
+    [self.navigationController pushViewController:detail animated:NO];
 
 }
 
@@ -151,7 +151,6 @@
          PlayerViewController *playerVC = [[PlayerViewController alloc]init];
         playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:playerVC animated:YES completion:nil];
-    
     
     
 }
