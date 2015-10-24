@@ -29,6 +29,9 @@
 @property(strong,nonatomic)NSMutableArray *storydetailArray;
 
 
+@property (strong,nonatomic)NSMutableArray *storydetailArray;
+@property (strong,nonatomic) NSString *playerUrl;
+@property (strong,nonatomic) PlayerViewController *playerVC;
 
 
 @end
@@ -37,14 +40,20 @@
 
 -(NSMutableArray *)storydetailArray
 {
-    
     if (_storydetailArray == nil) {
         _storydetailArray = [[NSMutableArray array]init];
     }
-    
     return _storydetailArray;
 }
 
+-(PlayerViewController *)playerVC
+{
+    if (_playerVC == nil) {
+        _playerVC = [[PlayerViewController alloc]init];
+        _playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    }
+    return _playerVC;
+}
 
 
 - (void)viewDidLoad {
@@ -71,14 +80,11 @@
 
 
 #pragma mark--<PlayerAudioDelgate>
--(void)onClickToPlayer:(NSString *)audioUrl withTag:(long)tag withButton:(UIButton *)button
+-(void)onClickToPlayer:(NSString *)audioUrl withTag:(NSInteger)tag
 {
-    button.selected = !button.selected;
-    
-    PlayerViewController *playerVC = [[PlayerViewController alloc]init];
-//    playerVC.isPlaying = button.selected;
-    playerVC.mp3Url = audioUrl;
-    playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    self.playerVC.isCurrentUrl = [self.playerUrl isEqualToString:audioUrl];
+    self.playerVC.mp3Url = audioUrl;
+    self.playerVC.programsArray = self.programsMedolArray;
     
     timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerdataaction) userInfo:nil repeats:YES];
     
@@ -87,14 +93,20 @@
 }
 
 
+    self.playerVC.index = tag;
+    NSLog(@"tag:%ld",tag);
+    NSLog(@"self.playerVC.index----->%d",(int)self.playerVC.index);
+    if (self.playerVC.isCurrentUrl == 1) {
+        self.playerUrl = nil;
+    }else
+    {
+        self.playerUrl = audioUrl;
+    }
+}
+
+>>>>>>> 34a409cc8ce0999e4bb2c7a86d681c7cbd747cf4
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
-    
-    
-    PlayerViewController *playerVC = [[PlayerViewController alloc]init];
-    playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    [self presentViewController:playerVC animated:YES completion:nil];
-    
-    
+    [self presentViewController:self.playerVC animated:YES completion:nil];
 }
 
 
@@ -124,16 +136,14 @@
     TStorydetailCell *cell = nil;
     if(indexPath.row == 0 && indexPath.section == 0)
     {
-        //  StorydetailHeaderCell
        cell = [tableView dequeueReusableCellWithIdentifier:@"StorydetailHeaderCell" forIndexPath:indexPath];
         cell.medol = _medol;
         return cell;
     }
-    
-    
     cell = [tableView dequeueReusableCellWithIdentifier:ptah forIndexPath:indexPath];
     cell.programsMedol = self.programsMedolArray[indexPath.row];
     cell.celltag = indexPath.row;
+    NSLog(@"celltag:%d",(int)cell.celltag);
     cell.delgate = self;
     return cell;
     
@@ -148,17 +158,6 @@
     }
     return 120;
         
-}
-
-
-
-
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

@@ -17,10 +17,12 @@
 @property (nonatomic,strong)MPMoviePlayerController *player;
 @property (nonatomic,copy)NSString *mp3Url;
 @property (nonatomic,strong)ProgramsMedol *medol;
-
-@property (nonatomic,assign)Boolean isPlaying;
-@property (nonatomic,strong)UIButton *onClickButton;
-
+/* 判断是否是当前播放的音频 */
+@property (nonatomic,assign)Boolean isCurrentUrl;
+/* 获取当前组的数据 */
+@property (nonatomic,assign)NSArray *programsArray;
+/* 标示是当前组中数据的下表 */
+@property (nonatomic,assign)NSInteger *index;
 
 
 @end

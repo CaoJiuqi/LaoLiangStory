@@ -13,7 +13,7 @@
 
 @protocol PlayerAudioDelgate <NSObject>
 
--(void)onClickToPlayer:(NSString *)audioUrl withTag:(long)tag withButton:(UIButton *)button;
+-(void)onClickToPlayer:(NSString *)audioUrl withTag:(NSInteger)tag;
 
 @end
 
@@ -23,7 +23,7 @@
 @property (nonatomic,strong)ProgramsMedol *programsMedol;
 @property (nonatomic,strong)TSplayerView *player;
 @property (nonatomic,strong)id <PlayerAudioDelgate> delgate;
-@property (nonatomic,assign)long celltag;
+@property (nonatomic,assign)NSInteger celltag;
 
 
 @end

@@ -108,15 +108,12 @@
     
     NSTimeInterval time = [str doubleValue]+2800;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
-//    NSLog(@"date:%@",[date description]);
 
     NSDateFormatter *formater = [[NSDateFormatter alloc] init];
     [formater setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSString * datestr = [formater stringFromDate:date];
 
     self.timelabel.text = datestr;
-    
-    return;
     
 }
 
@@ -126,8 +123,9 @@
     switch (sender.tag) {
         case 0:
         {
-            if ([self.delgate respondsToSelector:@selector(onClickToPlayer:withTag:withButton:)]) {
-                [self.delgate onClickToPlayer:self.programsMedol.mp3Url withTag:self.tag withButton:sender];
+            sender.selected = !sender.selected;
+            if ([self.delgate respondsToSelector:@selector(onClickToPlayer:withTag:)]) {
+                [self.delgate onClickToPlayer:self.programsMedol.mp3Url withTag:self.celltag];
             }
         }
             break;

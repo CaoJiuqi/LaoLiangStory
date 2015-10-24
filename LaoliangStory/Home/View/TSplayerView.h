@@ -40,6 +40,20 @@ typedef  NS_ENUM(NSInteger, PlayerSelctedButtonType){
 
 @interface TSplayerView : UIView
 
+@property (weak, nonatomic) IBOutlet UILabel *sortnamelabel;
+
+@property (weak, nonatomic) IBOutlet UIImageView *sortimageview;
+
+@property (weak, nonatomic) IBOutlet UILabel *audionamelabel;
+
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+
+@property (weak, nonatomic) IBOutlet UILabel *starttimelabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *endtimelabel;
+
+@property (weak, nonatomic) IBOutlet UIView *bottomview;
+
 @property (nonatomic,strong) id <PlayerDelagte> delagte;
 
 @end
