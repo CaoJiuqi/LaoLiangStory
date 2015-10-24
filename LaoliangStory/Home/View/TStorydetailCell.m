@@ -65,16 +65,53 @@
     self.titleLable.text = _medol.title;
 }
 
+
+
+
+
 -(void)setProgramsMedol:(ProgramsMedol *)programsMedol
 {
     _programsMedol = programsMedol;
     self.storyname.text = _programsMedol.name;
-    self.hitslabel.text = [NSString stringWithFormat:@"下载量%@",_programsMedol.downloadCount];
-    self.timelabel.text = [NSString stringWithFormat:@"创建时间%@",_programsMedol.createTime];
-    self.timelengthlabel.text = [NSString stringWithFormat:@"播放时长%@",_programsMedol.duration];
+    
+    self.hitslabel.text = [NSString stringWithFormat:@"%@万",_programsMedol.downloadCount];
+    
+    self.timelengthlabel.text = [self fomatTimeToString:[_programsMedol.duration doubleValue ]];
+    
+   [self fomatdateaction:_programsMedol.createTime.description];
+    
 
 }
+#pragma mark - 将秒数转为时间格式
+- (NSString *)fomatTimeToString:(double)duration
+{
+    int m = duration / 60;
+    int s = (int)duration % 60;
+    
+    return [NSString stringWithFormat:@"时长 %02d'%02d'' ",m,s];
+    
+    
+}
 
+#pragma mark - 时间格式数据
+- ( void)fomatdateaction:(NSString *)createTime
+{
+    
+    NSString *str = createTime;
+    
+    NSTimeInterval time = [str doubleValue]+2800;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:time];
+    NSLog(@"date:%@",[date description]);
+
+    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+    [formater setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString * datestr = [formater stringFromDate:date];
+
+    self.timelabel.text = datestr;
+    
+    return;
+    
+}
 
 
 - (IBAction)playbutton:(UIButton *)sender {
