@@ -10,6 +10,9 @@
 #import "TSplayerView.h"
 @interface PlayerViewController () <PlayerDelagte>
 
+@property (nonatomic,copy)NSString *playerUrl;
+
+
 @end
 
 
@@ -21,8 +24,6 @@
 {
     self = [super init];
     if (self) {
- 
-        
         TSplayerView *playerview= [[[NSBundle mainBundle] loadNibNamed:@"TSplayerView" owner:self options:nil]lastObject];
             playerview.frame = CGRectMake(0, 0, TSWedth, TSHeight);
         playerview.delagte = self;
@@ -32,31 +33,48 @@
     return self;
 }
 
--(void)createPlayerWith:(NSString *)url
+-(void)createMPMoviePlayerCol:(NSString *)url
 {
-    self.player = [[MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:url]];
-    [self.player.view setFrame: self.view.bounds];
-    self.player.controlStyle = MPMovieControlStyleFullscreen;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-   
-    if (self.block == nil) {
-//        self.player = /
-        self.block(self.player);
-
+    self.player = nil;
+    if( self.player == nil)
+    {
+        self.player = [[MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:url]];
+        [self.player.view setFrame: self.view.bounds];
+        self.player.controlStyle = MPMovieControlStyleFullscreen;
+        
     }
     
 }
 
 
 
-#pragma mark--<PlayerAudioDelgate>
--(void)OnClickToPlayer:(NSString *)audioUrl
-{
-    NSLog(@"点击了播放按钮:url :%@",audioUrl);
+- (void)viewDidLoad {
+    [super viewDidLoad];
+   
+    
+}
 
+-(void)setMp3Url:(NSString *)mp3Url
+{
+    _mp3Url = mp3Url;
+    
+    if (![self.playerUrl isEqualToString:_mp3Url]) {
+        [self createMPMoviePlayerCol:_mp3Url];
+    }
+    
+    
+    if ([self.player loadState] == MPMovieLoadStatePlayable) {
+        
+        [self.player pause];
+    }else
+    {
+        NSLog(@"-----");
+        [self.player play];
+    }
+    
+    self.playerUrl = _mp3Url;
+
+    
 }
 
 #pragma mark--<PlayerDelagte>
@@ -68,19 +86,7 @@
 -(void)OnClickPlayerButton:(UIButton *)playButton
 {
     playButton.selected =!playButton.selected;
-    if (playButton.selected) {
-        
-//        [self.audioPlayer play];
-        
-//        _timer.fireDate = [NSDate distantPast];
-    }else{
-        
-//        [self.audioPlayer pause];
-        
-//        _timer.fireDate = [NSDate distantFuture];
-    }
-
-
+    
 }
 -(void)OnClickLastButton
 {

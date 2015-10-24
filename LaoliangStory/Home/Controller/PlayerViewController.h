@@ -10,7 +10,6 @@
 #import "ProgramsMedol.h"
 #import <MediaPlayer/MediaPlayer.h>
 
-typedef void(^PlayerBlock)(MPMoviePlayerController *);
 
 
 @interface PlayerViewController : UIViewController 
@@ -19,7 +18,9 @@ typedef void(^PlayerBlock)(MPMoviePlayerController *);
 @property (nonatomic,copy)NSString *mp3Url;
 @property (nonatomic,strong)ProgramsMedol *medol;
 
-@property (copy, nonatomic) PlayerBlock block;
+@property (nonatomic,assign)Boolean isPlaying;
+@property (nonatomic,strong)UIButton *onClickButton;
+
 
 
 @end
