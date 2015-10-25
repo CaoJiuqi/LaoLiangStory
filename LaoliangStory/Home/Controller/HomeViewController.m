@@ -152,7 +152,6 @@
         playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:playerVC animated:YES completion:nil];
     
-    
 }
 
 
