@@ -85,7 +85,7 @@
                     <state key="normal" image="btn_play_pause_n">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <state key="selected" backgroundImage="btn_play_play_n"/>
+                    <state key="selected" image="btn_play_play_n"/>
                     <connections>
                         <action selector="ButtonActopn:" destination="17B-EV-oTs" eventType="touchUpInside" id="1fv-k0-fLV"/>
                     </connections>

@@ -17,10 +17,9 @@
 @interface StorydetailViewController ()<UITableViewDataSource,UITableViewDelegate,PlayerAudioDelgate>
 
 @property (weak, nonatomic) IBOutlet UITableView *storydetailtableview;
-
-@property(strong,nonatomic)NSMutableArray *storydetailArray;
-
-
+@property (strong,nonatomic)NSMutableArray *storydetailArray;
+@property (strong,nonatomic) NSString *playerUrl;
+@property (strong,nonatomic) PlayerViewController *playerVC;
 
 
 @end
@@ -29,14 +28,20 @@
 
 -(NSMutableArray *)storydetailArray
 {
-    
     if (_storydetailArray == nil) {
         _storydetailArray = [[NSMutableArray array]init];
     }
-    
     return _storydetailArray;
 }
 
+-(PlayerViewController *)playerVC
+{
+    if (_playerVC == nil) {
+        _playerVC = [[PlayerViewController alloc]init];
+        _playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    }
+    return _playerVC;
+}
 
 
 - (void)viewDidLoad {
@@ -51,37 +56,26 @@
 
 
 #pragma mark--<PlayerAudioDelgate>
--(void)onClickToPlayer:(NSString *)audioUrl withTag:(long)tag withButton:(UIButton *)button
+-(void)onClickToPlayer:(NSString *)audioUrl withTag:(NSInteger)tag
 {
-    button.selected = !button.selected;
+    self.playerVC.isCurrentUrl = [self.playerUrl isEqualToString:audioUrl];
+    self.playerVC.mp3Url = audioUrl;
+    self.playerVC.programsArray = self.programsMedolArray;
     
-    PlayerViewController *playerVC = [[PlayerViewController alloc]init];
-//    playerVC.isPlaying = button.selected;
-    playerVC.mp3Url = audioUrl;
-    playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    
-
-
+    self.playerVC.index = tag;
+    NSLog(@"tag:%ld",tag);
+    NSLog(@"self.playerVC.index----->%d",(int)self.playerVC.index);
+    if (self.playerVC.isCurrentUrl == 1) {
+        self.playerUrl = nil;
+    }else
+    {
+        self.playerUrl = audioUrl;
+    }
 }
-
-
-
 
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
-    
-    
-    PlayerViewController *playerVC = [[PlayerViewController alloc]init];
-    playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    [self presentViewController:playerVC animated:YES completion:nil];
-    
-    
+    [self presentViewController:self.playerVC animated:YES completion:nil];
 }
-
-
-
-
-
-
 
 #pragma mark-- <UITableViewDataSource,UITableViewDelegate>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -105,16 +99,14 @@
     TStorydetailCell *cell = nil;
     if(indexPath.row == 0 && indexPath.section == 0)
     {
-        //  StorydetailHeaderCell
        cell = [tableView dequeueReusableCellWithIdentifier:@"StorydetailHeaderCell" forIndexPath:indexPath];
         cell.medol = _medol;
         return cell;
     }
-    
-    
     cell = [tableView dequeueReusableCellWithIdentifier:ptah forIndexPath:indexPath];
     cell.programsMedol = self.programsMedolArray[indexPath.row];
     cell.celltag = indexPath.row;
+    NSLog(@"celltag:%d",(int)cell.celltag);
     cell.delgate = self;
     return cell;
     
@@ -129,17 +121,6 @@
     }
     return 120;
         
-}
-
-
-
-
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
