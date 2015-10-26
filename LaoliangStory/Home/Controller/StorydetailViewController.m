@@ -12,6 +12,8 @@
 #import "PlayerViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 
+
+
 @interface StorydetailViewController ()<UITableViewDataSource,UITableViewDelegate,PlayerAudioDelgate>
 
 @property (weak, nonatomic) IBOutlet UITableView *storydetailtableview;
@@ -21,6 +23,7 @@
 @property(strong,nonatomic)NSMutableArray *storydetailArray;
 
 /* 用于记录 当前播放的音频 */
+
 @property (strong,nonatomic) NSString *playerUrl;
 @property (strong,nonatomic) PlayerViewController *playerVC;
 @property (strong,nonatomic) NSTimer *timer;
@@ -121,6 +124,24 @@
         self.playerUrl = audioUrl;
     }
 
+
+}
+
+
+//    self.playerVC.index = tag;
+//    NSLog(@"tag:%ld",tag);
+//    NSLog(@"self.playerVC.index----->%d",(int)self.playerVC.index);
+//    if (self.playerVC.isCurrentUrl == 1) {
+//        self.playerUrl = nil;
+//    }else
+//    {
+//        self.playerUrl = audioUrl;
+//    }
+//}
+
+- (IBAction)pushplayerbuttonaction:(UIButton *)sender {
+    [self presentViewController:self.playerVC animated:YES completion:nil];
+>>>>>>> 2528805ef1f59f496faa05693b04f0d4e9835b0c
 }
 
 
