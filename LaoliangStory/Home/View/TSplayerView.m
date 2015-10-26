@@ -40,6 +40,20 @@
     [self.sortimageview sd_setImageWithURL:[NSURL URLWithString:_headURL]];
 }
 
+-(void)setTitleName:(NSString *)titleName
+{
+    _titleName  = titleName;
+    self.sortnamelabel.text = _titleName;
+    
+}
+
+
+
+-(void)setStoryintro:(NSString *)storyintro
+{
+    _storyintro = storyintro;
+    self.audionamelabel.text = _storyintro;
+}
 
 #pragma mark--Action
 

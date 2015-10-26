@@ -28,6 +28,9 @@
 @property (strong,nonatomic) PlayerViewController *playerVC;
 @property (strong,nonatomic) NSTimer *timer;
 
+//@property (nonatomic,assign) int currentTag;
+
+@property (strong,nonatomic)UIButton *currentButton;
 
 @end
 
@@ -108,24 +111,31 @@
 
 
 #pragma mark--<PlayerAudioDelgate>
--(void)onClickToPlayer:(NSString *)audioUrl withTag:(NSInteger)tag
+-(void)onClickToPlayer:(NSString *)audioUrl withCellTag:(NSInteger)tag selectButton:(UIButton *)selectButton
 {
+
+    selectButton.selected = !selectButton.selected;
+    
     // 判断是不是之前播放的那个音频
     self.playerVC.isCurrentUrl = [self.playerUrl isEqualToString:audioUrl];
     self.playerVC.headUrl = _medol.largerImageUrl;
-    self.playerVC.mp3Url = audioUrl;
-    self.playerVC.index = &(tag);
+    self.playerVC.titleName = _medol.title;
+    self.playerVC.index = (int)tag;
     self.playerVC.programsArray = self.programsMedolArray;
     
     if (self.playerVC.isCurrentUrl == 1) {
-        
         self.playerUrl = nil;
     }else
     {
         self.playerUrl = audioUrl;
     }
 
+//    if (self.currentButton.selected != ) {
+//        <#statements#>
+//    }
 
+    self.currentButton = selectButton;
+    
 }
 
 
