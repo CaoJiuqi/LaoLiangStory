@@ -17,17 +17,28 @@
 @end
 @implementation PlayerViewController 
 
-- (instancetype)init
+static PlayerViewController *playerController = nil;
+
++ (instancetype)defaultPlayerController
 {
-    self = [super init];
-    if (self) {
-        _playerview= [[[NSBundle mainBundle] loadNibNamed:@"TSplayerView" owner:self options:nil]lastObject];
-        _playerview.frame = CGRectMake(0, 0, TSWedth, TSHeight);
-        _playerview.delagte = self;
-        [self.view addSubview:_playerview];
+    if ( playerController == nil) {
+        playerController = [[PlayerViewController alloc]init];
+        playerController.playerview= [[[NSBundle mainBundle] loadNibNamed:@"TSplayerView" owner:self options:nil]lastObject];
+        playerController.playerview.frame = CGRectMake(0, 0, TSWedth, TSHeight);
+        [playerController.view addSubview:playerController.playerview];
+        
     }
-    return self;
+    return playerController;
 }
+
++(instancetype)allocWithZone:(struct _NSZone *)zone
+{
+    if (playerController == nil) {
+        playerController = [super allocWithZone:zone];
+    }
+    return playerController;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,6 +46,11 @@
     
 }
 
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+
+}
 
 #pragma mark－－ 创建音频播放器
 -(void)createMPMoviePlayerCol:(NSString *)url
@@ -46,6 +62,7 @@
         [self.player.view setFrame: self.view.bounds];
         self.player.controlStyle = MPMovieControlStyleFullscreen;
         [self.player play];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"playMP3" object:nil];
 
     }
 }
@@ -54,12 +71,14 @@
 -(void)setMp3Url:(NSString *)mp3Url
 {
     _mp3Url = mp3Url;
+    // 通过判断是否是当前播放的数据，来判读是播放还是暂停
     if (!self.isCurrentUrl) {
         [self createMPMoviePlayerCol:_mp3Url];
     }else
     {
         [self.player pause];
         
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseMP3" object:nil];
     }
 
 }
@@ -70,6 +89,7 @@
     
     self.playerview.headURL = _headUrl;
 }
+
 
 #pragma mark--<PlayerDelagte>
 -(void)OnClickToReturn
@@ -82,10 +102,12 @@
     playButton.selected =!playButton.selected;
     if (playButton.selected) {
         [self.player pause];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseMP3" object:nil];
     }
     else
     {
         [self.player play];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"playMP3" object:nil];
     }
 
     

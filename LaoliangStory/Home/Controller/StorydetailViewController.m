@@ -15,10 +15,6 @@
 
 
 @interface StorydetailViewController ()<UITableViewDataSource,UITableViewDelegate,PlayerAudioDelgate>
-{
-    NSTimer* timer;
-}
-
 
 @property (weak, nonatomic) IBOutlet UITableView *storydetailtableview;
 
@@ -26,13 +22,15 @@
 
 @property(strong,nonatomic)NSMutableArray *storydetailArray;
 
+/* 用于记录 当前播放的音频 */
 
-//@property (strong,nonatomic)NSMutableArray *storydetailArray;
 @property (strong,nonatomic) NSString *playerUrl;
 @property (strong,nonatomic) PlayerViewController *playerVC;
+@property (strong,nonatomic) NSTimer *timer;
 
 
 @end
+
 
 @implementation StorydetailViewController
 
@@ -47,10 +45,18 @@
 -(PlayerViewController *)playerVC
 {
     if (_playerVC == nil) {
-        _playerVC = [[PlayerViewController alloc]init];
+        _playerVC = [PlayerViewController defaultPlayerController];
         _playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     }
     return _playerVC;
+}
+
+-(NSTimer *)timer
+{
+    if (_timer == nil) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerdataaction) userInfo:nil repeats:YES];
+    }
+    return  _timer;
 }
 
 
@@ -58,9 +64,33 @@
     [super viewDidLoad];
     
     self.title = _medol.title;
-   
+    
+    // playMP3
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pauseAction) name:@"pauseMP3" object:nil];
+    // playMP3
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playAction) name:@"playMP3" object:nil];
+    
 
 }
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
+
+-(void)pauseAction
+{
+    [self.timer setFireDate:[NSDate distantFuture]];
+}
+
+-(void)playAction
+{
+    [self.timer setFireDate:[NSDate distantPast]];
+}
+
+
+
 //播放按钮动画
 - (void)timerdataaction
 {
@@ -80,13 +110,20 @@
 #pragma mark--<PlayerAudioDelgate>
 -(void)onClickToPlayer:(NSString *)audioUrl withTag:(NSInteger)tag
 {
+    // 判断是不是之前播放的那个音频
     self.playerVC.isCurrentUrl = [self.playerUrl isEqualToString:audioUrl];
     self.playerVC.headUrl = _medol.largerImageUrl;
     self.playerVC.mp3Url = audioUrl;
+    self.playerVC.index = &(tag);
     self.playerVC.programsArray = self.programsMedolArray;
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerdataaction) userInfo:nil repeats:YES];
-    
+    if (self.playerVC.isCurrentUrl == 1) {
+        
+        self.playerUrl = nil;
+    }else
+    {
+        self.playerUrl = audioUrl;
+    }
 
 
 }
@@ -106,12 +143,15 @@
 
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
     [self presentViewController:self.playerVC animated:YES completion:nil];
+>>>>>>> 2528805ef1f59f496faa05693b04f0d4e9835b0c
 }
 
 
 
 
-
+- (IBAction)pushplayerbuttonaction:(UIButton *)sender {
+    [self presentViewController:self.playerVC animated:YES completion:nil];
+}
 
 #pragma mark-- <UITableViewDataSource,UITableViewDelegate>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -153,7 +193,6 @@
     if(indexPath.section == 0 && indexPath.row == 0)
     {
         return 265;
-    
     }
     return 120;
         

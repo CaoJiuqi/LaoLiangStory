@@ -34,13 +34,6 @@
                     <color key="textColor" red="0.88548743206521741" green="0.88548743206521741" blue="0.88548743206521741" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_advertising" translatesAutoresizingMaskIntoConstraints="NO" id="0cD-OU-Nwi">
-                    <rect key="frame" x="70" y="75" width="180" height="180"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="180" id="Fyz-9P-Qcu"/>
-                        <constraint firstAttribute="height" constant="180" id="yRR-rU-vqz"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文件名称20140519" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qh4-7X-GrM">
                     <rect key="frame" x="10" y="280" width="300" height="25"/>
                     <constraints>
@@ -76,7 +69,7 @@
                     <color key="textColor" red="0.61850286989795911" green="0.47086198396293594" blue="0.36540422800528599" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdo-I6-6c2" userLabel="playButton">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdo-I6-6c2" userLabel="playButton">
                     <rect key="frame" x="130" y="380" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="i1P-op-8Sb"/>
@@ -184,6 +177,13 @@
                         <constraint firstItem="Blr-d7-Lh6" firstAttribute="leading" secondItem="okT-in-nLl" secondAttribute="trailing" id="wwL-Bn-22V"/>
                     </constraints>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_advertising" translatesAutoresizingMaskIntoConstraints="NO" id="0cD-OU-Nwi">
+                    <rect key="frame" x="70" y="75" width="180" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="Fyz-9P-Qcu"/>
+                        <constraint firstAttribute="height" constant="180" id="yRR-rU-vqz"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.29035750679347827" green="0.061696619364646252" blue="0.096069390550754627" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>

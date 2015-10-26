@@ -24,8 +24,12 @@
 
 
 @interface HomeViewController () <OnclickItemViewDelegate>
-
+{
+    PlayerViewController *playerVC;
+}
 @property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
+
+@property (weak, nonatomic) IBOutlet UIButton *playerbutton;
 
 
 @property (nonatomic,strong)NSMutableArray *infoArrays;
@@ -33,6 +37,9 @@
 @property (strong,nonatomic)NSMutableArray *groupMedols;
 
 @property (strong,nonatomic)NSMutableArray *programsMedols;
+
+
+@property (strong,nonatomic) NSTimer *timer;
 
 @end
 
@@ -49,9 +56,56 @@
     [self setScrollView];
     [self addViewToScrollView];
     
+    // pauseMP3
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pauseAction) name:@"pauseMP3" object:nil];
+    // playMP3
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playAction) name:@"playMP3" object:nil];
     
-
+    
 }
+
+-(void)dealloc
+{
+//    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
+-(NSTimer *)timer
+{
+    if (_timer == nil) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerdataaction) userInfo:nil repeats:YES];
+    }
+    return  _timer;
+}
+
+#pragma mark--监听的方法
+-(void)pauseAction
+{
+    NSLog(@"pauseAction");
+    [self.timer setFireDate:[NSDate distantFuture]];
+}
+
+-(void)playAction
+{
+    NSLog(@"playAction");
+
+    [self.timer setFireDate:[NSDate distantPast]];
+}
+
+
+
+//播放按钮动画
+- (void)timerdataaction
+{
+    NSArray *values = @[@"topbar_musicplayer_1",
+                        @"topbar_musicplayer_2",
+                        @"topbar_musicplayer_3",
+                        @"topbar_musicplayer_4",
+                        @"topbar_musicplayer_5"];
+    NSString *str = values[arc4random()%5];
+    [self.playerbutton setImage:[UIImage imageNamed:str] forState:UIControlStateNormal];
+    
+}
+
 
 #pragma mark-- 设置ScrollView
 -(void)setScrollView{
@@ -109,18 +163,14 @@
     StorydetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StorydetailViewController"];
 
     detail.medol = self.infoArrays[markTag];
-    NSLog(@"-->%@",detail.medol.title);
     
     NSMutableArray *programsItemArray = [[NSMutableArray alloc]init];
     
     for (GroupMedol *groupMedol in self.groupMedols) {
     
         if ( ![groupMedol.title isEqualToString:detail.medol.title] ) {
-//            NSLog(@"title 不相同");
         }else
-        {
-//            NSLog(@"title 相同");
-            
+        {   
             detail.groupId = groupMedol.groupId;
             
             for ( ProgramsMedol *programMedol in self.programsMedols) {
@@ -149,6 +199,7 @@
     
     
          PlayerViewController *playerVC = [[PlayerViewController alloc]init];
+    playerVC = [PlayerViewController defaultPlayerController];
         playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:playerVC animated:YES completion:nil];
     

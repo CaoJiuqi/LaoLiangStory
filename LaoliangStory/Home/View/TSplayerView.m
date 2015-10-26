@@ -16,15 +16,6 @@
 
 
 @interface TSplayerView ()
-{
-        NSMutableArray *_audioArray; // 所有音乐数据
-        NSDictionary *_audioInfo;    // 每首歌的数据
-        NSTimer *_timer;
-       int _audioIndex;
-}
-
-
-
 @end
 
 @implementation TSplayerView
