@@ -42,7 +42,8 @@ static PlayerViewController *playerController = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.playerview.delagte = self;
+
     
 }
 
@@ -101,6 +102,7 @@ static PlayerViewController *playerController = nil;
 {
     playButton.selected =!playButton.selected;
     if (playButton.selected) {
+        self.playerview.playButton.selected = playButton.selected;
         [self.player pause];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseMP3" object:nil];
     }

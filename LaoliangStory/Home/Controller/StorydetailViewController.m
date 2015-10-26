@@ -65,7 +65,7 @@
     
     self.title = _medol.title;
     
-    // playMP3
+    // pauseMP3
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pauseAction) name:@"pauseMP3" object:nil];
     // playMP3
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playAction) name:@"playMP3" object:nil];
@@ -163,7 +163,6 @@
     cell = [tableView dequeueReusableCellWithIdentifier:ptah forIndexPath:indexPath];
     cell.programsMedol = self.programsMedolArray[indexPath.row];
     cell.celltag = indexPath.row;
-    NSLog(@"celltag:%d",(int)cell.celltag);
     cell.delgate = self;
     return cell;
     
