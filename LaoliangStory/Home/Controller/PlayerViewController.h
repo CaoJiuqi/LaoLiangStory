@@ -12,7 +12,9 @@
 
 
 
-@interface PlayerViewController : UIViewController 
+@interface PlayerViewController : UIViewController
+
++ (instancetype)defaultPlayerController;
 
 @property (nonatomic,strong)MPMoviePlayerController *player;
 @property (nonatomic,copy)NSString *mp3Url;
