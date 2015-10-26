@@ -9,6 +9,8 @@
 		<string>老梁故事汇</string>
 		<key>anuthorImageUrl</key>
 		<string>http://118.123.114.174/cdn.lizhi.fm/user/2014/01/13/8761406331809026_320x320.jpg</string>
+		<key>intro</key>
+		<string>《老梁故事汇》梁宏达邀您一起谈古论今旧事新说《老梁故事汇》梁宏达邀您一起谈古论今旧事新说</string>
 	</dict>
 	<dict>
 		<key>largerImageUrl</key>
@@ -16,7 +18,9 @@
 		<key>title</key>
 		<string>晓晓的故事会</string>
 		<key>anuthorImageUrl</key>
-		<string></string>
+		<string>http://118.123.114.174/cdn.lizhi.fm/user/2014/01/13/8761406331809026_320x320.jpg</string>
+		<key>intro</key>
+		<string>一个爸爸妈妈给女儿讲故事的节目</string>
 	</dict>
 	<dict>
 		<key>largerImageUrl</key>
@@ -25,6 +29,8 @@
 		<string>天天故事会</string>
 		<key>anuthorImageUrl</key>
 		<string>http://118.123.114.174/cdn.lizhi.fm/user/2014/04/30/11240055402359938_320x320.jpg</string>
+		<key>intro</key>
+		<string>希希2岁3个月，是一个爱唱爱跳，爱听妈妈讲故事的小女孩儿，希希的妈妈，希望把这些故事录下来，分享给小伙伴儿们。</string>
 	</dict>
 	<dict>
 		<key>largerImageUrl</key>
@@ -35,6 +41,8 @@
 		<string>http://183.136.166.248/cdn.lizhi.fm/user/2014/03/20/10296361698704514_320x320.jpg
 http://183.136.166.248/cdn.lizhi.fm/user/2014/03/20/10296361698704514_320x320.jpg
 http://183.136.166.248/cdn.lizhi.fm/user/2014/03/20/10296361698704514_320x320.jpg</string>
+		<key>intro</key>
+		<string>小葱爸爸每晚睡前给小葱讲的故事，用声音为孩子张开想象翅膀，点亮夜晚，温暖梦乡。</string>
 	</dict>
 	<dict>
 		<key>largerImageUrl</key>
@@ -42,7 +50,9 @@ http://183.136.166.248/cdn.lizhi.fm/user/2014/03/20/10296361698704514_320x320.jp
 		<key>title</key>
 		<string>冰与火故事会</string>
 		<key>anuthorImageUrl</key>
-		<string></string>
+		<string>http://118.123.114.174/cdn.lizhi.fm/user/2014/04/30/11240055402359938_320x320.jpg</string>
+		<key>intro</key>
+		<string>《冰与火之歌》for 晶晶</string>
 	</dict>
 	<dict>
 		<key>largerImageUrl</key>
@@ -51,6 +61,8 @@ http://183.136.166.248/cdn.lizhi.fm/user/2014/03/20/10296361698704514_320x320.jp
 		<string>清晨空中故事会</string>
 		<key>anuthorImageUrl</key>
 		<string>http://118.123.114.174/cdn.lizhi.fm/user/2014/05/08/11430195990757506_320x320.jpg</string>
+		<key>intro</key>
+		<string>为喜欢绘本故事的小朋友，大朋友们送去清晨的问候，陪伴大家度过美好的一天！</string>
 	</dict>
 	<dict>
 		<key>largerImageUrl</key>
@@ -58,7 +70,9 @@ http://183.136.166.248/cdn.lizhi.fm/user/2014/03/20/10296361698704514_320x320.jp
 		<key>title</key>
 		<string>皮克布克故事会</string>
 		<key>anuthorImageUrl</key>
-		<string></string>
+		<string>http://118.123.114.174/cdn.lizhi.fm/user/2014/05/08/11430195990757506_320x320.jpg</string>
+		<key>intro</key>
+		<string>通过4年给孩子讲故事，看到故事喂大的孩子与没听过故事的孩子区别很大，为了让更多的孩子享受读书的快乐，我开了绘本馆，每天在花园里给孩子们讲故事。看到孩子们聚精会神地听，开心极了。微信:天津皮克布克绘本王国</string>
 	</dict>
 </array>
 </plist>

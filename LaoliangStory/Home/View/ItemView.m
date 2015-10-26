@@ -37,6 +37,7 @@
     self.titleLable.text = _medol.title;
     
     
+    
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

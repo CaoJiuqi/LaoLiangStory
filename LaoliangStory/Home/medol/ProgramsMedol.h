@@ -32,4 +32,7 @@
 /*11、重复播放的数量*/
 @property (nonatomic,strong)NSNumber *replayCount;
 
+
+
+
 @end

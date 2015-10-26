@@ -17,6 +17,7 @@
 @property (nonatomic,strong)ItemMedol * medol;
 @property (nonatomic,strong)NSString * groupId;
 @property (nonatomic,strong)NSArray *programsMedolArray;
+@property (nonatomic,strong)NSString *intro;
 
 
 @end

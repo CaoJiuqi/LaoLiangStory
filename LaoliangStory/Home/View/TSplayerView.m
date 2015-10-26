@@ -12,6 +12,9 @@
 #import "HomeViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
+#import "UIImageView+WebCache.h"
+
+
 @interface TSplayerView ()
 @end
 
@@ -28,6 +31,15 @@
     
     
 }
+
+
+
+-(void)setHeadURL:(NSString *)headURL
+{
+    _headURL = headURL;
+    [self.sortimageview sd_setImageWithURL:[NSURL URLWithString:_headURL]];
+}
+
 
 #pragma mark--Action
 

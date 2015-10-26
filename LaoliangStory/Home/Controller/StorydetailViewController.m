@@ -112,6 +112,7 @@
 {
     // 判断是不是之前播放的那个音频
     self.playerVC.isCurrentUrl = [self.playerUrl isEqualToString:audioUrl];
+    self.playerVC.headUrl = _medol.largerImageUrl;
     self.playerVC.mp3Url = audioUrl;
     self.playerVC.index = &(tag);
     self.playerVC.programsArray = self.programsMedolArray;
@@ -126,7 +127,6 @@
 
 
 }
-
 
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
     [self presentViewController:self.playerVC animated:YES completion:nil];
