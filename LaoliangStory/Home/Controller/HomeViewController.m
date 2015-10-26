@@ -143,8 +143,6 @@
 }
 
 
-
-
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
     
     
@@ -153,6 +151,9 @@
     [self presentViewController:playerVC animated:YES completion:nil];
     
 }
+
+
+
 
 
 

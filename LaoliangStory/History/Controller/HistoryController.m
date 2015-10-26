@@ -11,17 +11,27 @@
 
 @interface HistoryController ()<UITableViewDataSource,UITableViewDelegate>
 
+{
+    NSTimer *timer;
+    
+}
+@property (weak, nonatomic) IBOutlet UIButton *playerbutton;
+
+
 @end
 
 @implementation HistoryController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+      timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerdataaction) userInfo:nil repeats:YES];
 }
 
 //编辑按钮
 - (IBAction)editbuttonaction:(UIButton *)sender {
+    
+  
     
 }
 
@@ -36,8 +46,22 @@
 }
 
 
+- (void)timerdataaction
+{
+    NSArray *values = @[@"topbar_musicplayer_1",
+                        @"topbar_musicplayer_2",
+                        @"topbar_musicplayer_3",
+                        @"topbar_musicplayer_4",
+                        @"topbar_musicplayer_5"];
+    NSString *str = values[arc4random()%5];
+    [self.playerbutton setImage:[UIImage imageNamed:str] forState:UIControlStateNormal];
+
+}
 
 
+
+
+#pragma mark -<UITableViewDataSource,UITableViewDelegate>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 3;

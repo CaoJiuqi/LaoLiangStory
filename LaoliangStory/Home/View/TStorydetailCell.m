@@ -31,6 +31,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *forwardbutton;
 @property (weak, nonatomic) IBOutlet UIButton *downbutton;
 
+
+
+
 @end
 
 @implementation TStorydetailCell
@@ -44,6 +47,10 @@
     self.downbutton.layer.borderWidth = 0.8;
 
 }
+
+
+
+
 
 -(void)setMedol:(ItemMedol *)medol
 {
@@ -137,7 +144,17 @@
 }
 
 - (IBAction)forwardbuttonaction:(UIButton *)sender {
+    
+    
+    
 }
+
+
+
+
+
+
+
 
 
 - (IBAction)downloadbuttonaction:(UIButton *)sender {
