@@ -148,29 +148,6 @@ static PlayerViewController *playerController = nil;
 }
 
 
-//
-//- (AVAudioPlayer *)audioPlayer
-//{
-//    if (_audioPlayer == nil) {
-//
-//        NSString *musicPath = [[NSBundle mainBundle] pathForResource:_audioInfo[@"name"] ofType:@"mp3"];
-//
-//        NSURL *musicURL = [NSURL fileURLWithPath:musicPath];
-//
-//        NSError *error;
-//
-//        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:musicURL error:&error];
-//
-//        _audioPlayer.delegate = self;
-//
-//        // 准备播放
-//        [_audioPlayer prepareToPlay];
-//    }
-//
-//    return _audioPlayer;
-//
-//}
-
 
 #pragma mark -播放前设置
 - (void)prepareToPlayMusic
@@ -186,74 +163,16 @@ static PlayerViewController *playerController = nil;
     return [NSString stringWithFormat:@"%02d:%02d",m,s];
 }
 
-- (void)changSliderValue
-{
-//    self.slider.value = self.audioPlayer.currentTime;
-//    self.starttimelabel.text = [self fomatTimeToString:self.audioPlayer.currentTime];
-}
 
 
 
 
 
-/*
- - (void)playaudioaction
- {
- self.playbutton.selected =!self.playbutton.selected;
- if (self.playbutton.selected) {
- 
- [self.audioPlayer play];
- 
- _timer.fireDate = [NSDate distantPast];
- }else{
- 
- [self.audioPlayer pause];
- 
- _timer.fireDate = [NSDate distantFuture];
- }
- 
- }
- 
- - (void)lastaudioplayaction
- {
- _audioIndex--;
- if (_audioIndex <0) {
- _audioIndex = (int)_audioArray.count -1;
- }
- _audioInfo = _audioArray[_audioIndex];
- 
- [self prepareToPlayMusic];
- 
- self.playbutton.selected = NO;
- 
- [self.playbutton sendActionsForControlEvents:UIControlEventTouchUpInside];
- 
- }
- 
- - (void)nextaudioplayaction
- {
- _audioIndex++;
- if (_audioIndex > _audioArray.count - 1) {
- 
- _audioIndex = 0;
- }
- 
- _audioInfo = _audioArray[_audioIndex];
- [self prepareToPlayMusic];
- 
- self.playbutton.selected = NO;
- [self.playbutton sendActionsForControlEvents:UIControlEventTouchUpInside];
- }
- */
 
 
 
-- (void)sliderAction
-{
-    
-//    self.audioPlayer.currentTime = self.slider.value;
-    
-}
+
+
 
 
 

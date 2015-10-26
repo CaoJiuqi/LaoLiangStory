@@ -129,29 +129,10 @@
 }
 
 
-
-//    self.playerVC.index = tag;
-//    NSLog(@"tag:%ld",tag);
-//    NSLog(@"self.playerVC.index----->%d",(int)self.playerVC.index);
-//    if (self.playerVC.isCurrentUrl == 1) {
-//        self.playerUrl = nil;
-//    }else
-//    {
-//        self.playerUrl = audioUrl;
-//    }
-//}
-
-- (IBAction)pushplayerbuttonaction:(UIButton *)sender {
-    [self presentViewController:self.playerVC animated:YES completion:nil];
->>>>>>> 2528805ef1f59f496faa05693b04f0d4e9835b0c
-}
-
-
-
-
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
     [self presentViewController:self.playerVC animated:YES completion:nil];
 }
+
 
 #pragma mark-- <UITableViewDataSource,UITableViewDelegate>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
