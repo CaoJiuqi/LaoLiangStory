@@ -14,8 +14,6 @@
 
 
 
-
-
 @interface StorydetailViewController ()<UITableViewDataSource,UITableViewDelegate,PlayerAudioDelgate>
 {
     NSTimer* timer;
@@ -29,7 +27,7 @@
 @property(strong,nonatomic)NSMutableArray *storydetailArray;
 
 
-@property (strong,nonatomic)NSMutableArray *storydetailArray;
+//@property (strong,nonatomic)NSMutableArray *storydetailArray;
 @property (strong,nonatomic) NSString *playerUrl;
 @property (strong,nonatomic) PlayerViewController *playerVC;
 
@@ -93,18 +91,17 @@
 }
 
 
-    self.playerVC.index = tag;
-    NSLog(@"tag:%ld",tag);
-    NSLog(@"self.playerVC.index----->%d",(int)self.playerVC.index);
-    if (self.playerVC.isCurrentUrl == 1) {
-        self.playerUrl = nil;
-    }else
-    {
-        self.playerUrl = audioUrl;
-    }
-}
+//    self.playerVC.index = tag;
+//    NSLog(@"tag:%ld",tag);
+//    NSLog(@"self.playerVC.index----->%d",(int)self.playerVC.index);
+//    if (self.playerVC.isCurrentUrl == 1) {
+//        self.playerUrl = nil;
+//    }else
+//    {
+//        self.playerUrl = audioUrl;
+//    }
+//}
 
->>>>>>> 34a409cc8ce0999e4bb2c7a86d681c7cbd747cf4
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
     [self presentViewController:self.playerVC animated:YES completion:nil];
 }
