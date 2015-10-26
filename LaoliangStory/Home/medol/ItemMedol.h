@@ -13,6 +13,8 @@
 @property (nonatomic,copy)NSString *largerImageUrl;
 @property (nonatomic,copy)NSString *title;
 @property (nonatomic,copy)NSString *anuthorImageUrl;
+@property (nonatomic,copy)NSString *intro;
+
 
 
 @end

@@ -70,6 +70,9 @@
    
     
     self.titleLable.text = _medol.title;
+    
+    self.introduceLable.text = _medol.intro;
+    
 }
 
 

@@ -103,8 +103,9 @@
 }
 
 
--(void)OnClickViewkwithItem:(int)markTag
+-(void)OnClickViewkwithItem:(int)markTag 
 {
+    
     StorydetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StorydetailViewController"];
 
     detail.medol = self.infoArrays[markTag];
@@ -144,6 +145,7 @@
 
 
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
+    
     
     
          PlayerViewController *playerVC = [[PlayerViewController alloc]init];

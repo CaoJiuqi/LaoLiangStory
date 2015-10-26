@@ -264,10 +264,10 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="简介：" translatesAutoresizingMaskIntoConstraints="NO" id="gnp-DL-w8z">
-                                                            <rect key="frame" x="10" y="201" width="280" height="41"/>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="简介内容" translatesAutoresizingMaskIntoConstraints="NO" id="gnp-DL-w8z">
+                                                            <rect key="frame" x="40" y="201" width="250" height="41"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <color key="textColor" red="0.67794667119565211" green="0.67794667119565211" blue="0.67794667119565211" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.74503746810000004" green="0.74503746810000004" blue="0.74503746810000004" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
@@ -280,21 +280,33 @@
                                                             <color key="textColor" red="0.66213060461956519" green="0.65395615271068164" blue="0.65395615271068164" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="简介:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H4-DP-CNk">
+                                                            <rect key="frame" x="10" y="212" width="30" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="c5L-hk-UAM"/>
+                                                                <constraint firstAttribute="width" constant="30" id="sj3-lw-9gX"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                            <color key="textColor" red="0.74503746811224492" green="0.74503746811224492" blue="0.74503746811224492" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="c49-ph-C9t" firstAttribute="top" secondItem="5Lr-7T-AGs" secondAttribute="top" id="2O7-Us-Z2C"/>
                                                         <constraint firstItem="gnp-DL-w8z" firstAttribute="top" secondItem="wTz-tP-aLL" secondAttribute="bottom" constant="5" id="2Zz-ff-niX"/>
                                                         <constraint firstItem="Vs3-Ka-VcG" firstAttribute="top" secondItem="gnp-DL-w8z" secondAttribute="bottom" constant="5" id="4FR-kK-KbY"/>
+                                                        <constraint firstItem="8H4-DP-CNk" firstAttribute="leading" secondItem="5Lr-7T-AGs" secondAttribute="leading" constant="10" id="6yn-M8-xvw"/>
                                                         <constraint firstItem="729-lU-yyT" firstAttribute="leading" secondItem="wTz-tP-aLL" secondAttribute="trailing" constant="10" id="Axt-1L-O3W"/>
                                                         <constraint firstItem="729-lU-yyT" firstAttribute="top" secondItem="c49-ph-C9t" secondAttribute="bottom" constant="10" id="D3z-yE-aHw"/>
+                                                        <constraint firstItem="gnp-DL-w8z" firstAttribute="centerY" secondItem="8H4-DP-CNk" secondAttribute="centerY" id="DeZ-pO-a8B"/>
                                                         <constraint firstItem="086-C8-SHT" firstAttribute="leading" secondItem="wTz-tP-aLL" secondAttribute="trailing" constant="10" id="LeU-8d-Wke"/>
                                                         <constraint firstItem="086-C8-SHT" firstAttribute="top" secondItem="729-lU-yyT" secondAttribute="bottom" id="N7K-04-nbD"/>
                                                         <constraint firstAttribute="trailing" secondItem="gnp-DL-w8z" secondAttribute="trailing" constant="10" id="NuE-TK-B1c"/>
                                                         <constraint firstItem="wTz-tP-aLL" firstAttribute="leading" secondItem="5Lr-7T-AGs" secondAttribute="leading" constant="10" id="P1K-wI-bGI"/>
                                                         <constraint firstItem="Vs3-Ka-VcG" firstAttribute="leading" secondItem="5Lr-7T-AGs" secondAttribute="leading" constant="10" id="PoG-gZ-pKb"/>
+                                                        <constraint firstItem="gnp-DL-w8z" firstAttribute="leading" secondItem="8H4-DP-CNk" secondAttribute="trailing" id="cJR-zb-EbC"/>
                                                         <constraint firstAttribute="trailing" secondItem="c49-ph-C9t" secondAttribute="trailing" id="f0l-SH-HuJ"/>
-                                                        <constraint firstItem="gnp-DL-w8z" firstAttribute="leading" secondItem="5Lr-7T-AGs" secondAttribute="leading" constant="10" id="fKN-Gd-DAz"/>
                                                         <constraint firstAttribute="bottom" secondItem="Vs3-Ka-VcG" secondAttribute="bottom" constant="5" id="hf9-F1-pbf"/>
                                                         <constraint firstItem="wTz-tP-aLL" firstAttribute="top" secondItem="c49-ph-C9t" secondAttribute="bottom" constant="11" id="wkW-X8-i1t"/>
                                                         <constraint firstItem="c49-ph-C9t" firstAttribute="leading" secondItem="5Lr-7T-AGs" secondAttribute="leading" id="x6L-NL-7Kr"/>

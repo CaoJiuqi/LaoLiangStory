@@ -81,6 +81,7 @@
 -(void)onClickToPlayer:(NSString *)audioUrl withTag:(NSInteger)tag
 {
     self.playerVC.isCurrentUrl = [self.playerUrl isEqualToString:audioUrl];
+    self.playerVC.headUrl = _medol.largerImageUrl;
     self.playerVC.mp3Url = audioUrl;
     self.playerVC.programsArray = self.programsMedolArray;
     
@@ -89,6 +90,7 @@
 
 
 }
+
 
 
 //    self.playerVC.index = tag;

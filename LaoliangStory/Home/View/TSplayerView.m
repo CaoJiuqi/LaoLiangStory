@@ -12,6 +12,9 @@
 #import "HomeViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
+#import "UIImageView+WebCache.h"
+
+
 @interface TSplayerView ()
 {
         NSMutableArray *_audioArray; // 所有音乐数据
@@ -37,6 +40,15 @@
     
     
 }
+
+
+
+-(void)setHeadURL:(NSString *)headURL
+{
+    _headURL = headURL;
+    [self.sortimageview sd_setImageWithURL:[NSURL URLWithString:_headURL]];
+}
+
 
 #pragma mark--Action
 

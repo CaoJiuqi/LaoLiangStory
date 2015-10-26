@@ -24,5 +24,7 @@
 /* 标示是当前组中数据的下表 */
 @property (nonatomic,assign)NSInteger *index;
 
+@property (nonatomic,copy)NSString *headUrl;;
+
 
 @end

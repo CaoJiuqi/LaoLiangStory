@@ -56,4 +56,9 @@ typedef  NS_ENUM(NSInteger, PlayerSelctedButtonType){
 
 @property (nonatomic,strong) id <PlayerDelagte> delagte;
 
+
+
+@property (nonatomic,copy)NSString *headURL;
+
+
 @end

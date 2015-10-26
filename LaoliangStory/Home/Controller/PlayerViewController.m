@@ -35,6 +35,7 @@
     
 }
 
+
 #pragma mark－－ 创建音频播放器
 -(void)createMPMoviePlayerCol:(NSString *)url
 {
@@ -58,8 +59,16 @@
     }else
     {
         [self.player pause];
+        
     }
 
+}
+
+-(void)setHeadUrl:(NSString *)headUrl
+{
+    _headUrl = headUrl;
+    
+    self.playerview.headURL = _headUrl;
 }
 
 #pragma mark--<PlayerDelagte>
