@@ -65,7 +65,7 @@
     
     self.title = _medol.title;
     
-    // playMP3
+    // pauseMP3
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pauseAction) name:@"pauseMP3" object:nil];
     // playMP3
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playAction) name:@"playMP3" object:nil];
@@ -128,25 +128,6 @@
 }
 
 
-//    self.playerVC.index = tag;
-//    NSLog(@"tag:%ld",tag);
-//    NSLog(@"self.playerVC.index----->%d",(int)self.playerVC.index);
-//    if (self.playerVC.isCurrentUrl == 1) {
-//        self.playerUrl = nil;
-//    }else
-//    {
-//        self.playerUrl = audioUrl;
-//    }
-//}
-
-- (IBAction)pushplayerbuttonaction:(UIButton *)sender {
-    [self presentViewController:self.playerVC animated:YES completion:nil];
->>>>>>> 2528805ef1f59f496faa05693b04f0d4e9835b0c
-}
-
-
-
-
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
     [self presentViewController:self.playerVC animated:YES completion:nil];
 }
@@ -180,7 +161,6 @@
     cell = [tableView dequeueReusableCellWithIdentifier:ptah forIndexPath:indexPath];
     cell.programsMedol = self.programsMedolArray[indexPath.row];
     cell.celltag = indexPath.row;
-    NSLog(@"celltag:%d",(int)cell.celltag);
     cell.delgate = self;
     return cell;
     

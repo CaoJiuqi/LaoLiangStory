@@ -55,5 +55,6 @@ typedef  NS_ENUM(NSInteger, PlayerSelctedButtonType){
 @property (weak, nonatomic) IBOutlet UIView *bottomview;
 
 @property (nonatomic,strong) id <PlayerDelagte> delagte;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
 
 @end

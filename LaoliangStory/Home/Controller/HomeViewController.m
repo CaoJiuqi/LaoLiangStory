@@ -80,14 +80,11 @@
 #pragma mark--监听的方法
 -(void)pauseAction
 {
-    NSLog(@"pauseAction");
     [self.timer setFireDate:[NSDate distantFuture]];
 }
 
 -(void)playAction
 {
-    NSLog(@"playAction");
-
     [self.timer setFireDate:[NSDate distantPast]];
 }
 
@@ -200,11 +197,6 @@
     [self presentViewController:playerVC animated:YES completion:nil];
     
 }
-
-
-
-
-
 
 
 -(NSMutableArray *)infoArrays
