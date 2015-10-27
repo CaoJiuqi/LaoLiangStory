@@ -75,7 +75,7 @@
 		15DE33891BD800BD0092A29C /* HistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE33861BD800BD0092A29C /* HistoryController.m */; };
 		15DE33901BD800C70092A29C /* TSLoadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE338D1BD800C70092A29C /* TSLoadController.m */; };
 		15DE339D1BD80E1F0092A29C /* TSBaseMedol.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE339C1BD80E1F0092A29C /* TSBaseMedol.m */; };
-		15FC305B1BDF1B2C008B88AE /* TSplayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15FC305A1BDF1B2C008B88AE /* TSplayerView.xib */; };
+		15FC305D1BDFE66A008B88AE /* TSplayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15FC305C1BDFE66A008B88AE /* TSplayerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,7 +224,7 @@
 		15DE338D1BD800C70092A29C /* TSLoadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLoadController.m; sourceTree = "<group>"; };
 		15DE339B1BD80E1F0092A29C /* TSBaseMedol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBaseMedol.h; sourceTree = "<group>"; };
 		15DE339C1BD80E1F0092A29C /* TSBaseMedol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBaseMedol.m; sourceTree = "<group>"; };
-		15FC305A1BDF1B2C008B88AE /* TSplayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSplayerView.xib; sourceTree = "<group>"; };
+		15FC305C1BDFE66A008B88AE /* TSplayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSplayerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -689,6 +689,7 @@
 		15DE337A1BD7FFCE0092A29C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				15FC305C1BDFE66A008B88AE /* TSplayerView.xib */,
 				15DE337B1BD7FFCE0092A29C /* ItemView.h */,
 				15DE337C1BD7FFCE0092A29C /* ItemView.m */,
 				15DE337D1BD7FFCE0092A29C /* ItemView.xib */,
@@ -696,7 +697,6 @@
 				15DE337F1BD7FFCE0092A29C /* TStorydetailCell.m */,
 				154556101BD877D200144AC9 /* TSplayerView.h */,
 				154556111BD877D200144AC9 /* TSplayerView.m */,
-				15FC305A1BDF1B2C008B88AE /* TSplayerView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -852,7 +852,7 @@
 				15B860671BDB862B00302ED8 /* ZLPhotoLib.bundle in Resources */,
 				15829D0D1BD5E9FD0011EDA5 /* LaunchScreen.xib in Resources */,
 				15DE33811BD7FFCE0092A29C /* ItemView.xib in Resources */,
-				15FC305B1BDF1B2C008B88AE /* TSplayerView.xib in Resources */,
+				15FC305D1BDFE66A008B88AE /* TSplayerView.xib in Resources */,
 				152EF09D1BD953CA009AADC7 /* Main.storyboard in Resources */,
 				15DE33541BD7F4F40092A29C /* data.plist in Resources */,
 				15829D0A1BD5E9FD0011EDA5 /* Images.xcassets in Resources */,

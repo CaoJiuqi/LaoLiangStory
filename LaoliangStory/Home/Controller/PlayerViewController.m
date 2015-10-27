@@ -63,7 +63,7 @@ static PlayerViewController *playerController = nil;
     
 }
 
--(void)setTitleName:(NSString *)titleName
+-(void)setTitleName:(NSString *)titleName 
 {
     _titleName = titleName;
     self.playerview.titleName  = _titleName;
