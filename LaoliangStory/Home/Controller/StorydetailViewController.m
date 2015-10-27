@@ -138,9 +138,11 @@
     
 }
 
+
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
     [self presentViewController:self.playerVC animated:YES completion:nil];
 }
+
 
 #pragma mark-- <UITableViewDataSource,UITableViewDelegate>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
