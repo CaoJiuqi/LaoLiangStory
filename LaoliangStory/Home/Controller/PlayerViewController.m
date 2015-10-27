@@ -7,12 +7,9 @@
 //
 
 #import "PlayerViewController.h"
-#import "TSplayerView.h"
 #import "ProgramsMedol.h"
 
 @interface PlayerViewController () <PlayerDelagte>
-
-@property (nonatomic,strong)TSplayerView *playerview;
 
 @end
 @implementation PlayerViewController 
@@ -57,40 +54,13 @@ static PlayerViewController *playerController = nil;
 -(void)createMPMoviePlayerCol:(NSString *)url
 {
     self.player = nil;
-    if( self.player == nil)
-    {
-        self.player = [[MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:url]];
-        [self.player.view setFrame: self.view.bounds];
-        self.player.controlStyle = MPMovieControlStyleFullscreen;
-        [self.player play];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"playMP3" object:nil];
+    self.player = [[MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:url]];
+    self.player.controlStyle = MPMovieControlStyleFullscreen;
+    [self.player.view setFrame: self.view.bounds];
+    [self toPlay];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"playMP3" object:nil];
 
-    }
-}
-
-
-//-(void)setMp3Url:(NSString *)mp3Url
-//{
-//    _mp3Url = mp3Url;
-//    // 通过判断是否是当前播放的数据，来判读是播放还是暂停
-//    if (!self.isCurrentUrl) {
-//        [self createMPMoviePlayerCol:_mp3Url];
-//    }else
-//    {
-//        [self.player pause];
-//        
-//        [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseMP3" object:nil];
-//    }
-//
-//}
-
--(void)setHeadUrl:(NSString *)headUrl
-{
-    _headUrl = headUrl;
     
-//    self.playerview.headURL = _headUrl;
-//    self.playerview.storyintro = self.medol.name;
-
 }
 
 -(void)setTitleName:(NSString *)titleName
@@ -104,8 +74,23 @@ static PlayerViewController *playerController = nil;
 -(void)setProgramsArray:(NSArray *)programsArray
 {
     _programsArray = programsArray;
-    self.medol = _programsArray[self.index];
-    self.playerview.storyintro = self.medol.name;
+    
+    // 判断是不是之前播放的那个音频文件
+    if(self.currentIndex == self.index)
+    {
+        if (self.playerview.playButton.selected) {
+            [self toPlay];
+        }else
+        {
+            [self toPause];
+        }
+        
+    }else
+    {
+        self.medol = _programsArray[self.index];
+        self.playerview.storyintro = self.medol.name;
+        self.currentIndex = self.index;
+    }
 
 }
 
@@ -113,20 +98,25 @@ static PlayerViewController *playerController = nil;
 
 -(void)setMedol:(ProgramsMedol *)medol
 {
-    if (_medol != medol) {
-        
-        [self createMPMoviePlayerCol:medol.mp3Url];
-        _medol = medol;
-        _playerview.storyintro = medol.name;
-    }else
-    {
-        [self.player pause];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseMP3" object:nil];
-    }
+    _medol = medol;
+    [self createMPMoviePlayerCol:_medol.mp3Url];
+}
 
+-(void)toPlay
+{
+    [self.player play];
+    // 播放按钮的状态 与是否播放关联
+    self.playerview.playButton.selected = NO;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"playMP3" object:nil];
     
-    
-    
+}
+
+-(void)toPause
+{
+    [self.player pause];
+    self.playerview.playButton.selected = YES;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseMP3" object:nil];
+
 }
 
 
@@ -139,49 +129,37 @@ static PlayerViewController *playerController = nil;
 -(void)OnClickPlayerButton:(UIButton *)playButton
 {
     playButton.selected =!playButton.selected;
+    
     if (playButton.selected) {
-        self.playerview.playButton.selected = playButton.selected;
-        [self.player pause];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"pauseMP3" object:nil];
+        [self toPause];
     }
     else
     {
-        [self.player play];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"playMP3" object:nil];
+        [self toPlay];
     }
-
-    self.playerview.storyintro = _medol.name;
-    
 }
+
 -(void)OnClickLastButton
 {
+    [self toPause];
     self.index = self.index - 1;
     if (self.index < 0 ) {
         self.index = (int)[self.programsArray count] - 1;
     }
-
-    ProgramsMedol *medol = self.programsArray[ self.index ];
-        [self createMPMoviePlayerCol:medol.mp3Url];
-
+    self.medol = self.programsArray[ self.index ];
 }
+
 -(void)OnClickNextButton
 {
-
+    [self toPause];
     self.index = self.index + 1;
-    
     if (self.index == [self.programsArray count] ) {
         self.index = 0;
     }
-    
-    NSLog(@"--%@",self.programsArray);
-    
-    ProgramsMedol *medol = self.programsArray[self.index];
-    
-    NSLog(@"nexturl:%@",medol.mp3Url);
-    
-    [self createMPMoviePlayerCol:medol.mp3Url];
+    self.medol = self.programsArray[self.index];
     
 }
+
 -(void)OnClickBackTimeButton
 {
 
@@ -206,22 +184,4 @@ static PlayerViewController *playerController = nil;
     int s = (int)duration % 60;
     return [NSString stringWithFormat:@"%02d:%02d",m,s];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @end
