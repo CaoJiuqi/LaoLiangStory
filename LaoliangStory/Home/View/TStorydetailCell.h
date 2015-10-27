@@ -13,7 +13,7 @@
 
 @protocol PlayerAudioDelgate <NSObject>
 
--(void)onClickToPlayer:(NSString *)audioUrl withTag:(NSInteger)tag;
+-(void)onClickToPlayer:(NSString *)audioUrl withCellTag:(NSInteger)cellTag selectButton:(UIButton *)selectButton;
 
 @end
 

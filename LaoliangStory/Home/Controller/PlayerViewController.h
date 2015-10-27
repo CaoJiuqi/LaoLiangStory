@@ -24,9 +24,10 @@
 /* 获取当前组的数据 */
 @property (nonatomic,assign)NSArray *programsArray;
 /* 标示是当前组中数据的下表 */
-@property (nonatomic,assign)NSInteger *index;
+@property (nonatomic,assign)int  index;
 
 @property (nonatomic,copy)NSString *headUrl;;
+@property (nonatomic,copy)NSString *titleName;
 
 
 @end

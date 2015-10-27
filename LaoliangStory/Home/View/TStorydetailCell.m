@@ -126,9 +126,9 @@
     switch (sender.tag) {
         case 0:
         {
-            sender.selected = !sender.selected;
-            if ([self.delgate respondsToSelector:@selector(onClickToPlayer:withTag:)]) {
-                [self.delgate onClickToPlayer:self.programsMedol.mp3Url withTag:self.celltag];
+//            sender.selected = !sender.selected;
+            if ([self.delgate respondsToSelector:@selector(onClickToPlayer:withCellTag:selectButton:)]) {
+                [self.delgate onClickToPlayer:self.programsMedol.mp3Url withCellTag:self.celltag selectButton:sender];
             }
         }
             break;

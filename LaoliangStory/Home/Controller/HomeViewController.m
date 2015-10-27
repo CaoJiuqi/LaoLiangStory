@@ -193,9 +193,6 @@
 
 - (IBAction)pushplayerbuttonaction:(UIButton *)sender {
     
-    
-    
-         PlayerViewController *playerVC = [[PlayerViewController alloc]init];
     playerVC = [PlayerViewController defaultPlayerController];
         playerVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self presentViewController:playerVC animated:YES completion:nil];
