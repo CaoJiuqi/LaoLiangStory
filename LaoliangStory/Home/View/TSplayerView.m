@@ -16,6 +16,7 @@
 
 
 @interface TSplayerView ()
+
 @end
 
 @implementation TSplayerView
@@ -54,6 +55,33 @@
     _storyintro = storyintro;
     self.audionamelabel.text = _storyintro;
 }
+
+- (void)setEndtime:(NSString *)endtime
+{
+    _endtime = endtime;
+    self.endtimelabel.text = _endtime;
+//    NSLog(@"%@",_endtime);
+    
+}
+
+
+//- (void)sliderAction
+//{
+//    self.slider.maximumValue = [_endtime floatValue];
+//    self.slider.value = 0;
+////    NSLog(@"%f",self.slider.maximumValue);
+//    
+//    
+//    
+//    [_timer invalidate];
+//    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(changSliderValue) userInfo:nil repeats:YES];
+//    
+//}
+
+//- (void)changSliderValue
+//{
+//    self.slider.value = ;
+//}
 
 #pragma mark--Action
 

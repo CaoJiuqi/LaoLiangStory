@@ -11,6 +11,9 @@
 #import "ProgramsMedol.h"
 
 @interface PlayerViewController () <PlayerDelagte>
+{
+    NSTimer *_timer;
+}
 
 @property (nonatomic,strong)TSplayerView *playerview;
 
@@ -42,8 +45,45 @@ static PlayerViewController *playerController = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.playerview.delagte = self;
+    
+ 
+
+    
+    [_timer invalidate];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(changSliderValue) userInfo:nil repeats:YES];
+    
+    
+
+    self.playerview.slider.maximumValue = 400;
+    self.playerview.slider.value = 0;
+    
+    NSLog(@"%f",self.player.duration);
+
+    
+    [self.playerview.slider addTarget:self action:@selector(sliderAction) forControlEvents:UIControlEventValueChanged];
+
+    
+//    self.playerview.slider.value = self.player.currentPlaybackTime;
 
 }
+
+- (void)changSliderValue
+{
+    self.playerview.slider.value = self.player.currentPlaybackTime;
+
+    self.playerview.starttimelabel.text = [self fomatTimeToString:self.player.currentPlaybackTime];
+    
+    
+    
+}
+
+- (void)sliderAction
+{
+    self.player.currentPlaybackTime = self.playerview.slider.value;
+ 
+}
+
+
 
 
 
@@ -106,7 +146,9 @@ static PlayerViewController *playerController = nil;
     _programsArray = programsArray;
     self.medol = _programsArray[self.index];
     self.playerview.storyintro = self.medol.name;
-
+    
+    self.playerview.endtime = self.medol.changedDuration;
+    
 }
 
 
@@ -193,18 +235,14 @@ static PlayerViewController *playerController = nil;
 
 
 
-#pragma mark -播放前设置
-- (void)prepareToPlayMusic
-{
-   
-    
-}
+
 #pragma mark - 将秒数转为 00：00 时间格式
 - (NSString *)fomatTimeToString:(double)duration
 {
     int m = duration / 60;
     int s = (int)duration % 60;
     return [NSString stringWithFormat:@"%02d:%02d",m,s];
+
 }
 
 

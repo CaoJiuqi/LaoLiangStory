@@ -18,6 +18,9 @@
 @property (nonatomic,copy)NSString *name;
 /*3、节目的时间*/
 @property (nonatomic,copy)NSString *duration;
+
+@property (nonatomic,copy)NSString *changedDuration;
+
 /*4、节目的创建时间*/
 @property (nonatomic,strong)NSNumber *createTime;
 /*5、节目的跟踪，可以获取到MP3的播放文件*/

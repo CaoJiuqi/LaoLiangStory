@@ -29,5 +29,7 @@
 @property (nonatomic,copy)NSString *headUrl;;
 @property (nonatomic,copy)NSString *titleName;
 
+@property(nonatomic,copy)NSString *endtime;
+
 
 @end

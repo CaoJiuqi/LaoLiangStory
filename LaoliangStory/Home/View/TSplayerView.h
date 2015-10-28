@@ -35,6 +35,7 @@ typedef  NS_ENUM(NSInteger, PlayerSelctedButtonType){
 /* 点击前进15秒按钮 */
 -(void)OnClickForwardTimeButton;
 
+
 @end
 
 
@@ -63,6 +64,8 @@ typedef  NS_ENUM(NSInteger, PlayerSelctedButtonType){
 @property (nonatomic,copy)NSString *headURL;
 @property (nonatomic,copy)NSString *titleName;
 @property (nonatomic,copy)NSString *storyintro;
+
+@property(nonatomic,copy)NSString *endtime;
 
 
 

@@ -156,10 +156,6 @@
 
 
 
-
-
-
-
 - (IBAction)downloadbuttonaction:(UIButton *)sender {
     
     
