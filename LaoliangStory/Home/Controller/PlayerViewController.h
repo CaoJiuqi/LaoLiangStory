@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ProgramsMedol.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "TSplayerView.h"
 
 
 
@@ -17,6 +18,9 @@
 + (instancetype)defaultPlayerController;
 
 @property (nonatomic,strong)MPMoviePlayerController *player;
+@property (nonatomic,strong)TSplayerView *playerview;
+
+
 @property (nonatomic,copy)NSString *mp3Url;
 @property (nonatomic,strong)ProgramsMedol *medol;
 /* 判断是否是当前播放的音频 */
@@ -30,6 +34,7 @@
 @property (nonatomic,copy)NSString *titleName;
 
 @property(nonatomic,copy)NSString *endtime;
+@property (nonatomic,assign) int currentIndex;
 
 
 @end

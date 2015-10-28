@@ -28,7 +28,6 @@
 @property (strong,nonatomic) PlayerViewController *playerVC;
 @property (strong,nonatomic) NSTimer *timer;
 
-//@property (nonatomic,assign) int currentTag;
 
 @property (strong,nonatomic)UIButton *currentButton;
 
@@ -68,11 +67,14 @@
     
     self.title = _medol.title;
     
-    // pauseMP3
+    // 添加暂停监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pauseAction) name:@"pauseMP3" object:nil];
-    // playMP3
+    // 添加播放监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playAction) name:@"playMP3" object:nil];
-    
+
+    // 避免第一次点击就是点击第一个出现的状况
+    self.playerVC.currentIndex = -1;
+
 
 }
 
@@ -85,11 +87,13 @@
 -(void)pauseAction
 {
     [self.timer setFireDate:[NSDate distantFuture]];
+    self.currentButton.selected = NO;
 }
 
 -(void)playAction
 {
     [self.timer setFireDate:[NSDate distantPast]];
+    self.currentButton.selected = YES;
 }
 
 
@@ -113,28 +117,22 @@
 #pragma mark--<PlayerAudioDelgate>
 -(void)onClickToPlayer:(NSString *)audioUrl withCellTag:(NSInteger)tag selectButton:(UIButton *)selectButton
 {
-
     selectButton.selected = !selectButton.selected;
-    
-    // 判断是不是之前播放的那个音频
-    self.playerVC.isCurrentUrl = [self.playerUrl isEqualToString:audioUrl];
-    self.playerVC.headUrl = _medol.largerImageUrl;
-    self.playerVC.titleName = _medol.title;
-    self.playerVC.index = (int)tag;
-    self.playerVC.programsArray = self.programsMedolArray;
-    
-    if (self.playerVC.isCurrentUrl == 1) {
+
+    if (self.currentButton != selectButton ) {
+        self.currentButton.selected = NO;
         self.playerUrl = nil;
-    }else
-    {
-        self.playerUrl = audioUrl;
+        self.currentButton = selectButton;
+        
+        self.playerVC.headUrl = _medol.largerImageUrl;
+        self.playerVC.titleName = _medol.title;
+        
     }
+    
+        // 将该组的数据传递过去
+        self.playerVC.index = (int)tag;
+        self.playerVC.programsArray = self.programsMedolArray;
 
-//    if (self.currentButton.selected != ) {
-//        <#statements#>
-//    }
-
-    self.currentButton = selectButton;
     
 }
 
@@ -185,7 +183,6 @@
         return 265;
     }
     return 120;
-        
 }
 
 @end

@@ -14,7 +14,6 @@
 		152EF0AD1BD9B4C2009AADC7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1547C7831BD85B5400CB6A32 /* libsqlite3.dylib */; };
 		152EF0B21BDC4515009AADC7 /* TSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 152EF0B11BDC4515009AADC7 /* TSTabBarController.m */; };
 		154556131BD877D200144AC9 /* TSplayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 154556111BD877D200144AC9 /* TSplayerView.m */; };
-		154556141BD877D200144AC9 /* TSplayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154556121BD877D200144AC9 /* TSplayerView.xib */; };
 		154556171BD877FE00144AC9 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 154556161BD877FE00144AC9 /* PlayerViewController.m */; };
 		1547C78B1BD8866000CB6A32 /* ItemMedol .m in Sources */ = {isa = PBXBuildFile; fileRef = 1547C7891BD8866000CB6A32 /* ItemMedol .m */; };
 		155C94441BD8AAB20067B0F5 /* SettingTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155C94431BD8AAB20067B0F5 /* SettingTableController.m */; };
@@ -41,7 +40,6 @@
 		15829D0D1BD5E9FD0011EDA5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15829D0B1BD5E9FD0011EDA5 /* LaunchScreen.xib */; };
 		15829D191BD5E9FD0011EDA5 /* LaoliangStoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D181BD5E9FD0011EDA5 /* LaoliangStoryTests.m */; };
 		15829D341BD5EB210011EDA5 /* TSNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D331BD5EB210011EDA5 /* TSNavgationController.m */; };
-		15829D371BD5EB380011EDA5 /* TSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15829D361BD5EB380011EDA5 /* TSTabBarController.m */; };
 		15B8604E1BDB862B00302ED8 /* UIImage+ZLPhotoLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B8600C1BDB862B00302ED8 /* UIImage+ZLPhotoLib.m */; };
 		15B8604F1BDB862B00302ED8 /* UIView+ZLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B8600E1BDB862B00302ED8 /* UIView+ZLExtension.m */; };
 		15B860501BDB862B00302ED8 /* ZLCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B860141BDB862B00302ED8 /* ZLCamera.m */; };
@@ -77,6 +75,7 @@
 		15DE33891BD800BD0092A29C /* HistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE33861BD800BD0092A29C /* HistoryController.m */; };
 		15DE33901BD800C70092A29C /* TSLoadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE338D1BD800C70092A29C /* TSLoadController.m */; };
 		15DE339D1BD80E1F0092A29C /* TSBaseMedol.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DE339C1BD80E1F0092A29C /* TSBaseMedol.m */; };
+		15FC305D1BDFE66A008B88AE /* TSplayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15FC305C1BDFE66A008B88AE /* TSplayerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +99,6 @@
 		152EF0B11BDC4515009AADC7 /* TSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabBarController.m; sourceTree = "<group>"; };
 		154556101BD877D200144AC9 /* TSplayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSplayerView.h; sourceTree = "<group>"; };
 		154556111BD877D200144AC9 /* TSplayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSplayerView.m; sourceTree = "<group>"; };
-		154556121BD877D200144AC9 /* TSplayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSplayerView.xib; sourceTree = "<group>"; };
 		154556151BD877FE00144AC9 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		154556161BD877FE00144AC9 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		1547C7831BD85B5400CB6A32 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -156,7 +154,6 @@
 		15829D321BD5EB210011EDA5 /* TSNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNavgationController.h; sourceTree = "<group>"; };
 		15829D331BD5EB210011EDA5 /* TSNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavgationController.m; sourceTree = "<group>"; };
 		15829D351BD5EB380011EDA5 /* TSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabBarController.h; sourceTree = "<group>"; };
-		15829D361BD5EB380011EDA5 /* TSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabBarController.m; sourceTree = "<group>"; };
 		15B8600B1BDB862B00302ED8 /* UIImage+ZLPhotoLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZLPhotoLib.h"; sourceTree = "<group>"; };
 		15B8600C1BDB862B00302ED8 /* UIImage+ZLPhotoLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZLPhotoLib.m"; sourceTree = "<group>"; };
 		15B8600D1BDB862B00302ED8 /* UIView+ZLExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZLExtension.h"; sourceTree = "<group>"; };
@@ -227,6 +224,7 @@
 		15DE338D1BD800C70092A29C /* TSLoadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLoadController.m; sourceTree = "<group>"; };
 		15DE339B1BD80E1F0092A29C /* TSBaseMedol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSBaseMedol.h; sourceTree = "<group>"; };
 		15DE339C1BD80E1F0092A29C /* TSBaseMedol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSBaseMedol.m; sourceTree = "<group>"; };
+		15FC305C1BDFE66A008B88AE /* TSplayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSplayerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -691,6 +689,7 @@
 		15DE337A1BD7FFCE0092A29C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				15FC305C1BDFE66A008B88AE /* TSplayerView.xib */,
 				15DE337B1BD7FFCE0092A29C /* ItemView.h */,
 				15DE337C1BD7FFCE0092A29C /* ItemView.m */,
 				15DE337D1BD7FFCE0092A29C /* ItemView.xib */,
@@ -698,7 +697,6 @@
 				15DE337F1BD7FFCE0092A29C /* TStorydetailCell.m */,
 				154556101BD877D200144AC9 /* TSplayerView.h */,
 				154556111BD877D200144AC9 /* TSplayerView.m */,
-				154556121BD877D200144AC9 /* TSplayerView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -853,8 +851,8 @@
 			files = (
 				15B860671BDB862B00302ED8 /* ZLPhotoLib.bundle in Resources */,
 				15829D0D1BD5E9FD0011EDA5 /* LaunchScreen.xib in Resources */,
-				154556141BD877D200144AC9 /* TSplayerView.xib in Resources */,
 				15DE33811BD7FFCE0092A29C /* ItemView.xib in Resources */,
+				15FC305D1BDFE66A008B88AE /* TSplayerView.xib in Resources */,
 				152EF09D1BD953CA009AADC7 /* Main.storyboard in Resources */,
 				15DE33541BD7F4F40092A29C /* data.plist in Resources */,
 				15829D0A1BD5E9FD0011EDA5 /* Images.xcassets in Resources */,
