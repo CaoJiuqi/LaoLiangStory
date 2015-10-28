@@ -14,6 +14,8 @@
 
 #import "UIImageView+WebCache.h"
 
+#import "ProgramsMedol.h"
+
 
 @interface TSplayerView ()
 
@@ -24,11 +26,10 @@
 
 - (void)drawRect:(CGRect)rect {
     
-//    [_slider setMinimumTrackImage:[UIImage imageNamed:@"volleft"] forState:UIControlStateNormal];
-//    [_slider setMaximumTrackImage:[UIImage imageNamed:@"volright"] forState:UIControlStateNormal];
+    [_slider setMinimumTrackImage:[UIImage imageNamed:@"volleft"] forState:UIControlStateNormal];
+    [_slider setMaximumTrackImage:[UIImage imageNamed:@"volright"] forState:UIControlStateNormal];
     [_slider setThumbImage:[UIImage imageNamed:@"tabbar_progress_handle"] forState:UIControlStateNormal];
     
-//    [_slider addTarget:self action:@selector(sliderAction) forControlEvents:UIControlEventValueChanged];
     
     
 }
@@ -48,40 +49,12 @@
     
 }
 
-
-
 -(void)setStoryintro:(NSString *)storyintro
 {
     _storyintro = storyintro;
     self.audionamelabel.text = _storyintro;
 }
 
-- (void)setEndtime:(NSString *)endtime
-{
-    _endtime = endtime;
-    self.endtimelabel.text = _endtime;
-//    NSLog(@"%@",_endtime);
-    
-}
-
-
-//- (void)sliderAction
-//{
-//    self.slider.maximumValue = [_endtime floatValue];
-//    self.slider.value = 0;
-////    NSLog(@"%f",self.slider.maximumValue);
-//    
-//    
-//    
-//    [_timer invalidate];
-//    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(changSliderValue) userInfo:nil repeats:YES];
-//    
-//}
-
-//- (void)changSliderValue
-//{
-//    self.slider.value = ;
-//}
 
 #pragma mark--Action
 

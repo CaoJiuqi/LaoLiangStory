@@ -11,9 +11,8 @@
 
 @interface PlayerViewController () <PlayerDelagte>
 {
-    NSTimer *_timer;
+   NSTimer *_timer;
 }
-
 @end
 @implementation PlayerViewController 
 
@@ -43,35 +42,28 @@ static PlayerViewController *playerController = nil;
     [super viewDidLoad];
     self.playerview.delagte = self;
     
- 
-
-    
     [_timer invalidate];
+    
     _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(changSliderValue) userInfo:nil repeats:YES];
     
-    
-
-    self.playerview.slider.maximumValue = 400;
-    self.playerview.slider.value = 0;
-    
-    NSLog(@"%f",self.player.duration);
-
-    
     [self.playerview.slider addTarget:self action:@selector(sliderAction) forControlEvents:UIControlEventValueChanged];
-
     
-//    self.playerview.slider.value = self.player.currentPlaybackTime;
-
 }
+
 
 - (void)changSliderValue
 {
+
+    self.playerview.slider.maximumValue = [self.medol.duration floatValue];
+    self.playerview.slider.value = 0;
+    
     self.playerview.slider.value = self.player.currentPlaybackTime;
 
     self.playerview.starttimelabel.text = [self fomatTimeToString:self.player.currentPlaybackTime];
     
+    self.playerview.endtimelabel.text = [self fomatTimeToString:[self.medol.duration doubleValue]];
     
-    
+   
 }
 
 - (void)sliderAction
@@ -79,8 +71,6 @@ static PlayerViewController *playerController = nil;
     self.player.currentPlaybackTime = self.playerview.slider.value;
  
 }
-
-
 
 
 
@@ -97,11 +87,15 @@ static PlayerViewController *playerController = nil;
     self.player = [[MPMoviePlayerController alloc]initWithContentURL:[NSURL URLWithString:url]];
     self.player.controlStyle = MPMovieControlStyleFullscreen;
     [self.player.view setFrame: self.view.bounds];
+    
     [self toPlay];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"playMP3" object:nil];
 
     
 }
+
+
+
 
 -(void)setTitleName:(NSString *)titleName 
 {
@@ -117,8 +111,7 @@ static PlayerViewController *playerController = nil;
     self.medol = _programsArray[self.index];
     self.playerview.storyintro = self.medol.name;
     
-    self.playerview.endtime = self.medol.changedDuration;
-    
+    self.playerview.endtime = self.medol.duration;
     
     // 判断是不是之前播放的那个音频文件
     if(self.currentIndex == self.index)
@@ -222,7 +215,10 @@ static PlayerViewController *playerController = nil;
 {
     int m = duration / 60;
     int s = (int)duration % 60;
-    return [NSString stringWithFormat:@"%02d:%02d",m,s];
+   NSString * time = [NSString stringWithFormat:@"%02d:%02d",m,s];
+    
+    return time;
+   
 
 }
 @end
